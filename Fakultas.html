@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakultas</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- BOX ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        header {
+            z-index: 1000;
+        }
+
+        .bg-primary {
+            background-color: rgb(25, 135, 84);
+        }
+
+        /* Navigasi Carousel */
+        .navigation {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 4px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #fffefe;
+            transition: color 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animasi floating */
+        @keyframes slide-down {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+
+        .nav-mobile {
+            display: none;
+            position: fixed;
+            /* Ganti absolute dengan fixed */
+            top: 0;
+            width: 100%;
+            background-color: rgba(25, 135, 84, 255);
+            color: white;
+            z-index: 999;
+        }
+
+        .nav-item.active {
+            color: #939393;
+            /* Warna untuk tombol aktif */
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: rgb(39, 174, 96);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-item.active::after {
+            width: 100%;
+            /* Garis bawah penuh untuk elemen aktif */
+        }
+
+        .nav-mobile.open {
+            display: block;
+            animation: slide-down 0.3s ease-out;
+        }
+
+        .nav-mobile.closing {
+            animation: slide-up 0.3s ease-in;
+        }
+
+        /* Dropdown Style */
+        .dropdown-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .sembunyi {
+            display: none !important;
+            /* Sembunyikan elemen */
+        }
+
+        .dropdown-menu {
+            display: block;
+            /* Default: Tampilkan */
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #f3f3f3;
+        }
+
+        .dropdown.open .dropdown-menu {
+            display: flex;
+        }
+
+        /* Hide navigation for mobile */
+        @media (max-width: 768px) {
+            .navigation {
+                display: none;
+            }
+
+            .dropdown {
+                display: block;
+            }
+        }
+
+        /* Show navigation for desktop */
+        @media (min-width: 769px) {
+            .navigation {
+                display: flex;
+            }
+
+            .dropdown {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-1000 bg-primary">
+        <nav class="w-full mx-auto flex items-center justify-between px-8 py-2">
+
+            <!-- Logo UPN -->
+            <a href="Landing_Page.html">
+                <img src="assets/img/index/logo.png" class="w-20 h-20 my-4" alt="Logo">
+            </a>
+            <!-- Navigasi Carousel -->
+            <div class="carousel-nav p-2 flex">
+                <div class="navigation hidden md:flex">
+                    <!-- Tombol navigasi untuk desktop -->
+                    <button class="nav-item" data-target="FTM">FTI</button>
+                    <button class="nav-item" data-target="FTI">FP</button>
+                    <button class="nav-item" data-target="FP">FEB</button>
+                    <button class="nav-item" data-target="FEB">FISIP</button>
+                    <button class="nav-item" data-target="FISIP">FTM</button>
+                </div>
+
+                <!-- Dropdown untuk mobile -->
+                <div class="dropdown relative md:hidden">
+                    <button id="dropdown-btn" class="dropdown-btn bg-primary text-white px-4 py-2 rounded">
+                        Pilih Fakultas
+                        <i class="bx bx-chevron-down"></i>
+                    </button>
+                    <div id="dropdown-menu"
+                        class="dropdown-menu absolute sembunyi text-black shadow-lg rounded-md mt-2 w-48 border-2 border-gray-400">
+                        <button class="dropdown-item nav-item px-4 py-2 w-full text-left" data-target="FTM">FTI</button>
+                        <button class="dropdown-item nav-item px-4 py-2 w-full text-left" data-target="FTI">FP</button>
+                        <button class="dropdown-item nav-item px-4 py-2 w-full text-left" data-target="FP">FEB</button>
+                        <button class="dropdown-item nav-item px-4 py-2 w-full text-left" data-target="FEB">FISIP</button>
+                        <button class="dropdown-item nav-item px-4 py-2 w-full text-left" data-target="FISIP">FTM</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Navigasi -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="Home.html" class="text-white font-medium">Home</a>
+                <a href="Fakultas.html" class="text-white font-medium">Fakultas</a>
+                <a href="AboutUs.html" class="text-white font-medium">About Us</a>
+                <a href="ContactMe.html" class="text-white font-medium">Contact Us</a>
+            </div>
+
+            <!-- Ikon menu untuk mobile -->
+            <div id="nav-toggle" class="md:hidden text-white text-5xl cursor-pointer">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+
+        <!-- Navbar untuk mobile -->
+        <div id="mobile-nav" class="nav-mobile mt-24 rounded-lg border-2 border-gray-400">
+            <a href="Home.html" class="block py-2 px-4">Home</a>
+            <a href="Fakultas.html" class="block py-2 px-4">Fakultas</a>
+            <a href="AboutUs.html" class="block py-2 px-4">About Us</a>
+            <a href="ContactMe.html" class="block py-2 px-4">Contact Us</a>
+        </div>
+    </header>
+    <div class="Con-Carousel z-10">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            /* carousel */
+
+            .carousel {
+                width: 100vw;
+                height: calc(100vh - 125px);
+                margin-top: 125px;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+            }
+
+            .carousel .list .item {
+                width: 180px;
+                height: 250px;
+                position: absolute;
+                top: 80%;
+                transform: translateY(-70%);
+                left: 70%;
+                border-radius: 20px;
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+                background-position: 50% 50%;
+                background-size: cover;
+                z-index: 100;
+                transition: 1s;
+            }
+
+            .carousel .list .item:nth-child(1),
+            .carousel .list .item:nth-child(2) {
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+                border-radius: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .carousel .list .item:nth-child(3) {
+                left: 67%;
+            }
+
+            .carousel .list .item:nth-child(4) {
+                left: calc(67% + 200px);
+            }
+
+            .carousel .list .item:nth-child(5) {
+                left: calc(67% + 400px);
+            }
+
+            .carousel .list .item:nth-child(6) {
+                left: calc(67% + 600px);
+            }
+
+            .carousel .list .item:nth-child(n+7) {
+                left: calc(67% + 800px);
+                opacity: 0;
+            }
+
+            .list .item .content {
+                position: absolute;
+                top: 50%;
+                left: 100px;
+                transform: translateY(-50%);
+                width: 400px;
+                text-align: left;
+                color: #fff;
+                display: none;
+            }
+
+            .list .item:nth-child(2) .content {
+                display: block;
+            }
+
+            .content .title {
+                font-size: 56px;
+                text-transform: uppercase;
+                color: #14ff72cb;
+                font-weight: bold;
+                line-height: 1;
+
+                opacity: 0;
+                animation: animate 1s ease-in-out 0.3s 1 forwards;
+            }
+
+            .content .name {
+                font-size: 56px;
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: 1;
+                text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
+
+                opacity: 0;
+                animation: animate 1s ease-in-out 0.6s 1 forwards;
+            }
+
+            .content .des {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                margin-left: 5px;
+                text-align: justify;
+                opacity: 0;
+                animation: animate 1s ease-in-out 0.9s 1 forwards;
+            }
+
+            .content .btn {
+                margin-left: 5px;
+
+                opacity: 0;
+                animation: animate 1s ease-in-out 1.2s 1 forwards;
+            }
+
+            .content .btn a {
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                border: 2px solid #fff;
+            }
+
+            .content .btn a:nth-child(1) {
+                margin-right: 15px;
+            }
+
+            .content .btn a:nth-child(2) {
+                background: transparent;
+                color: #14ff72cb;
+                border: 2px solid #fff;
+                transition: 0.3s;
+            }
+
+            .content .btn a:hover {
+                background-color: #14ff72cb;
+                color: #fff;
+                border-color: #14ff72cb;
+            }
+
+            @keyframes animate {
+
+                from {
+                    opacity: 0;
+                    transform: translate(0, 100px);
+                    filter: blur(33px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translate(0);
+                    filter: blur(0);
+                }
+            }
+
+            /* Carousel */
+            /* next / prev arrows */
+
+            .arrows {
+                position: absolute;
+                top: 80%;
+                right: 52%;
+                z-index: 100;
+                width: 300px;
+                max-width: 30%;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .arrows button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #14ff72cb;
+                color: #fff;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                font-family: monospace;
+                font-weight: bold;
+                transition: .5s;
+                cursor: pointer;
+            }
+
+            .arrows button:hover {
+                background: #fff;
+                color: #000;
+            }
+
+
+            /* Waktu jeda */
+            .carousel .timeRunning {
+                position: absolute;
+                z-index: 1000;
+                width: 0%;
+                height: 4px;
+                background-color: #14ff72cb;
+                left: 0;
+                top: 0;
+                animation: runningTime 7s linear 1 forwards;
+            }
+
+            @keyframes runningTime {
+
+                from {
+                    width: 0%;
+                }
+
+                to {
+                    width: 100%;
+                }
+
+            }
+
+            @media screen and (max-width: 999px) {
+
+                .list .item .content {
+                    left: 8px;
+                }
+
+                .content .title,
+                .content .name {
+                    font-size: 64px;
+                }
+
+                .content .des {
+                    font-size: 16px;
+                    padding-right: 16%;
+                }
+
+            }
+
+            @media screen and (max-width: 690px) {
+                header nav a {
+                    font-size: 14px;
+                    margin-right: 0;
+                }
+
+                .list .item .content {
+                    top: 40%;
+                }
+
+                .content .title,
+                .content .name {
+                    font-size: 42px;
+                }
+
+                .content .btn button {
+                    padding: 10px 15px;
+                    font-size: 14px;
+                }
+
+                .content .des {
+                    font-size: 16px;
+                    margin-right: 16%;
+                }
+            }
+        </style>
+        <div class="carousel">
+            <div class="list">
+                <!-- FTM -->
+                <div class="item bg-cover bg-center" id="FTM"
+                    style="background-image: url('./assets/img/home/ftm.jpg');">
+                    <div class="content">
+                        <div class="title">FAKULTAS</div>
+                        <div class="name">TAMBANG DAN MINERAL</div>
+                        <div class="des">FTM UPNVY merupakan fakultas ilmu kebumian yang memiliki program studi paling
+                            lengkap di Indonesia, yaitu Teknik Geologi, Teknik Geofisika, Teknik Geomatika, Teknik
+                            Perminyakan, Teknik Pertambangan, Teknik Metalurgi, dan Teknik Lingkungan. </div>
+                        <div class="btn">
+                            <a class="w-full h-full" href="FTM.html">Lihat lengkap</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FTM END-->
+
+                <!-- FTI -->
+                <div class="item" id="FTI" style="background-image: url('./assets/img/UPN/FTI.jpg');">
+
+                    <div class="content">
+                        <div class="title">FAKULTAS</div>
+                        <div class="name">TEKNIK INDUSTRI</div>
+                        <div class="des">Teknik Industri adalah fakultas kuliah yang menggabungkan bidang ilmu teknik
+                            dengan ilmu manajemen. Itu sebabnya, sangat cocok untuk lulusan IPA yang senang berbisnis,
+                            atau yang punya mimpi untuk bisa memimpin sebuah perusahaan industri yang besar.</div>
+                        <div class="btn">
+                            <a class="w-full h-full" href="FTI.html">Lihat lengkap</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FTM END-->
+
+                <!-- FP -->
+                <div class="item" id="FP" style="background-image: url('./assets/img/UPN/FP.jpg');">
+
+                    <div class="content">
+                        <div class="title">FAKULTAS</div>
+                        <div class="name">PERTANIAN</div>
+                        <div class="des">Fakultas Pertanian UPN "Veteran" Yogyakarta adalah salah satu fakultas yang
+                            menawarkan pendidikan tinggi di bidang pertanian. </div>
+                        <div class="btn">
+                            <a class="w-full h-full" href="FP.html">Lihat lengkap</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FTM END-->
+
+                <!-- FEB  -->
+                <div class="item" id="FEB" style="background-image: url('./assets/img/home/feb.jpg');">
+
+                    <div class="content">
+                        <div class="title">FAKULTAS</div>
+                        <div class="name">EKONOMI DAN BISNIS</div>
+                        <div class="des">Fakultas Ekonomi dan Bisnis (FEB) UPN "Veteran" Yogyakarta adalah salah satu
+                            fakultas unggulan yang menyediakan pendidikan di bidang ekonomi dan bisnis.
+                        </div>
+                        <div class="btn">
+                            <a class="w-full h-full" href="FEB.html">Lihat lengkap</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- FEB -->
+
+                <!-- FISIP -->
+                <div class="item" id="FISIP" style="background-image: url('./assets/img/UPN/FISIP.jpg');">
+
+                    <div class="content">
+                        <div class="title">FAKULTAS</div>
+                        <div class="name">ILMU SOSIAL DAN </div>
+                        <div class="name">ILMU POLITIK</div>
+                        <div class="des">Fakultas Ilmu Sosial dan Ilmu Politik (FISIP) UPN "Veteran" Yogyakarta adalah
+                            salah satu fakultas yang berfokus pada pendidikan dan penelitian di bidang sosial dan
+                            politik.</div>
+                        <div class="btn">
+                            <a class="w-full h-full" href="FISIP.html">Lihat lengkap</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FISIP -->
+            </div>
+
+            <!--next / prev button-->
+            <div class="arrows">
+                <button class="prev">
+                     </button>
+                        <button class="next">></button>
+            </div>
+
+            <!-- Waktu jeda -->
+            <div class="timeRunning"></div>
+
+        </div>
+
+    </div>
+</body>
+<script src="./assets/js/carousel.js"></script>
+<script>
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    let isAnimating = false;
+
+    navToggle.addEventListener('click', () => {
+        if (isAnimating) return;
+        if (mobileNav.classList.contains('open')) {
+            // Animasi navbar buka tutup 
+            isAnimating = true;
+            mobileNav.classList.remove('open');
+            mobileNav.classList.add('closing');
+            setTimeout(() => {
+                mobileNav.classList.remove('closing');
+                isAnimating = false;
+            }, 300);
+        } else {
+            // Jika navbar tertutup, buka dengan animasi slide-down
+            isAnimating = true;
+            mobileNav.classList.add('open');
+            setTimeout(() => {
+                isAnimating = false;
+            }, 300); // Durasi animasi slide-down
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            mobileNav.classList.remove('open');
+            mobileNav.classList.remove('closing');
+        }
+    });
+</script>
+
+</html>
