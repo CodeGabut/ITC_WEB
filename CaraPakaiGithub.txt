@@ -13,9 +13,16 @@
    - Ubah alamat eksekusinya ke file yang diambil dengan cara cd ./fileyangdiambildariGithub
    - Nanti ada tulisan biru diujung kayak master atau kita namanya itc
 
-3. Cara Mengupload File dari VScode ke Github
+3. Cara Up to date dengan file yang ada di github 
+   - ketik git pull biar up to date dengan github, nanti filenya bakal sama kayak yang di github. Jangan pull 
+      diakhir nanti kamu ngereplace hasil codingan yang dikerjain kamu.
+
+4. Cara Mengupload File dari VScode ke Github
     - Ketik git add , ini buat milih mana aja file yang mau disave. Cuman lebih sering semua file 
       itu disave, jadi ketiknya git add .
+    - Ketik git commit -m "Pesan buat apa yang diubah"
+    - git push buat ngesave di repo github
+    
     
     
 
