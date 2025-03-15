@@ -1,0 +1,23 @@
+
+1. Cara Log in Github di VScode
+   - Tekan Ctrl + shift + P
+   - isi GitHub: Sign in
+   - Lalu log in sesuai akun
+   - Konfigurasikan 
+    git config --global user.name "NamaGithubKamu"
+    git config --global user.email "EmailGithubKamu"
+
+
+2. Cara Menarik File dari Github ke VScode 
+   - Ketik git clone "Link repo githubnya"
+   - Ubah alamat eksekusinya ke file yang diambil dengan cara cd ./fileyangdiambildariGithub
+   - Nanti ada tulisan biru diujung kayak master atau kita namanya itc
+
+3. Cara Mengupload File dari VScode ke Github
+    - Ketik git add , ini buat milih mana aja file yang mau disave. Cuman lebih sering semua file 
+      itu disave, jadi ketiknya git add .
+    
+    
+
+4. Cara File VScode Up-to-date  dengan Github 
+  
