@@ -335,8 +335,8 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #000;
-  opacity: 50%;
+  background-color: #011025;
+  opacity: 75%;
   z-index: -1;
 }
 .tombol-menu {
@@ -1013,3 +1013,25 @@ section.atasan {
   justify-content: start;
 }
 
+
+@media screen and (max-width: 991.98px) {
+  .blog_hero{
+    flex-direction: column;
+  }
+  .judul_hero {
+    display: none !important;
+    order: 2;
+    flex-grow: 1;
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .gambar_hero{
+    height: 500px;
+  }
+  .text_gambar_hero{
+    display: flex !important;
+  }
+  .layout_hero{
+    background-color: #011838b4 !important;
+  }
+}
