@@ -1,0 +1,11 @@
+1. Blog  : 
+  - Menambahkan fitur halaman (pagenation)
+  - Menambahkan button untuk mengacu ke article dan hover
+  - Membuat struktur data untuk mengisi artikel2 serta logika2nya
+  - Membuat deskripsi disingkatkan menjadi ...
+
+  Footer  :
+  - Menambahkan fitur sosmed di footer dan desain ulang
+
+  Navbar : 
+  - Desain Ulang
