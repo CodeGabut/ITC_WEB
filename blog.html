@@ -16,9 +16,9 @@
    <body>
      <!--Navbar start-->
      
-     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top " style="background-color: rgba(173, 49, 49, 0);">
+     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
       <div class="container-fluid px-5">
-        <div style="background-color: rgba(95, 158, 160, 0);height: 50px;display: flex;">
+        <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
           <img src="./asset/Logo_ITC.png" alt="">
         </div>
         <a class="navbar-brand" href="#" style="font-size: 1rem;">ITC MIPA UNSOED</a>
@@ -86,23 +86,39 @@
      
      <section class="container d-flex flex-column mt-5 " style="background-color: #21252900;display: flex;padding: 0%;aspect-ratio: 14/5;width: 100%;" >
       
+      <div class="mb-3 mx-2" style="font-size: 32px;font-weight: bold;color: #00265c;">Informasi Terbaru</div>
   
-      <div class="card mb-3">
+      <div class="card mb-5">
         <div style="background-color: #00265c; width: 100%;aspect-ratio: 16/5;overflow: hidden;">
           <img src="./asset/IMG_7145.JPG" class="card-img-top" alt="..." style="width: 100%;height: 100%;object-fit: cover;">
         </div>
         <div class="card-body">
+          
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. yap this text is solong. test the word here and there</p>
           <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
-          <button type="button" class="btn btn-outline-primary">Read More</button>
+         <div style="background-color: rgba(205, 50, 50, 0);width: 100%; height: 20px;display: flex; justify-content: center; align-items: center;">
+          <i class="bi bi-caret-left" style="margin-right: 16px;"></i>
+          <div class="circle"></div>
+          <div class="circle_hole"></div>
+          <div class="circle_hole"></div>
+          <i class="bi bi-caret-right" style="margin-left: 14px;"></i>
+         
+          
+         </div>
+      
         </div>
+        
+    
       </div>
 
+      <div class="mb-3 mx-2" style="font-size: 32px;font-weight: bold;color: #00265c;">Lainnya..</div>
 
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div class="card">
+
+        <div class="col article_hover" style="cursor: pointer; ">
+          
+          <div class="card margin_mobile_article" style="border: #00265c 1px solid;box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;">
             <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
               <img src="./asset/IMG_20240629_093800_075.jpg" class="card-img-top" alt="...">
             </div>
@@ -111,106 +127,145 @@
               <h5 class="card-title">Kegiatan Dies Natalis ITC Yang Diselengarakan</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
-              <button type="button" class="btn btn-outline-primary">Read More</button>
+              <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
+            </div>
+            <div class="backround_hover article1" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -2; transition: 0.4s ease;border-radius: 5px;">
+           
             </div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="card">
-            <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
-              <img src="./asset/IMG_9324.JPG" class="card-img-top" alt="...">
-            </div>
-            
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card">
+        <div class="col article_hover" style="cursor: pointer;">
+          
+          <div class="card margin_mobile_article " style="border: #00265c 1px solid; box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;">
             <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
               <img src="./asset/IMG_20240629_093800_075.jpg" class="card-img-top" alt="...">
             </div>
             
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This text will long enought to fill the gap bellow</p>
+              <h5 class="card-title">Kegiatan Dies Natalis ITC Yang Diselengarakan</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Ini merupakan</p>
+              <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
+              <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
+            </div>
+            <div class="backround_hover article2" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -1; transition: 0.4s ease;">
             </div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="card">
+        <div class="col article_hover" style="cursor: pointer;">
+          
+          <div class="card margin_mobile_article " style="border: #00265c 1px solid; box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;">
             <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
-              <img src="./asset/black-sharp-gradient-background-free-vector.jpg" class="card-img-top" alt="...">
+              <img src="./asset/IMG_20240629_093800_075.jpg" class="card-img-top" alt="...">
             </div>
             
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Kegiatan Dies Natalis ITC Yang Diselengarakan</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
+              <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
+            </div>
+            <div class="backround_hover article3" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -1; transition: 0.4s ease;border-radius: 5px">
             </div>
           </div>
         </div>
+        
+        <div class="col article_hover" style="cursor: pointer;">
+          
+          <div class="card margin_mobile_article " style="border: #00265c 1px solid; box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;">
+            <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
+              <img src="./asset/IMG_20240629_093800_075.jpg" class="card-img-top" alt="...">
+            </div>
+            
+            <div class="card-body">
+              <h5 class="card-title">Kegiatan Dies Natalis ITC Yang Diselengarakan</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
+              <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
+            </div>
+            <div class="backround_hover article4" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -1; transition: 0.4s ease;border-radius: 5px">
+            </div>
+          </div>
         </div>
-    
+
+
+     
+
+
+        
+
+      
+        </div>
+        
+    <div class="page_section mt-5 mb-5" style="background-color: #cccccc00;width: 100%;height: 20px; display: flex; flex-direction: row; justify-content: center;">
+      <div style="width: 20px;height: fit-content; color: #00265c; font-size: 1.2rem;margin-left: 28px; border-bottom: #00265c solid 1px;display: flex;justify-content: center;">1</div>
+      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">2</div>
+      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">3</div>
+      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">4</div>
+      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">...></div>
+    </div>
      </section>
 
 
   
-     <footer class="footer_section mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 footer-col">
-            <div class="footer_content">
-             <!-- <h4>Reach at...</h4>
-              <div class="contact_link_box">
-                <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>Location</span></a>
-                <a href=""><i class="fa fa-phone" aria-hidden="true"></i>
-                <span>Call 08.......</span></a>
-                <a href=""><i class="fa fa-envelop" aria-hidden="true"></i>
-              <span>itcmipaunsoed@gmail.com</span></a>
-              </div>-->
-            </div>
-          </div>
-          <div class="col-md-4 footer-col">
-            <div class="footer_detail">
-              <a href="" class="footer-logo">
-                ITC MIPA UNSOED
-              </a>
-              <p>Web resmi ITC MIPA Unsoed
-              </p>
-              <div class="footer_social">
-                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 footer-col">
-            <div class="map_container">
-              <div class="map">
-                <div id="googleMap"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-info">
-          <p>&copy; <span id="displayYear"></span>All Rights Reserved By
-          <a href="#">Tekno</a></p>
-        </div>
-      </div>
-    </footer>
-    
+     <script>
+      const navEl = document.querySelector('.navbar') ; 
+      const article1 = document.querySelector('.article1') ; 
+      const article2 = document.querySelector('.article2') ; 
+      const article3 = document.querySelector('.article3') ; 
+      const article4 = document.querySelector('.article4') ; 
+
+      let done = true
 
 
 
+      window.addEventListener('scroll' , ()=>{
 
+        //NAVBAR
+        if (window.scrollY >= 256) {
+          console.log(window.scrollY);
+          navEl.classList.add('navbar_scrolled')
+        } else if (window.scrollY < 256) {
+          navEl.classList.remove('navbar_scrolled')
+        }
+
+        // ARTICLE 1 
+        if (window.innerWidth < 768 && window.scrollY >= 700 ) {
+          article1.classList.add("mobile_scroll_resize");
+        } 
+        if ( (window.scrollY >= 1158 || window.scrollY < 900  || window.innerWidth > 768)  ) {
+          article1.classList.remove("mobile_scroll_resize");
+          
+        } 
+
+        //ARTICLE 2
+        if (window.scrollY >= 1158 && window.innerWidth < 768) {
+          article2.classList.add("mobile_scroll_resize");
+        } 
+        if (window.scrollY >= 1700  || window.scrollY < 1158 || window.innerWidth > 768) {
+          article2.classList.remove("mobile_scroll_resize");
+        }
+
+        //ARTICLE 3
+        if (window.scrollY >= 1800 && window.innerWidth < 768) {
+          article3.classList.add("mobile_scroll_resize");
+        } 
+        if (window.scrollY >= 2200  ||  window.scrollY <  1700|| window.innerWidth > 768) {
+          article3.classList.remove("mobile_scroll_resize");
+        }
+        
+        //ARTICLE 4 
+        if (window.scrollY >= 2000 && window.innerWidth < 768) {
+          article4.classList.add("mobile_scroll_resize");
+        } 
+        if (window.scrollY < 2200) {
+          article4.classList.remove("mobile_scroll_resize");
+        }
+        
+
+      })
+     </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
  </html>

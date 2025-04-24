@@ -1035,3 +1035,56 @@ section.atasan {
     background-color: #011838b4 !important;
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  
+  .margin_mobile_article {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 768px) {
+  
+  .article_hover:hover .backround_hover {
+   width: 103% !important;
+   height: 104% !important;
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;
+  }
+ 
+}
+
+.mobile_scroll_resize{
+  width: 103% !important;
+   height: 104% !important;
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background-color: #00265c;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.circle_hole {
+  width: 12px;
+  height: 12px;
+  background-color: #00265c00;
+  border: #00265c 1px solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.navbar_scrolled {
+  background-color: #00265c !important;
+  box-shadow: 0.3px 10px rgba(0, 0, 0, 0.027);
+}
+
+.navbar {
+  transition: all 0.5s !important;
+}

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link href="css/style.css" rel="stylesheet"/>
           <link href="css/responsive.css" rel="stylesheet"/>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
           <script src="script.js" defer></script>
 
 </head>
@@ -16,9 +17,9 @@
     </head>
     <body>
       <!--Navbar start-->
-      <nav class="navbar navbar-expand-lg navbar-dark  fixed-top " style="background-color: #3b81e200;">
+      <nav class="navbar navbar-expand-lg navbar-dark  fixed-top navbar_scrolled " style="background-color: #3b81e200;">
         <div class="container-fluid px-5">
-          <div style="background-color: rgba(95, 158, 160, 0);height: 50px;display: flex;">
+          <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
             <img src="./asset/Logo_ITC.png" alt="">
           </div>
           <a class="navbar-brand" href="#" style="font-size: 1rem;">ITC MIPA UNSOED</a>
@@ -211,8 +212,9 @@
         <!--Blog end-->
 
             <!--Footer start-->
-          <footer class="footer_section">
-            <div class="container">
+          <footer class="footer_section" style="background-color: #00265c !important;">
+            <div class="container" >
+
               <div class="row">
                 <div class="col-md-4 footer-col">
                   <div class="footer_content">
@@ -235,30 +237,36 @@
                     <p>Web resmi ITC MIPA Unsoed
                     </p>
                     <div class="footer_social">
-                      <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                      <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                      <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                      <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                      <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 footer-col">
-                  <div class="map_container">
-                    <div class="map">
-                      <div id="googleMap"></div>
+                      <i class="bi bi-instagram mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                      <i class="bi bi-twitter-x  mx-3"style="font-size: 22px; cursor: pointer;"></i>
+                      <i class="bi bi-linkedin mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                      <i class="bi bi-pinterest mx-3" style="font-size: 22px; cursor: pointer;"></i>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="footer-info">
                 <p>&copy; <span id="displayYear"></span>All Rights Reserved By
                 <a href="#">Tekno</a></p>
               </div>
+
             </div>
           </footer>
           <!--Footer end-->
 
+          <script>
+            const navEl = document.querySelector('.navbar') ; 
+      
+            window.addEventListener('scroll' , ()=>{
+              if (window.scrollY >= 256) {
+                console.log(window.scrollY);
+                navEl.classList.add('navbar_scrolled')
+              } else if (window.scrollY < 256) {
+                navEl.classList.remove('navbar_scrolled')
+              }
+            })
+           </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         
     </body>
