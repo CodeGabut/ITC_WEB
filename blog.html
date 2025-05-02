@@ -13,7 +13,7 @@
 
        <title>UKM ITC MIPA UNSOED</title>
    </head>
-   <body>
+   <body style="overflow-x: hidden;">
      <!--Navbar start-->
      
      <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
@@ -87,34 +87,61 @@
      <section class="container d-flex flex-column mt-5 " style="background-color: #21252900;display: flex;padding: 0%;aspect-ratio: 14/5;width: 100%;" >
       
       <div class="mb-3 mx-2" style="font-size: 32px;font-weight: bold;color: #00265c;">Informasi Terbaru</div>
-  
-      <div class="card mb-5">
-        <div style="background-color: #00265c; width: 100%;aspect-ratio: 16/5;overflow: hidden;">
-          <img src="./asset/IMG_7145.JPG" class="card-img-top" alt="..." style="width: 100%;height: 100%;object-fit: cover;">
+
+
+      <div id="carouselExampleCaptions" class="carousel slide mx-2">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class="card-body">
-          
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. yap this text is solong. test the word here and there</p>
-          <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
-         <div style="background-color: rgba(205, 50, 50, 0);width: 100%; height: 20px;display: flex; justify-content: center; align-items: center;">
-          <i class="bi bi-caret-left" style="margin-right: 16px;"></i>
-          <div class="circle"></div>
-          <div class="circle_hole"></div>
-          <div class="circle_hole"></div>
-          <i class="bi bi-caret-right" style="margin-left: 14px;"></i>
-         
-          
-         </div>
-      
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div style="width: 100%;aspect-ratio: 16/9;background-color:  #00265c;overflow: hidden;">
+              <img src="./asset/Desain tanpa judul_20240905_102033_0000.jpg" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 50%; ">
+            </div>
+
+            <div class="carousel-caption ">
+              <h5>First slide label</h5>
+              <p style="font-size: clamp(8px,3vw,24px); color: #fffeff;">Some representative placeholder content for the first slide. I</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div style="width: 100%;aspect-ratio: 16/9;background-color:  #00265c;overflow: hidden;">
+              <img src="./asset/Desain tanpa judul_20240905_102033_0000.jpg" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 60%; ">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #1437683d, #00132e);;overflow: hidden;">
+              <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 40%; ">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Third slide label</h5>
+              <p style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
         </div>
-        
-    
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+  
+      
 
       <div class="mb-3 mx-2" style="font-size: 32px;font-weight: bold;color: #00265c;">Lainnya..</div>
 
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="row row-cols-1 row-cols-md-2 g-4 " style="margin-left: 1px;margin-right: 1px;">
 
         <div class="col article_hover" style="cursor: pointer; ">
           
@@ -216,10 +243,7 @@
       const article3 = document.querySelector('.article3') ; 
       const article4 = document.querySelector('.article4') ; 
 
-      let done = true
-
-
-
+    
       window.addEventListener('scroll' , ()=>{
 
         //NAVBAR
