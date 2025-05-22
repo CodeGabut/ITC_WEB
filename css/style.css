@@ -102,7 +102,8 @@ body {
 
 .spcl_section .detail-box1 img {
   width: 45px;
-  margin-bottom: 10px;}
+  margin-bottom: 10px;
+}
 
 .spcl_section .detail-box h5 {
   text-transform: uppercase;
@@ -987,7 +988,33 @@ section.quote {
   .container{
     height: 90%;
   }
+
 }
+
+@media screen and (max-width: 991.98px) {
+  .spcl_section .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .spcl_section .col-6 {
+  width: auto;
+  margin-bottom: 15px;
+  }
+  .abuabu .layar-dalam {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .blog {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog .area {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 section.atasan {
   background: url("/asset/IMG_7145.JPG") no-repeat;
   background-attachment: fixed;
