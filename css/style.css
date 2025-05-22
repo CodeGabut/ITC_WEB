@@ -79,6 +79,29 @@ body {
   color: #ffff  
 }
 
+/*about us*/
+.aboutus .layar-dalam {
+  width: 100%;
+  margin-top: 50px;
+}
+.konten-isi {
+  margin-bottom: 70px; 
+  margin-left: 70px; 
+  margin-right: 70px;
+}
+.konten-isi .text-about-us {
+  text-align: justify;
+  font-size: 24px
+}
+
+@media screen and (max-width: 991.98px) {
+  .aboutus .layar-dalam {
+    width: 100%;
+  }
+  .konten-isi .text-about-us{
+    font-size: 18px;
+  }
+}
 /*Isi teks home*/
 
 .spcl_section .row {
