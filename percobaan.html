@@ -1,11 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+
+  <script src="script.js" defer></script>
+  <title>UKM ITC MIPA UNSOED</title>
 </head>
+
 <body>
-    Misalkan ini adalah file diubah
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_scrolled" style="background-color: #3b81e200;">
+    <div class="container-fluid px-5">
+      <div style="background-color: rgba(95, 158, 160, 0); height: 40px; display: flex;">
+        <img src="./asset/Logo_ITC.png" alt="">
+      </div>
+      <a class="navbar-brand" href="#" style="font-size: 1rem;">ITC MIPA UNSOED</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <div>
+          <ul class="navbar-nav w-500">
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span style="margin-left: 10px;">Home</span>
+              </a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item dropdown me-5">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">KABINET</a></li>
+                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-5" href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- Header start -->
+  <div class="layar-penuh text-light" style="background-color: #00265c;">
+    <header id="home">
+      <div class="overlay"></div>
+      <video autoplay muted loop>
+        <source type="video/mp4" />
+      </video>
+      <div class="intro">
+        <img src="./asset/Logo Nexabyte (No bg).png" style="height: 200px; padding: 10px;">
+        <h3>ITC MIPA UNSOED</h3>
+        <p>Information Technology and Communication MIPA Unsoed</p>
+        <p><a href="" class="tombol">MORE INFO</a></p>
+      </div>
+    </header>
+    <main>
+      <div class="aboutus" id="aboutus">
+        <div class="layar-dalam">
+          <h3>ABOUT US</h3>
+          <p class="ringkasan"></p>
+          <div class="konten-isi">
+            <p class="text-about-us">
+              ITC MIPA Unsoed Merupakan sebuah unit kegiatan mahasiswa yang berada di lingkup Fakultas MIPA Unsoed
+              yang bergerak di bidang informasi, teknologi, dan komunikasi serta di bidang Ilmu Pengetahuan dan Teknologi (IPTEK) dimana perkembangan zaman yang begitu pesat mendorong adanya kemajuan dibidang ilmu pengetahuan dan teknologi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Isi start -->
+      <section class="spcl_section layout_padding text-dark bg-light" style="text-align: justify;">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="detail_container">
+                <div class="detail-box">
+                  <h5>Visi</h5>
+                  <p class="detail-box">
+                    Menjadi Unit Kemahasiswaan terdepan di fakultas MIPA Universitas Jenderal Soedirman dalam mewujudkan atmosfer kampus yang berbasis IPTEK
+                  </p>
+                </div>
+                <div class="detail-box">
+                  <h5>Misi</h5>
+                  <p class="detail-box">
+                    <a style="display: list-item; list-style: decimal; margin-left: 15px;">Mewadahi mahasiswa MIPA Unsoed yang berminat di bidang informasi, teknologi, dan komunikasi.</a>
+                    <a style="display: list-item; list-style: decimal; margin-left: 15px;">Merintis dan mengembangkan kegiatan=kegiatan UKM ITC MIPA Unsoed yang bersifat edukasi, sosial, dan riset di kalangan mahasiswa MIPA Unsoed dan masyarakat.</a>
+                    <a style="display: list-item; list-style: decimal; margin-left: 15px;">Meningkatkan kreatifitas, keahlian, dan pengetahuan mahasiswa dalam bidang informasi, teknologi, dan komunikasi.</a>
+                    <a style="display: list-item; list-style: decimal; margin-left: 15px;">Membina dan mempererat kebersamaan antar anggota UKM ITC MIPA Unsoed.</a>
+                    <a style="display: list-item; list-style: decimal; margin-left: 15px;">Mengembangkan potensi IPTEK di dalam masyarakat pada umumnya.</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-5 ml-auto">
+              <div class="img-box">
+                <img src="asset/IMG_7145.JPG" alt=""
+                     style="box-shadow: 0px -10px 30px #ccc; border: 10px; border-top-left-radius: 10%;
+                            border-color: aqua; border-bottom-right-radius: 10%; border-style: double;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Isi end -->
+
+      <!-- Division start -->
+      <section class="about_section layout_padding-bottom bg-dark text-light" style="text-align: left;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="img-box">
+                <img src="asset/IMG_9368.JPG" alt=""
+                     style="border: 10px; border-top-right-radius: 10%;
+                            border-color: aqua; border-bottom-left-radius: 10%; border-style: double;">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="detail-box">
+                <div class="heading_container">
+                  <h2>Division</h2>
+                </div>
+                <p>
+                  UKM ITC MIPA UNSOED merupakan sebuah unit kegiatan mahasiswa yang bergerak di bidang Ilmu Pengetahuan dan Teknologi (IPTEK).
+                  ITC mempunyai 5 divisi yaitu pengurus harian, divisi informasi, divisi teknologi, divisi komunikasi, dan divisi pengembangan.
+                </p>
+                <a href="division.html">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Division end -->
+
+      <!-- Quotes start -->
+      <section class="quote">
+        <div class="layar-dalam">
+          <div class="row">
+            <div class="col-md-6">
+              <p style="align-items: center; margin-left: -30px;">
+                "Kids who have never seen Peace and kids who have never seen War have different values!
+                Those who stand at the top determine what’s wrong and what’s right!
+                This very place is neutral ground! Justice will prevail, you say? But of course it will!!!
+                Whoever wins this war… Becomes Justice!”
+              </p>
+              <a style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Donquixote Doflamingo</a>
+            </div>
+            <div class="col-md-6">
+              <div class="img-box">
+                <img src="asset/IMG_20240718_135333.png"
+                     style="width: 75%; align-items: center; margin-top: -110px; margin-bottom: -100px;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Quotes end -->
+
+      <!-- Blog start -->
+      <section class="abuabu" id="blog">
+        <div class="layar-dalam text-dark">
+          <h3>Lastest Blog</h3>
+          <p class="ringkasan">Ini adalah beberapa program ITC yang telah terlaksana</p>
+          <div class="blog">
+            <div class="area">
+              <div class="gambar" style="background-image: url('asset/IMG_9368.JPG')"></div>
+              <div class="text">
+                <article>
+                  <h4><a href="#">Dies Natalis UKM ITC ke 18</a></h4>
+                  <p>Ini adalah salah satu program kerja dari divisi pengembangan</p>
+                </article>
+              </div>
+            </div>
+            <div class="area">
+              <div class="gambar" style="background-image: url('asset/Screenshot (1050).png')"></div>
+              <div class="text">
+                <article>
+                  <h4><a href="#">ITC Class 1</a></h4>
+                  <p>Ini adalah salah satu program kerja dari divisi Teknologi</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Blog end -->
+
+      <!-- Footer start -->
+      <footer class="footer_section" style="background-color: #00265c !important;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-col">
+              <div class="footer_content"></div>
+            </div>
+            <div class="col-md-4 footer-col">
+              <div class="footer_detail">
+                <a href="" class="footer-logo">ITC MIPA UNSOED</a>
+                <p>Web resmi ITC MIPA Unsoed</p>
+                <div class="footer_social">
+                  <i class="bi bi-instagram mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                  <i class="bi bi-twitter-x mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                  <i class="bi bi-linkedin mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                  <i class="bi bi-pinterest mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <p>&copy; <span id="displayYear"></span> All Rights Reserved By <a href="#">Tekno</a></p>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer end -->
+
+      <script>
+        const navEl = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY >= 256) {
+            navEl.classList.add('navbar_scrolled');
+          } else {
+            navEl.classList.remove('navbar_scrolled');
+          }
+        });
+      </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+              crossorigin="anonymous"></script>
+    </main>
+  </div>
 </body>
 </html>
