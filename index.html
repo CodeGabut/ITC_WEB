@@ -63,18 +63,19 @@
   <!-- Navbar end -->
 
   <!-- Header start -->
-  <div class="layar-penuh text-light" style="background-color: #00265c;">
-    <header id="home">
-      <div class="overlay"></div>
-      <video autoplay muted loop>
-        <source type="video/mp4" />
-      </video>
-      <div class="intro">
-        <img src="./asset/Logo Nexabyte (No bg).png" style="height: 200px; padding: 10px;">
-        <h3>ITC MIPA UNSOED</h3>
-        <p>Information Technology and Communication MIPA Unsoed</p>
-        <p><a href="" class="tombol">MORE INFO</a></p>
-      </div>
+  <div class="text-light" style="background-color: #00265c;">
+    <header class="layar-penuh" id="home">
+      <section class="background_header">
+        <div class="overlay"></div>
+        <div class="intro">
+          <img src="./asset/Logo Nexabyte (No bg).png" style="height: 200px; padding: 10px;">
+          <h3>ITC MIPA UNSOED</h3>
+          <p>Information Technology and Communication MIPA Unsoed</p>
+          <button class="tombol" onclick="document.getElementById('aboutus').scrollIntoView({ behavior: 'smooth' })">
+            MORE INFO
+          </button>
+        </div>
+      </section>
     </header>
     <main>
       <div class="aboutus" id="aboutus">
@@ -117,9 +118,9 @@
 
             <div class="col-6 col-lg-5 ml-auto">
               <div class="img-box">
-                <img src="asset/IMG_7145.JPG" alt=""
+                <img src="asset/ITC_2.jpg" alt=""
                      style="box-shadow: 0px -10px 30px #ccc; border: 10px; border-top-left-radius: 10%;
-                            border-color: aqua; border-bottom-right-radius: 10%; border-style: double;">
+                            border-color: #00265c; border-bottom-right-radius: 10%; border-style: double;">
               </div>
             </div>
           </div>
@@ -128,14 +129,14 @@
       <!-- Isi end -->
 
       <!-- Division start -->
-      <section class="about_section layout_padding-bottom bg-dark text-light" style="text-align: left;">
+      <section class="about_section layout_padding-bottom" style="text-align: left;">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="img-box">
-                <img src="asset/IMG_9368.JPG" alt=""
+                <img src="asset/ITC_3.jpg" alt=""
                      style="border: 10px; border-top-right-radius: 10%;
-                            border-color: aqua; border-bottom-left-radius: 10%; border-style: double;">
+                            border-color: #a6a6a6; border-bottom-left-radius: 10%; border-style: double;">
               </div>
             </div>
             <div class="col-md-6">
@@ -147,7 +148,9 @@
                   UKM ITC MIPA UNSOED merupakan sebuah unit kegiatan mahasiswa yang bergerak di bidang Ilmu Pengetahuan dan Teknologi (IPTEK).
                   ITC mempunyai 5 divisi yaitu pengurus harian, divisi informasi, divisi teknologi, divisi komunikasi, dan divisi pengembangan.
                 </p>
-                <a href="division.html">Read More</a>
+                <button class="tombol" onclick="location.href='division.html'">
+                  Read More
+                </button>
               </div>
             </div>
           </div>
