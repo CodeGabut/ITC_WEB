@@ -1104,9 +1104,14 @@ section.atasan {
   .layout_hero{
     background-color: #011838b4 !important;
   }
+
 }
 
-
+@media screen and (max-width: 400px) {
+  .navbar-brand {
+    display: none;
+  }  
+}
 
 
 @media (max-width: 768px) {

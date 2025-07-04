@@ -66,27 +66,28 @@
 </head>
 <body>
   <section class="div-head-container">
+    <div class="judul-halaman"><h2 style="font-size: 24px;">DIVISI</h2></div>
     <div class="position-1">
       <div class="position-2">
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('ketua')">
+            <button class="structure-card structure-img" onclick="document.getElementById('ketua').scrollIntoView({ behavior: 'smooth' })">
               <img src="asset/divisi/ITCcard_Ketum.jpg" alt="Ketua Umum" class="card-img">
             </button>
         </div>
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('wakil_ketua')">
+            <button class="structure-card structure-img" onclick="document.getElementById('wakil_ketua').scrollIntoView({ behavior: 'smooth' })">
               <img src="asset/divisi/ITCcard_WaKetum.jpg" alt="Wakil Ketua" class="card-img">
             </button>
         </div>
       </div>
       <div class="position-2">
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('sekretaris')">
+            <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
               <img src="asset/divisi/ITCcard_divsekre.jpg" alt="Sekretaris" class="card-img">
             </button>
         </div>
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('bendahara')">
+            <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
               <img src="asset/divisi/ITCcard_divbendhr.jpg" alt="Bendahara" class="card-img">
             </button>
         </div>
@@ -95,610 +96,559 @@
     <div class="position-1">
       <div class="position-2">
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('divisi_pengembangan')">
-              <img src="asset/divisi/ITCcard_divpengmbngn.jpg" alt="Pengembangan" class="card-img">
+            <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+              <img src="asset/divisi/ITCcard_divinfor.jpg" alt="Informasi" class="card-img">
             </button>
-        </div>
+        </div>         
+
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('divisi_teknologi')">
+            <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
               <img src="asset/divisi/ITCcard_divtekno.jpg" alt="Teknologi" class="card-img">
             </button>
         </div>
       </div>
       <div class="position-2">
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('divisi_komunikasi')">
+            <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
               <img src="asset/divisi/ITCcard_divkomun.jpg" alt="Komunikasi" class="card-img">
             </button>
         </div>
         <div>
-            <button class="structure-card structure-img" onclick="scrollToSection('divisi_informasi')">
-              <img src="asset/divisi/ITCcard_divinfor.jpg" alt="Informasi" class="card-img">
+            <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+              <img src="asset/divisi/ITCcard_divpengmbngn.jpg" alt="Pengembangan" class="card-img">
             </button>
-        </div>        
+        </div>       
       </div>
     </div>
   </section>
 <!-- Struktur selesai -->
 
 <!-- Penjelasan Mulai -->
+<main>
+  <!-- Ketua Umum Section -->
+  <div class="div-main-container color-ketua text-light text-align">
+    <h2 id="ketua">Ketua Umum</h2>
+    <p class="perataan-tengah-text">Bertanggung jawab terhadap jalannya UKM ITC MIPA Unsoed baik internal maupun eksternal</p>
+    <div class="text-light text-align" style="margin-top: 10px; background-color:cornflowerblue; height: 50px; text-align: center;"></div>
 
+    <section class="judul-box text-dark" style="text-align:justify;">
+      <h2 class="judul-text">Program kerja</h2>
 
-  <main>
-
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:cornflowerblue; height: 50px; text-align: center;" ></div>
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:cornflowerblue; height: 1310px; text-align: center;" >
-      <h2 id="divisi_teknologi">Ketua Umum</h2>
-       <p>Bertanggung jawab terhadap jalannya UKM ITC MIPA Unsoed baik internal maupun eksternal
-      </p>
-       <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:cornflowerblue; height: 50px; text-align: center;" ></div>
-       <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-        <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="detail_container">
-                
-                </div>
-                <div class="detail-box">
-                  <h5>Konsolidasi Internal</h5>
-                  <p class="detail-box">Ketua umum secara langsung maupun dibantu oleh wakil ketua dan kepala divisi melaksanakan konsolidasi internal antar pengurus selama satu periode kepengurusan di UKM ITC MIPS Unsoed</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-                </div>
-                </div>
-
-                <div class=" col-sm-3 ml-auto">
-                <div class="detail-box">
-                  <h5>Konsolidasi Eksternal</h5>
-                  <p class="detail-box">Melakukan interaksi di luar lingkungan UKM ITC MIPA Unsoed, guna untuk menjalin komunikasi dengan lingkungan luar</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-            </div>
+      <div class="div-sec-container" style="text-align: center;">     
+        <div class="div-sec">
+          <div class="detail-judul-box">
+            <h5>Konsolidasi Internal</h5>              
           </div>
-          <div class=" col-sm-3 ml-auto">
-            <div class="detail-box">
-              <h5>Rapat Pimpinan </h5>
-              <p class="detail-box">Melakukan interaksi di luar lingkungan UKM ITC MIPA Unsoed, guna untuk menjalin komunikasi dengan lingkungan luar</p>
-            </div>
-            <div class="detail-box1">
-              <img src="asset/" style="height: 200px; width: 300px;">
+          <div>
+            <p class="perataan-text">Ketua umum secara langsung maupun dibantu oleh wakil ketua dan kepala divisi melaksanakan konsolidasi internal antar pengurus selama satu periode kepengurusan di UKM ITC MIPS Unsoed</p>
+          </div>
+          <div>
+            <img src="asset/proker/Proker_konsolidasi_internal.jpg" class="div-img">
+          </div>
         </div>
-      </div>
-      <div class=" col-sm-3 ml-auto">
-        <div class="detail-box">
-          <h5>Pengarahan dan Pengawasan Program Kerja </h5>
-          <p class="detail-box">Memberikan pengarahan dan pengawasan baik secara langsung maupun tidak langsung mengenai program kerja yang sedang atau akan dilaksanakan</p>
+
+        <div class="div-sec">
+          <div class="detail-judul-box">
+            <h5>Konsolidasi Eksternal</h5>
+          </div>
+          <div>
+            <p class="perataan-text">Melakukan interaksi di luar lingkungan UKM ITC MIPA Unsoed, guna untuk menjalin komunikasi dengan lingkungan luar</p>
+          </div>
+          <div>
+            <img src="asset/proker/Proker_konsolidasi_eksternal.jpg" class="div-img">
+          </div>
         </div>
-        <div class="detail-box1">
-          <img src="asset/" style="height: 200px; width: 300px;">
-    </div>
-  </div>
-              </div>
           
-            </section> 
-            <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:cornflowerblue; height: 50px; text-align: center;" ></div>
-            <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-            <div class="detail-box1">
-              <img src="asset/WhatsApp Image 2024-12-27 at 21.22.04.jpeg" style="height: 410px; padding: 20px;">
-            </div>
+        <div class="div-sec">
+          <div class="detail-judul-box">
+            <h5>Rapat Pimpinan</h5>
           </div>
+          <div>
+            <p class="perataan-text">Rapat yang dihadiri oleh pengurus harian meliputi ketua umum, wakil ketua, bendahara, dan sekretaris serta dihadiri oleh setiap kepala divisi di ITC.</p>
           </div>
-
-          <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:chocolate; height: 50px; text-align: center;" ></div>
-          <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:chocolate; height: 1310px; text-align: center;" >
-            <h2 id="divisi_teknologi">Wakil Ketua Umum</h2>
-             <p>Bertanggung jawab atas keadaan internal dan kesejahteraan pengurus
-            </p>
-             <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:chocolate; height: 50px; text-align: center;" ></div>
-             <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-              <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-                <div class="row">
-                  <div class="col-sm-3">
-                    <div class="detail_container">
-                      
-                      </div>
-                      <div class="detail-box">
-                        <h5>Musyawarah Kerja</h5>
-                        <p class="detail-box">Kegiatan yang dilakukan untuk membahas program kerja UKM ITC selama satu periode</p>
-                      </div>
-                      <div class="detail-box1">
-                        <img src="asset/" style="height: 200px; width: 300px;">
-                      </div>
-                      </div>
-      
-                      <div class=" col-sm-3 ml-auto">
-                      <div class="detail-box">
-                        <h5>KRapat Pleno</h5>
-                        <p class="detail-box">Rapat yang diselenggarakan untuk seluruh pengurus UKM ITC periode 2023 dan bertujuan untuk melaporkan tentang program kerja di setiap divisi kepada ketua umum.</p>
-                      </div>
-                      <div class="detail-box1">
-                        <img src="asset/" style="height: 200px; width: 300px;">
-                  </div>
-                </div>
-                <div class=" col-sm-3 ml-auto">
-                  <div class="detail-box">
-                    <h5>Monitoring dan Evaluasi</h5>
-                    <p class="detail-box">Kegiatan yang bertujuan untuk mengevaluasi dan monitoring setiap divisi yang ada di UKM ITC.</p>
-                  </div>
-                  <div class="detail-box1">
-                    <img src="asset/" style="height: 200px; width: 300px;">
-              </div>
-            </div>
-            <div class=" col-sm-3 ml-auto">
-              <div class="detail-box">
-                <h5>Sambang Pengurus </h5>
-                <p class="detail-box">Kegiatan ini berupa kunjungan wakil ketua umum ke setiap divisi untuk mengetahui keadaan internal divisi dengan pendekatan kelompok yang santa untuk mengetahui keadaan internal divisi dengan pendekatan kelompok yang santai.</p>
-              </div>
-              <div class="detail-box1">
-                <img src="asset/" style="height: 200px; width: 300px;">
+          <div>
+            <img src="asset/proker/Proker_rapat_pimpinan.jpg" class="div-img">
           </div>
         </div>
-                    </div>
-                
-                  </section> 
-                  <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:chocolate; height: 50px; text-align: center;" ></div>
-                  <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-                  <div class="detail-box1">
-                    <img src="asset/WhatsApp Image 2024-12-27 at 21.41.49.jpeg" style="height: 410px; padding: 20px;">
-                  </div>
-                </div>
-                </div>
-      
-
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:brown; height: 50px; text-align: center;" ></div>
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:brown; height: 1630px; text-align: center;" >
-      <h2 id="divisi_teknologi">Sekretaris</h2>
-       <p>Sekretaris bertanggung jawab atas inventaris dan kesekretariatan UKM ITC MIPA Unsoed</p>
-       <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:brown; height: 50px; text-align: center;" ></div>
-       <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-        <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="detail_container">
-                
-                </div>
-                <div class="detail-box">
-                  <h5>Pengarsipan Dokumen </h5>
-                  <p class="detail-box">Pengarsipan dokumen dilakukan dengan memasukkan seluruh dokumen mulai dari surat-surat, proposal, LPJ, dan notulensi ke dalam Google Drive. 
-                  </p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-                </div>
-                </div>
-
-                <div class=" col-sm-4 ml-auto">
-                <div class="detail-box">
-                  <h5>Forum Sekretaris Divisi </h5>
-                  <p class="detail-box">Forum sekretaris divisi dilaksanakan untuk menyampaikan alur keadministrasian dan tata cara penulisan surat-surat, proposal, dan LPJ.
-                  </p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-            </div>
-          </div>
-          <div class=" col-sm-4 ml-auto">
-            <div class="detail-box">
-              <h5>Inventaris </h5>
-              <p class="detail-box">Inventaris dilakukan untuk mengelola dan mendata seluruh barang-barang inventaris UKM ITC MIPA Unsoed dengan pemberian label dan penomoran pada setiap barang. </p>
-            </div>
-            <div class="detail-box1">
-              <img src="asset/" style="height: 200px; width: 300px;">
-        </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="detail_container">
-        </div>
-        <div class="detail-box">
-          <h5>Piket Sekertariat </h5>
-          <p class="detail-box">Piket yang dilaksanankan oleh seluruh pengurus UKM ITC MIPA Unsoud  dengan membagi pengurus menjadi 4 kelompok dan dijadwalkan perminggu 
-          </p>
-        </div>
-        <div class="detail-box1">
-          <img src="asset/" style="height: 200px; width: 300px;">
-        </div>
-        </div>
-
-      <div class=" col-sm-4 ml-auto">
-      <div class="detail-box">
-        <h5>Database Pengurus dan Database Anggota </h5>
-        <p class="detail-box">Mendata pengurus dan anggota UKM ITC MIPA Unsoed dengan data pribadi awal periode.
-        </p>
-      </div>
-      <div class="detail-box1">
-        <img src="asset/" style="height: 200px; width: 300px;">
-      </div>
-      </div>
-      <div class=" col-sm-4 ml-auto">
-      <div class="detail-box">
-        <h5>Time Table </h5>
-        <p class="detail-box">Berisi tanggal tanggal penting yang akan dilaksanakan oleh pengurus UKM ITC MIPA Unsoed</p>
-      </div>
-      <div class="detail-box1">
-        <img src="asset/" style="height: 200px; width: 300px;">
-      </div>
-      </div>
-    </div>
-
-      </section> 
-      <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:brown; height: 50px; text-align: center;" ></div>
-      <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-      <div class="detail-box1">
-        <img src="asset/WhatsApp Image 2024-12-27 at 19.08.38.jpeg" style="height: 410px; padding: 20px;">
-        <img src="asset/WhatsApp Image 2024-12-27 at 19.08.39.jpeg" style="height: 410px; padding: 20px;">
-        <img src="asset/WhatsApp Image 2024-12-27 at 19.08.40.jpeg" style="height: 410px; padding: 20px;">
-      </div>
-      </div>
-
-    
-    </div>
-  </div>
-
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:palevioletred; height: 50px; text-align: center;" ></div>
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:palevioletred; height: 1220px; text-align: center;" >
-      <h2 id="divisi_teknologi">Bendahara</h2>
-       <p>Divisi yang bertanggung jawab atas pengelolaan keuangan UKM ITC MIPA Unsoed</p>
-       <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:palevioletred; height: 50px; text-align: center;" ></div>
-       <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-        <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="detail_container">
-                
-                </div>
-                <div class="detail-box">
-                  <h5>Pengadaan Kas</h5>
-                  <p class="detail-box">Menyediakan dana tambahan untuk kegiatan dan kesejahteraan pengurus.
-                  </p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-                </div>
-                </div>
-
-                <div class=" col-sm-4 ml-auto">
-                <div class="detail-box">
-                  <h5>Pengalokasian Dana</h5>
-                  <p class="detail-box">Mengatur pemasukan dana dari berbagai sumber, termasuk MIPA dan kas pengurus
-                  </p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-            </div>
-          </div>
-          <div class=" col-sm-4 ml-auto">
-            <div class="detail-box">
-              <h5>Laporan Keuangan</h5>
-              <p class="detail-box">Melaporkan transaksi keuangan, baik pemasukan maupun pengeluaran, kepada pengurus UKM ITC MIPA Unsoed.</p>
-            </div>
-            <div class="detail-box1">
-              <img src="asset/" style="height: 200px; width: 300px;">
-        </div>
-      </div>
-      
-      </section> 
-      <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:palevioletred; height: 50px; text-align: center;" ></div>
-      <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-        <div class="detail-box1">
-          <img src="asset/WhatsApp Image 2024-12-27 at 19.58.33 (1).jpeg" style="height: 410px; padding: 20px;">
-          <img src="asset/WhatsApp Image 2024-12-27 at 19.58.33.jpeg" style="height: 410px; padding: 20px;">
-          <img src="asset/WhatsApp Image 2024-12-27 at 19.58.34.jpeg" style="height: 410px; padding: 20px;">
-        </div>
-        </div>
-    </div>
-  </div>
-
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:blueviolet; height: 50px; text-align: center;" ></div>
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:blueviolet; height: 1550px; text-align: center;" >
-      <h2 id="divisi_teknologi">Divisi Informasi</h2>
-       <p>Divisi yang bertanggung jawab Bertanggung jawab mengelola serta mengembangkan pers dan media</p>
-       <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:blueviolet; height: 50px; text-align: center;" ></div>
-       <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-        <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="detail_container">
-                
-                </div>
-                <div class="detail-box">
-                  <h5>Mading</h5>
-                  <p class="detail-box">Mading ini biasanya membahas tentang teknologi terbaru dan kegiatan UKM ITC MIPA Unsoed.</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-                </div>
-                </div>
-
-                <div class=" col-sm-4 ml-auto">
-                <div class="detail-box">
-                  <h5>Media Sosial</h5>
-                  <p class="detail-box">Media sosial ini merupakan proker untuk menyebarluaskan informasi tentang kegiatan UKM ITC dan teknologi melalui media sosial.
-                  </p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/" style="height: 200px; width: 300px;">
-            </div>
-          </div>
-          <div class=" col-sm-4 ml-auto">
-            <div class="detail-box">
-              <h5>Whats's In </h5>
-              <p class="detail-box">Program kerja yang menyediakan informasi terbaru seputar teknologi, dijadwalkan oleh pengurus</p>
-            </div>
-            <div class="detail-box1">
-              <img src="asset/" style="height: 200px; width: 300px;">
-        </div>
-      </div>
-      <div class=" col-sm-6 ml-auto">
-        <div class="detail-box">
-          <h5>Buletin</h5>
-          <p class="detail-box">Program kerja pembuatan majalah kecil berisi informasi teknologi dan tentang UKM ITC MIPA Unsoed.</p>
-        </div>
-        <div class="detail-box1">
-          <img src="asset/" style="height: 200px; width: 300px;">
-    </div>
-  </div>
-  <div class=" col-sm-6 ml-auto">
-    <div class="detail-box">
-      <h5>Video Project</h5>
-      <p class="detail-box">Program kerja membuat video yang berisi profil untuk branding UKM ITC.</p>
-    </div>
-    <div class="detail-box1">
-      <img src="asset/" style="height: 200px; width: 300px;">
-              </div>
-      </div>
-          </div>
-      </section> 
-      <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:blueviolet; height: 50px; text-align: center;" ></div>
-      <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-    <div class="slider" reverse="true" style="
-        --width: 300px;
-        padding-top: 20px;
-        --height: 700px;
-        --quantity: 7;
-    ">
-        <div class="list">
-            <div class="item" style="--position: 1"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.29.jpeg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.30 (1).jpeg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.30 (2).jpeg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.30 (3).jpeg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.30.jpeg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.31 (1).jpeg" alt=""></div>
-            <div class="item" style="--position: 7"><img src="asset/WhatsApp Image 2024-11-22 at 13.30.31.jpeg" alt=""></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:rgb(2, 96, 96); height: 50px; text-align: center;" ></div>
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:rgb(2, 96, 96); height: 1350px; text-align: center;" >
-      <h2 id="divisi_teknologi">Divisi Teknologi</h2>
-       <p>Divisi yang bertanggung jawab dalam kegiatan penelitian dan pengembangan keilmuan di bidang teknologi</p>
-       <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:rgb(2, 96, 96); height: 50px; text-align: center;" ></div>
-       <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-        <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="detail_container">
-                
-                </div>
-                <div class="detail-box">
-                  <h5>Pelatihan Pengurus dan Anggota (PPA)</h5>
-                  <p class="detail-box">Pelatihan yang diadakan dengan tujuan guna memberikan pelatihan intensif kepada pengurus dan anggota ITC terkait technological skill guna memperdalam kecakapan teknologi.</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/WhatsApp Image 2024-10-27 at 06.19.59.jpeg" style="height: 200px; width: 300px;">
-                </div>
-                </div>
-
-                <div class=" col-sm-3 ml-auto">
-                <div class="detail-box">
-                  <h5>ITC CLASS</h5>
-                  <p class="detail-box">Pelatihan yang disajikan dalam bentuk webinar atau workshop untuk memberikan wawasan TIK dan implementasi dari Tri Dharma Perguruan Tinggi.</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/Screenshot (1050).png" style="height: 200px; width: 300px;">
-            </div>
-          </div>
-          <div class=" col-sm-3 ml-auto">
-            <div class="detail-box">
-              <h5>Tech Talk and Learning (TTL) </h5>
-              <p class="detail-box">Program kerja yang diadakan dalam bentuk workshop untuk mengembangkan diri, baik pengurus maupun anggota dalam bidang teknologi.</p>
-            </div>
-            <div class="detail-box1">
-              <img src="asset/WhatsApp Image 2024-12-01 at 17.42.41.jpeg" style="height: 200px; width: 300px;">
-        </div>
-      </div>
-      <div class=" col-sm-3 ml-auto">
-        <div class="detail-box">
-          <h5>Web Project</h5>
-          <p class="detail-box">Program kerja pembuatan website khususnya untuk divisi teknologi yang memuat hal terkait ITC.</p>
-        </div>
-        <div class="detail-box1">
-          <img src="asset/Screenshot (28).png" style="height: 200px; width: 300px;">
-    </div>
-  </div>
-              </div>
           
-      </section> 
-      <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:rgb(2, 96, 96); height: 50px; text-align: center;" ></div>
-      <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-    <div class="slider" reverse="true" style="
-        --width: 300px;
-        padding-top: 20px;
-        --height: 700px;
-        --quantity: 7;
-    ">
-        <div class="list">
-            <div class="item" style="--position: 1"><img src="asset/WhatsApp Image 2024-10-26 at 23.24.22.jpeg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="asset/WhatsApp Image 2024-10-26 at 23.24.23.jpeg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="asset/WhatsApp Image 2024-10-26 at 23.37.31.jpeg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="asset/WhatsApp Image 2024-10-26 at 23.24.24 (1).jpeg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="asset/WhatsApp Image 2024-10-26 at 23.24.24.jpeg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="asset/WhatsApp Image 2024-10-26 at 23.24.25.jpeg" alt=""></div>
-            <div class="item" style="--position: 7"><img src="asset/WhatsApp Image 2024-10-26 at 23.24.24 (3).jpeg" alt=""></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:#337ab7; height: 50px; text-align: center;" ></div>
-    <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:#337ab7; height: 1300px; text-align: center;" >
-      <h2 id="divisi_teknologi">Divisi Komunikasi</h2>
-       <p>Divisi yang bertanggung jawab terhadap pengabdian masyarakat dan jaringan eksternal</p>
-       <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:#337ab7; height: 50px; text-align: center;" ></div>
-       <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-        <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="detail_container">
-                
-                </div>
-                <div class="detail-box">
-                  <h5>Study Banding</h5>
-                  <p class="detail-box">Suatu kegiatan mengunjungi atau menemui objek lain dengan tujuan menambah wawasan dan pengetahuan.</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/WhatsApp Image 2024-10-27 at 07.26.37.jpeg" style="height: 200px; width: 300px;">
-                </div>
-                </div>
-
-                <div class=" col-sm-4 ml-auto">
-                <div class="detail-box">
-                  <h5>Technology Training</h5>
-                  <p class="detail-box"> Berupa pelatihan dengan pembicara dari luar yang bertujuan untuk memberikan wawasan dan pengalaman bagi mahasiswa dalam bidang teknologi informasi agar nantinya siap terjun dalam dunia kerja.</p>
-                </div>
-                <div class="detail-box1">
-                  <img src="asset/WhatsApp Image 2024-10-27 at 07.29.57.jpeg" style="height: 200px; width: 300px;">
-            </div>
+        <div class="div-sec">
+          <div class="detail-judul-box">
+            <h5>Pengarahan dan Pengawasan Program Kerja</h5>
           </div>
-          <div class=" col-sm-4 ml-auto">
-            <div class="detail-box">
-              <h5>Pendelegasian </h5>
-              <p class="detail-box">Berperan aktif mengikuti dan mensukseskan kegiatan di luar UKM ITC serta menjalin silaturahmi antar lembaga.</p>
-            </div>
-            <div class="detail-box1">
-              <img src="asset/WhatsApp Image 2024-10-27 at 07.36.47.jpeg" style="height: 200px; width: 300px;">
-        </div>
-      </div>
-              </div>
-          
-      </section> 
-      <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:#337ab7; height: 50px; text-align: center;" ></div>
-      <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-    <div class="slider" reverse="true" style="
-        --width: 300px;
-        padding-top: 20px;
-        --height: 700px;
-        --quantity: 6;
-    ">
-        <div class="list">
-            <div class="item" style="--position: 1"><img src="asset/WhatsApp Image 2024-10-27 at 07.41.34 (1).jpeg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="asset/WhatsApp Image 2024-10-27 at 07.41.34.jpeg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="asset/WhatsApp Image 2024-10-27 at 07.41.36 (1).jpeg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="asset/WhatsApp Image 2024-10-27 at 07.41.36.jpeg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="asset/WhatsApp Image 2024-10-27 at 07.41.37 (1).jpeg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="asset/WhatsApp Image 2024-10-27 at 07.41.37.jpeg" alt=""></div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-
-  <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:#b79d33; height: 50px; text-align: center;" ></div>
-  <div class="layar-dalam text-light text-align" style="margin-top: 0px; background-color:#b79d33; height: 1750px; text-align: center;" >
-    <h2 id="divisi_teknologi">Divisi Pengembangan</h2>
-     <p>Divisi yang bertanggung jawab untuk menangani regenerasi organisasi, membantu wakil ketua umum 
-      atas kesejahteraan pengurus, dan bertanggung jawab terhadap sistem keanggotaan</p>
-     <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:#b79d33; height: 50px; text-align:center;" ></div>
-     <section class="spcl_section text-dark bg-light" style=" text-align:justify;">
-      <div class="container" style="text-align: center;"><h3>Program kerja</h3>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="detail_container">
-              
-              </div>
-              <div class="detail-box">
-                <h5>Upgrading</h5>
-                <p class="detail-box">suatu kegiatan pelatihan peningkatan mutu pengetahuan dan pengalaman organisasi.</p>
-              </div>
-              <div class="detail-box1">
-                <img src="asset/" style="height: 200px; width: 300px;">
-              </div>
-              </div>
-
-              <div class=" col-sm-4 ml-auto">
-              <div class="detail-box">
-                <h5>MEGO</h5>
-                <p class="detail-box">Program kerja ini berupa magang di UKM ITC saat laboratorium dan diakhiri dengan Grand Opening. Kegiatan yang berfungsi sebagai sarana bagi mahasiswa yang berkeinginan untuk berorganisasi dan mengembangkan minat serta bakatnya di bidang teknologi, informasi, dan komunikasi.</p>
-              </div>
-              <div class="detail-box1">
-                <img src="asset/" style="height: 200px; width: 300px;">
+          <div>
+            <p class="perataan-text">Memberikan pengarahan dan pengawasan baik secara langsung maupun tidak langsung mengenai program kerja yang sedang atau akan dilaksanakan</p>
+          </div>
+          <div>
+            <img src="asset/proker/Proker_pengarahan_dan_pengawasan_program_kerja.jpg" class="div-img">
           </div>
         </div>
-        <div class=" col-sm-4 ml-auto">
-          <div class="detail-box">
-            <h5>Diesnatalis </h5>
-            <p class="detail-box">suatu kegiatan yang bertujuan untuk memperingati lahirnya ITC.</p>
-          </div>
-          <div class="detail-box1">
-            <img src="asset/" style="height: 200px; width: 300px;">
       </div>
-    </div>
-            </div>
-
-            <div class="row" style="padding-top: 20px;">
-              <div class="col-sm-6">
-                <div class="detail_container">
-                  
-                  </div>
-                  <div class="detail-box">
-                    <h5>KUBA</h5>
-                    <p class="detail-box">Suatu kegiatan untuk menjalin silaturahmi sesama anggota baru UKM ITC dan merupakan tindak lanjut dari acara GO (Grand Opening)</p>
-                  </div>
-                  <div class="detail-box1">
-                    <img src="asset/" style="height: 200px; width: 300px;">
-                  </div>
-                  </div>
-    
-                  <div class=" col-sm-6 ml-auto">
-                  <div class="detail-box">
-                    <h5>Musyawarah Anggota</h5>
-                    <p class="detail-box"> Kegiatan rutin yang dilaksanakan setiap akhir periode. Kegiatan Musyawarah Anggota membahas tentang Anggaran Dasar (AD), Anggaran Rumah Tangga (ART), Garis-garis Besar Haluan Organisasi (GBHO), Struktur dan Tata Kerja Organisasi (STKO). Selain itu, pemilihan ketua umum dan pemilihan Dewan Pertimbangan Organisasi (DPO), serta laporan pertanggungjawaban.</p>
-                  </div>
-                  <div class="detail-box1">
-                    <img src="asset/" style="height: 200px; width: 300px;">
-              </div>
-                </div>
-        
     </section> 
-    <div class="layar-dalam text-light text-align" style="margin-top: 10px; background-color:#b79d33; height: 50px; text-align: center;" ></div>
-    <div class="container" style="text-align: center;"><h3>Daftar Pengurus</h3>
-  <div class="slider" reverse="true" style="
-      --width: 300px;
-      padding-top: 20px;
-      --height: 700px;
-      --quantity: 8;
-  ">
-      <div class="list">
-          <div class="item" style="--position: 1"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.12 (1).jpeg" alt=""></div>
-          <div class="item" style="--position: 2"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.12 (2).jpeg" alt=""></div>
-          <div class="item" style="--position: 3"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.12.jpeg" alt=""></div>
-          <div class="item" style="--position: 4"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.13 (1).jpeg" alt=""></div>
-          <div class="item" style="--position: 5"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.13 (2).jpeg" alt=""></div>
-          <div class="item" style="--position: 6"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.13.jpeg" alt=""></div>
-          <div class="item" style="--position: 7"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.14.jpeg" alt=""></div>
-          <div class="item" style="--position: 8"><img src="asset/WhatsApp Image 2024-12-01 at 18.14.11.jpeg" alt=""></div>
+  </div>
+
+<!-- Wakil Ketua Umum Section -->
+<div class="div-main-container color-wakil-ketua text-light text-align">
+  <h2 id="wakil_ketua">Wakil Ketua Umum</h2>
+  <p class="perataan-tengah-text">Bertanggung jawab atas keadaan internal dan kesejahteraan pengurus</p>
+  
+  <div class="text-light text-align" style="margin-top: 10px; background-color: chocolate; height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Musyawarah Kerja</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Kegiatan yang dilakukan untuk membahas program kerja UKM ITC selama satu periode</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Rapat Pleno</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Rapat yang diselenggarakan untuk seluruh pengurus UKM ITC periode 2023 dan bertujuan untuk melaporkan tentang program kerja di setiap divisi kepada ketua umum.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Monitoring dan Evaluasi</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Kegiatan yang bertujuan untuk mengevaluasi dan monitoring setiap divisi yang ada di UKM ITC.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Sambang Pengurus</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Kegiatan ini berupa kunjungan wakil ketua umum ke setiap divisi untuk mengetahui keadaan internal divisi dengan pendekatan kelompok yang santai.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
 
-</main>
+<!-- Sekretaris Section -->
+<div class="div-main-container color-sekretaris text-light text-align">
+  <h2 id="sekretaris">Sekretaris</h2>
+  <p class="perataan-tengah-text">Sekretaris bertanggung jawab atas inventaris dan kesekretariatan UKM ITC MIPA Unsoed</p>
 
+  <div class="text-light text-align" style="margin-top: 10px; background-color: brown; height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Pengarsipan Dokumen</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Pengarsipan dokumen dilakukan dengan memasukkan seluruh dokumen mulai dari surat-surat, proposal, LPJ, dan notulensi ke dalam Google Drive.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Forum Sekretaris Divisi</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Forum sekretaris divisi dilaksanakan untuk menyampaikan alur keadministrasian dan tata cara penulisan surat-surat, proposal, dan LPJ.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Inventaris</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Inventaris dilakukan untuk mengelola dan mendata seluruh barang-barang inventaris UKM ITC MIPA Unsoed dengan pemberian label dan penomoran pada setiap barang.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+    </div>
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Piket Sekretariat</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Piket yang dilaksanakan oleh seluruh pengurus UKM ITC MIPA Unsoed dengan membagi pengurus menjadi 4 kelompok dan dijadwalkan per minggu.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Database Pengurus dan Anggota</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Mendata pengurus dan anggota UKM ITC MIPA Unsoed dengan data pribadi awal periode.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Time Table</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Berisi tanggal-tanggal penting yang akan dilaksanakan oleh pengurus UKM ITC MIPA Unsoed.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- Bendahara Section -->
+<div class="div-main-container color-bendahara text-light text-align">
+  <h2 id="bendahara">Bendahara</h2>
+  <p class="perataan-tengah-text">Divisi yang bertanggung jawab atas pengelolaan keuangan UKM ITC MIPA Unsoed</p>
+
+  <div class="text-light text-align" style="margin-top: 10px; background-color: palevioletred; height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Pengadaan Kas</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Menyediakan dana tambahan untuk kegiatan dan kesejahteraan pengurus.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Pengalokasian Dana</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Mengatur pemasukan dana dari berbagai sumber, termasuk MIPA dan kas pengurus.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Laporan Keuangan</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Melaporkan transaksi keuangan, baik pemasukan maupun pengeluaran, kepada pengurus UKM ITC MIPA Unsoed.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Divisi Informasi Section -->
+<div class="div-main-container color-divisi-informasi text-light text-align">
+  <h2 id="divisi_informasi">Divisi Informasi</h2>
+  <p class="perataan-tengah-text">Divisi yang bertanggungjawab dalam mengelola dan mengembangkan pers dan media.</p>
+
+  <div class="text-light text-align" style="margin-top: 10px; background-color: rgb(80, 121, 0); height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Media Sosial</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja berupa informasi mengenai seputar kegiatan UKM ITC, juga memberikan informasi seputar teknologi. </p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-10-27 at 06.19.59.jpeg" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>What’s In</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja yang berisi informasi, fakta menarik, ataupun beberapa tips seputar dunia teknologi informasi dan komunikasi. Materi untuk What's In sudah dijadwalkan untuk dibuat oleh setiap pengurus UKM ITC.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Mading</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja berupa majalah dinding yang berisi informasi mengenai teknologi terbaru dan juga kegiatan-kegiatan UKM ITC MIPA Unsoed.</p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-12-01 at 17.42.41.jpeg" class="div-img">
+        </div>
+      </div>
+    </div>
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Bulletin</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja berupa pembuatan majalah kecil mengenai informasi seputar teknologi dan informasi tentang UKM ITC MIPA Unsoed.</p>
+        </div>
+        <div>
+          <img src="asset/Screenshot (28).png" class="div-img">
+        </div>
+      </div>
+      
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Video Project</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja berupa pembuatan video pendek berisi profil UKM ITC untuk lebih mengenalkan apa itu UKM ITC kepada mahasiswa baru FMIPA.</p>
+        </div>
+        <div>
+          <img src="asset/Screenshot (28).png" class="div-img">
+        </div>
+      </div>      
+    </div>
+  </section>
+</div>
+
+<!-- Divisi Teknologi Section -->
+<div class="div-main-container color-divisi-teknologi text-light text-align">
+  <h2 id="divisi_teknologi">Divisi Teknologi</h2>
+  <p class="perataan-tengah-text">Divisi yang bertanggung jawab dalam kegiatan penelitian dan pengembangan keilmuan di bidang teknologi</p>
+
+  <div class="text-light text-align" style="margin-top: 10px; background-color: rgb(2, 96, 96); height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Pelatihan Pengurus dan Anggota (PPA)</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Pelatihan yang diadakan dengan tujuan guna memberikan pelatihan intensif kepada pengurus dan anggota ITC terkait technological skill guna memperdalam kecakapan teknologi.</p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-10-27 at 06.19.59.jpeg" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>ITC CLASS</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Pelatihan yang disajikan dalam bentuk webinar atau workshop untuk memberikan wawasan TIK dan implementasi dari Tri Dharma Perguruan Tinggi.</p>
+        </div>
+        <div>
+          <img src="asset/Screenshot (1050).png" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Tech Talk and Learning (TTL)</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja yang diadakan dalam bentuk workshop untuk mengembangkan diri, baik pengurus maupun anggota dalam bidang teknologi.</p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-12-01 at 17.42.41.jpeg" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Web Project</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja pembuatan website khususnya untuk divisi teknologi yang memuat hal terkait ITC.</p>
+        </div>
+        <div>
+          <img src="asset/Screenshot (28).png" class="div-img">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Divisi Komunikasi Section -->
+<div class="div-main-container color-divisi-komunikasi text-light text-align">
+  <h2 id="divisi_komunikasi">Divisi Komunikasi</h2>
+  <p class="perataan-tengah-text">Divisi yang bertanggung jawab terhadap pengabdian masyarakat dan jaringan eksternal</p>
+
+  <div class="text-light text-align" style="margin-top: 10px; background-color: #337ab7; height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Study Banding</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Suatu kegiatan mengunjungi atau menemui objek lain dengan tujuan menambah wawasan dan pengetahuan.</p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-10-27 at 07.26.37.jpeg" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Technology Training</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Berupa pelatihan dengan pembicara dari luar yang bertujuan untuk memberikan wawasan dan pengalaman bagi mahasiswa dalam bidang teknologi informasi agar nantinya siap terjun dalam dunia kerja.</p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-10-27 at 07.29.57.jpeg" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Pendelegasian</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Berperan aktif mengikuti dan mensukseskan kegiatan di luar UKM ITC serta menjalin silaturahmi antar lembaga.</p>
+        </div>
+        <div>
+          <img src="asset/WhatsApp Image 2024-10-27 at 07.36.47.jpeg" class="div-img">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Divisi Pengembangan Section -->
+<div class="div-main-container color-divisi-pengembangan text-light text-align">
+  <h2 id="divisi_pengembangan">Divisi Pengembangan</h2>
+  <p class="perataan-tengah-text">Divisi yang bertanggung jawab untuk menangani regenerasi organisasi, membantu wakil ketua umum atas kesejahteraan pengurus, dan bertanggung jawab terhadap sistem keanggotaan</p>
+  
+  <div class="text-light text-align" style="margin-top: 10px; background-color: #b79d33; height: 50px; text-align: center;"></div>
+
+  <section class="judul-box text-dark" style="text-align:justify;">
+    <h2 class="judul-text">Program kerja</h2>
+
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Upgrading</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Suatu kegiatan pelatihan peningkatan mutu pengetahuan dan pengalaman organisasi.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>MEGO</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Program kerja ini berupa magang di UKM ITC saat laboratorium dan diakhiri dengan Grand Opening. Kegiatan yang berfungsi sebagai sarana bagi mahasiswa yang berkeinginan untuk berorganisasi dan mengembangkan minat serta bakatnya di bidang teknologi, informasi, dan komunikasi.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Diesnatalis</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Suatu kegiatan yang bertujuan untuk memperingati lahirnya ITC.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+    </div>
+    <div class="div-sec-container" style="text-align: center;">
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>KUBA</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Suatu kegiatan untuk menjalin silaturahmi sesama anggota baru UKM ITC dan merupakan tindak lanjut dari acara GO (Grand Opening).</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box">
+          <h5>Musyawarah Anggota</h5>
+        </div>
+        <div>
+          <p class="perataan-text">Kegiatan rutin yang dilaksanakan setiap akhir periode. Kegiatan Musyawarah Anggota membahas tentang Anggaran Dasar (AD), Anggaran Rumah Tangga (ART), Garis-garis Besar Haluan Organisasi (GBHO), Struktur dan Tata Kerja Organisasi (STKO). Selain itu, pemilihan ketua umum dan pemilihan Dewan Pertimbangan Organisasi (DPO), serta laporan pertanggungjawaban.</p>
+        </div>
+        <div>
+          <img src="asset/" class="div-img">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
 
     <!--Footer start-->
     <footer class="footer_section">
