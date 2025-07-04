@@ -9,7 +9,7 @@ body{
     background-position: center center;   /* agar gambar tetap di tengah */
     background-attachment: scroll; 
     padding: 20px;
-    padding-top: 65px;
+    padding-top: 60px;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 24px;
@@ -18,14 +18,13 @@ body{
     height: 100vh;
 }
 .judul-halaman  {
-    width: 200px;
+    width: 70px;
+    height: fit-content;
     color: #f4f4f4;
     background-color: #00265c;
     justify-self: left;
+    padding-top: 6px;
     border-radius: 15px;
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 15px;
     border: 2px solid rgb(255, 255, 255);
     font-family: 'Playfair Display', serif;
 }

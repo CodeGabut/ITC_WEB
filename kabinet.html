@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="css/kabinet.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+
+  <script src="script.js" defer></script>
+  <title>UKM ITC MIPA UNSOED</title>
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_scrolled" style="background-color: #3b81e200;">
+    <div class="container-fluid px-5">
+      <div style="background-color: rgba(95, 158, 160, 0); height: 40px; display: flex;">
+        <img src="./asset/Logo_ITC.png" alt="">
+      </div>
+      <a class="navbar-brand" href="index.html" style="font-size: 1rem;">ITC MIPA UNSOED</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <div>
+          <ul class="navbar-nav w-500">
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span style="margin-left: 10px;">Home</span>
+              </a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item dropdown me-5">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">KABINET</a></li>
+                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-5" href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- HEADER -->
+  <header class="kab-header-container background_header2">
+    <div class="overlay"></div>
+    <div class="kab-header">
+      <div class="logo-kabinet">
+        <img src="./asset/kabinet/header_kabinet.png" alt="Kabinet Header" class="img-logo-kabinet">
+      </div>
+      <div>
+        <button class="kab-tombol_more_info" onclick="document.getElementById('kabinet-nexabyte').scrollIntoView({ behavior: 'smooth' })">
+            MORE INFO
+        </button>        
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+    <div class="kab-main-container">
+        <div class="kab-main">
+            <div class="judul-utama">
+                <h2 class="judul-utama1" id="kabinet-nexabyte">KABINET NEXABYTE</h2>
+                <h2 class="judul-utama2">UKM ITC MIPA UNSOED</h2>
+            </div>           
+            <!-- Ketua Umum & Wakil Ketua Umum -->
+            <h3 id="ketua-wakil-ketua">Ketua Umum & Wakil Ketua Umum</h3>
+            <div class="position-1">
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('ketua').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#ketua" >
+                                <img src="asset/divisi/ITCcard_Ketum.jpg" alt="Ketua Umum" class="card-img">                        
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Fadhilah Aulia Zulfa
+                        </a>
+                        <a class="jabatan">
+                            Ketua Umum
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('wakil_ketua').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#wakil_ketua">
+                                <img src="asset/divisi/ITCcard_WaKetum.jpg" alt="Wakil Ketua" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Maya Ariyanti
+                        </a>
+                        <a class="jabatan">
+                            Wakil Ketua Umum
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sekretaris & Bendahara -->
+            <h3 id="sekretaris-bendahara">Sekretaris & Bendahara</h3>
+            <div class="position-1">
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#sekretaris" >
+                                <img src="asset/divisi/ITCcard_divsekre_kadiv.jpg" alt="Sekretaris" class="card-img">                        
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Endang Suhendar
+                        </a>
+                        <a class="jabatan">
+                            Sekretaris Umum
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#sekretaris">
+                                <img src="asset/divisi/ITCcard_divsekre_staff1.jpg" alt="sekretaris" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Nabila Farda Syandita
+                        </a>
+                        <a class="jabatan">
+                            Staff Sekretaris
+                        </a>
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#sekretaris">
+                                <img src="asset/divisi/ITCcard_divsekre_staff2.jpg" alt="sekretaris" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            M Farhan Al-Fajri
+                        </a>
+                        <a class="jabatan">
+                            Staff Sekretaris
+                        </a>                        
+                    </div>               
+                </div>
+
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#bendahara">
+                                <img src="asset/divisi/ITCcard_divbendhr_kadiv.jpg" alt="bendahara" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Hanna Salsabila A
+                        </a>
+                        <a class="jabatan">
+                            Bendahara Umum
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#bendahara">
+                                <img src="asset/divisi/ITCcard_divbendhr_staff1.jpg" alt="bendahara" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Akbar Firmansyah P A
+                        </a>
+                        <a class="jabatan">
+                            Staff Bendahara
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#bendahara">
+                                <img src="asset/divisi/ITCcard_divbendhr_staff2.jpg" alt="bendahara" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Alexandra Andini                            
+                        </a>
+                        <a class="jabatan">
+                            Staff Bendahara
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#bendahara">
+                                <img src="asset/divisi/ITCcard_divbendhr_staff3.jpg" alt="bendahara" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Naesa Deya K
+                        </a>
+                        <a class="jabatan">
+                            Staff Bendahara
+                        </a>                        
+                    </div>                     
+                </div>
+            </div>
+            <!-- Divisi Informasi -->
+            <h3 id="divisi_informasi">Divisi Informasi</h3>
+            <div class="position-1">
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi" >
+                                <img src="asset/divisi/ITCcard_divinfor_kadiv.jpg" alt="divisi_informasi" class="card-img">                        
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Murni Rahayu
+                        </a>
+                        <a class="jabatan">
+                            Kadiv Informasi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff1.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Khansa Zelda A
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff2.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Destyna Azahra S
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff3.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Tegar Nur Fahrenza
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>                        
+                    </div>                                   
+                </div>
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff4.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Maharani Hantrini
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff5.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Naila Fauziyah
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff6.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Sheva M Gibran                            
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_informasi">
+                                <img src="asset/divisi/ITCcard_divinfor_staff7.jpg" alt="divisi_informasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Yulia Fitriani
+                        </a>
+                        <a class="jabatan">
+                            Staff Informasi
+                        </a>                        
+                    </div>                     
+                </div>
+            </div>
+            <!-- Divisi Teknologi -->
+            <h3 id="divisi_teknologi">Divisi Teknologi</h3>
+            <div class="position-1">
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi" >
+                                <img src="asset/divisi/ITCcard_divtekno_kadiv.jpg" alt="divisi_teknologi" class="card-img">                        
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Sandy Aditya A P
+                        </a>
+                        <a class="jabatan">
+                            Kadiv Teknologi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff1.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Daffa Haiban Muzakki
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff2.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Dawwas Fatan Azzam
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff3.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Flora Amanda Putri
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>                        
+                    </div>                                   
+                </div>
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff4.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Hanis Firgiansyah
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff5.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Mahesa Panansang M
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff6.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Maisya Nabila                            
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_teknologi">
+                                <img src="asset/divisi/ITCcard_divtekno_staff7.jpg" alt="divisi_teknologi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Ratri Anjani
+                        </a>
+                        <a class="jabatan">
+                            Staff Teknologi
+                        </a>                        
+                    </div>                     
+                </div>
+            </div>
+            <!-- Divisi Komunikasi -->
+            <h3 id="divisi_komunikasi">Divisi Komunikasi</h3>
+            <div class="position-1">
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi" >
+                                <img src="asset/divisi/ITCcard_divkomun_kadiv.jpg" alt="divisi_komunikasi" class="card-img">                        
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Rahma Cintya Putri
+                        </a>
+                        <a class="jabatan">
+                            Kadiv Komunikasi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff1.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Ahnafia Zaneta P W
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff2.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Shohwatul Aisy M
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff3.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Amalia Nurkhikmah
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>                        
+                    </div>                                   
+                </div>
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff4.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Hening Miranti W
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff5.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Farhan Raudatul J
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff6.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Nabila Alifatul H                           
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_komunikasi">
+                                <img src="asset/divisi/ITCcard_divkomun_staff7.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            M Rafi Abdillah
+                        </a>
+                        <a class="jabatan">
+                            Staff Komunikasi
+                        </a>                        
+                    </div>                     
+                </div>
+            </div>
+            <!-- Divisi Pengembangan -->
+            <h3 id="divisi_pengembangan">Divisi Pengembangan</h3>
+            <div class="position-1">
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan" >
+                                <img src="asset/divisi/ITCcard_divpengmbngn_kadiv.jpg" alt="divisi_pengembangan" class="card-img">                        
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Anna Ramandhani
+                        </a>
+                        <a class="jabatan">
+                            Kadiv Pengembangan
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff1.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Nabila Alsa Haryanto
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff2.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Maldini Meida
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff3.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Fauzia Nur Nafsan Z
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div>                                   
+                </div>
+                <div class="position-2">
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff4.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Galih Tri Prasetyo
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff5.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Ikhlasul Amal
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff6.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Zakiyah Dwi Yuliana                           
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div> 
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff7.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Kamila Rahma
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div>
+                    <div class="position-3">
+                        <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
+                            <a href="division.html#divisi_pengembangan">
+                                <img src="asset/divisi/ITCcard_divpengmbngn_staff8.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            </a>
+                        </button>
+                        <a class="nama">
+                            Dian Prasetiyo R
+                        </a>
+                        <a class="jabatan">
+                            Staff Pengembangan
+                        </a>                        
+                    </div>                                         
+                </div>
+            </div>                                                                
+        </div>
+    </div>
+
+      <!-- Footer start -->
+      <footer class="footer_section" style="background-color: #00265c !important;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-col">
+              <div class="footer_content"></div>
+            </div>
+            <div class="col-md-4 footer-col">
+              <div class="footer_detail">
+                <a href="" class="footer-logo">ITC MIPA UNSOED</a>
+                <p>Web resmi ITC MIPA Unsoed</p>
+                <div class="footer_social">
+                  <i class="bi bi-instagram mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                  <i class="bi bi-twitter-x mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                  <i class="bi bi-linkedin mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                  <i class="bi bi-pinterest mx-3" style="font-size: 22px; cursor: pointer;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <p>&copy; <span id="displayYear"></span> All Rights Reserved By <a href="#">Tekno</a></p>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer end -->
+
+      <script>
+        const navEl = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY >= 256) {
+            navEl.classList.add('navbar_scrolled');
+          } else {
+            navEl.classList.remove('navbar_scrolled');
+          }
+        });
+      </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+              crossorigin="anonymous"></script>
+    </main>
+  </div>
+</body>
+</html>

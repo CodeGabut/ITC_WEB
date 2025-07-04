@@ -95,6 +95,16 @@ body {
   position: relative;
   z-index: 1;
 }
+.background_header2 {
+  background-image: url("/asset/bg_header_kabinet.jpg");
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 100%;                
+  position: relative;
+  z-index: 1;
+}
 #aboutus {
   scroll-margin-top: 100px; /* atau sesuai tinggi navbar kamu */
 }
