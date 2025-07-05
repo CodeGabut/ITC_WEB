@@ -138,7 +138,7 @@ body {
     width: 100%;
   }
   .konten-isi .text-about-us{
-    font-size: 18px;
+    font-size: 13px;
   }
 }
 /*Isi teks home*/
@@ -151,6 +151,16 @@ body {
 
 .spcl_section .detail-box {
   margin-bottom: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .spcl_section .detail-box {
+    font-size: 13px;
+    padding: 0 15px 0 15px
+  }
+  .text-division {
+    margin-top: 20px;
+  }
 }
 
 .spcl_section .detail-box img {
@@ -413,6 +423,18 @@ header .intro h3 {
   margin: 0;
   padding: 0;
 
+}
+header .intro img {
+  height: 200px;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  header .intro h3 {
+    font-size: 30px;
+  }
+  header .intro img {
+    height: 150px;
+  }
 }
 .tombol {
   background-color: transparent;
