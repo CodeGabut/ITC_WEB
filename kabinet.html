@@ -49,8 +49,8 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                  data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">KABINET</a></li>
-                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>
+                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>                
+                <li><a class="dropdown-item" href="kabinet.html">KABINET</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -79,6 +79,23 @@
   </header>
 
   <!-- Main content -->
+    <div class="kab-main-header  background_header3">
+        <div class="kab-main-content">
+            <div class="meaning-of-logo-box">
+                <div class="meaning-of-logo">
+                    <img class="img-meaning-of-logo" src="asset/mean_logo1.png">
+                </div>
+                <div class="meaning-of-logo">
+                    <img class="img-meaning-of-logo" src="asset/mean_logo2.png">
+                </div>
+            </div>
+            <div class="meaning-of-logo-box">
+                <div class="meaning-of-logo">
+                    <img class="img-meaning-of-logo" src="asset/mean_logo3.png">
+                </div>
+            </div>
+        </div>            
+    </div>   
     <div class="kab-main-container">
         <div class="kab-main">
             <div class="judul-utama">
@@ -681,33 +698,41 @@
         </div>
     </div>
 
-      <!-- Footer start -->
-      <footer class="footer_section" style="background-color: #00265c !important;">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 footer-col">
-              <div class="footer_content"></div>
-            </div>
-            <div class="col-md-4 footer-col">
-              <div class="footer_detail">
-                <a href="" class="footer-logo">ITC MIPA UNSOED</a>
-                <p>Web resmi ITC MIPA Unsoed</p>
-                <div class="footer_social">
-                  <i class="bi bi-instagram mx-3" style="font-size: 22px; cursor: pointer;"></i>
-                  <i class="bi bi-twitter-x mx-3" style="font-size: 22px; cursor: pointer;"></i>
-                  <i class="bi bi-linkedin mx-3" style="font-size: 22px; cursor: pointer;"></i>
-                  <i class="bi bi-pinterest mx-3" style="font-size: 22px; cursor: pointer;"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- Footer start -->
+<footer class="footer_section" style="background-color: #00265c !important;">
+  <div class="container">
+    <div class="row">
+      <!-- Kolom kosong / bisa diisi nanti -->
+      <div class="col-md-4 footer-col">
+        <div class="footer_content"></div>
+      </div>
 
-          <div class="footer-info">
-            <p>&copy; <span id="displayYear"></span> All Rights Reserved By <a href="#">Tekno</a></p>
+      <!-- Kolom tengah: logo, deskripsi, dan sosial media -->
+      <div class="col-md-4 footer-col">
+        <div class="footer_detail text-center">
+          <a href="#" class="footer-logo text-white fw-bold" style="text-decoration: none;">ITC MIPA UNSOED</a>
+          <p class="text-white mt-2">Web resmi ITC MIPA Unsoed</p>
+          <div class="footer_social mt-3">          
+            <a href="https://www.instagram.com/itcmipaunsoed/" style="font-size: 22px;"><i class="bi bi-instagram instagram"></i></a>
+            <a href="https://www.tiktok.com/@itcmipaunsoed" style="font-size: 22px;"><i class="bi bi-tiktok tiktok"></i></a>          
+            <a href="https://x.com/itc_mipaunsoed" style="font-size: 22px;"><i class="bi bi-twitter-x twitter"></i></a>
+            <a href="https://www.threads.com/@itcmipaunsoed" style="font-size: 22px;"><i class="bi bi-threads threads"></i></a>
+            <a href="https://www.linkedin.com/company/ukm-itc-mipa-unsoed" style="font-size: 22px;"><i class="bi bi-linkedin linkedin"></i></a>
+            <a href="https://www.youtube.com/@itcmipaunsoed5314" style="font-size: 22px;"><i class="bi bi-youtube youtube"></i></a>
           </div>
         </div>
-      </footer>
-      <!-- Footer end -->
+      </div>
+    </div>
+
+    <!-- Info hak cipta -->
+    <div class="footer-info text-center mt-4">
+      <p class="text-white mb-0">
+        &copy; <span id="displayYear"></span> All Rights Reserved By <a href="kabinet.html#divisi_teknologi" class="text-white fw-semibold" style="text-decoration: none; font-weight: bold;">Divisi Teknologi</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<!-- Footer end -->
 
       <script>
         const navEl = document.querySelector('.navbar');

@@ -1,55 +1,66 @@
 <!DOCTYPE html>
-<html long="en">
-   <head>
-       <meta chorset="UTF-8">
-       <meta http-equiv="X-UA-Conpatible" content=""IE=edge>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="style.css">
-           <link href="css/style.css" rel="stylesheet"/>
-           <link href="css/responsive.css" rel="stylesheet"/>
-</head>
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-       <title>UKM ITC MIPA UNSOED</title>
-   </head>
-   <body>
-     <!--Navbar start-->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand" href="#">ITC MIPA UNSOED</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+
+  <script src="script.js" defer></script>
+  <title>UKM ITC MIPA UNSOED</title>
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_scrolled" style="background-color: #3b81e200;">
+    <div class="container-fluid px-5">
+      <div style="background-color: rgba(95, 158, 160, 0); height: 40px; display: flex;">
+        <img src="./asset/Logo_ITC.png" alt="">
+      </div>
+      <a class="navbar-brand" href="#" style="font-size: 1rem;">ITC MIPA UNSOED</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <div>
+          <ul class="navbar-nav w-500">
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span style="margin-left: 10px;">Home</span>
+              </a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item dropdown me-5">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>                
+                <li><a class="dropdown-item" href="kabinet.html">KABINET</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-5" href="blog.html">Blog</a>
+            </li>
           </ul>
-          <div>
-            <ul class="navbar-nav  w-500">
-              <li class="nav-item me-5" >
-                <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house-door-fill"></i><span style="margin-left: 10px;">Home</span></a>
-              </li>
-              <li class="nav-item me-5">
-                <a class="nav-link" href="history.html">History</a>
-              </li>
-              <li class="nav-item dropdown me-5">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Profil
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">KABINET</a></li>
-                  <li><a class="dropdown-item" href="division.html">DIVISI</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link me-5" href="blog.html">Blog</a>
-              </li>
-            </ul>
-            
-          </div>
         </div>
       </div>
-    </nav>
-     <!--Navbar end-->
+    </div>
+  </nav>
+  <!-- Navbar end -->
 
       <!--Quotes start-->
       <section class="atasan" >
@@ -60,7 +71,7 @@
      <!--Text start-->
      <div class="row align-items-center text-light div-dark bg-dark mt-2" style="text-align:justify; font-family: Arial, Helvetica, sans-serif;">
       <div class="col-12 ">
-      <h1 style="margin-inline: 150px; margin-top: 100px; ">Sejarah ITC MIPA Unsoed</h1>
+      <h1 style="margin-inline: 150px; margin-top: 50px; ">Sejarah ITC MIPA Unsoed</h1>
           <p class="paragraf" style="font-size: 17px;margin-inline: 150px; justify-items: center; text-indent: 1in;">UKM ITC MIPA UNSOED merupakan sebuah unit kegiatan mahasiswa yang bergerak di bidang Ilmu Pengetahuan dan Teknologi (IPTEK). Perkembangan jaman yang begitu pesat mendorong adanya kemajuan dibidang ilmu pengetahuan dan teknologi. Perkembangan jaman yang semakin maju menuntut mahasiswa terus mengikuti perkembangan teknologi yang semakin canggih. Kemajuan teknologi juga mendorong mahasiswa-mahasiswa khususnya mahasiswa MIPA Unsoed untuk turut serta dalam usaha mengembangkan teknologi dalam lingkungan kampus.
 
             Perjuangan beberapa mahasiswa yang senantiasa tertarik dengan teknologi informasi dan komunkasi dan gemar dengan bidang komputer akhirnya membuahkan hasil. Dorongan untuk membentuk sebuah organisasi berbasis ilmu pengetahuan dan teknologi khususnya yang berhubungan dengan teknologi, informasi, dan komunikasi akhirnya terbentuk dengan adanya koordinasi dengan BEM kala itu. 20 Juni 2006 merupakan sebuah awal dari perjalan sebuah organisasi berbasis ilmu pengetahuan dan teknologi di fakultas MIPA (yang saat itu masih bernama Program Sarjana MIPA). Organisasi ini berbentuk suatu komunitas dengan nama ”ITC Community” . Sebagai ketua pertama yang dipercaya memimpin ITC Community yaitu saudara Riyadi (Kimia 2003).</p>
@@ -84,7 +95,9 @@
               15. Widha Permata Wihasti (Fisika 2019)</br>
               16. Hilman Adjie (Matematika 2020)</br>
               17. Gilang Axtria Mukti (Matematika 2021)</br>
-              18. Ihsan Farhan Maulana (Matematika 2022) </p>
+              18. Ihsan Farhan Maulana (Matematika 2022) </br>
+              19. Fadhilah Aulia Zulfa (Fisika 2023)</br>
+            </p>
         </div>
         <div class="row">
           <div class="img-box col-6">
@@ -96,54 +109,41 @@
             </div>
             <!--Text end-->
 
-     <!--Footer start-->
-     <footer class="footer_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 footer-col">
-            <div class="footer_content">
-             <!-- <h4>Reach at...</h4>
-              <div class="contact_link_box">
-                <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>Location</span></a>
-                <a href=""><i class="fa fa-phone" aria-hidden="true"></i>
-                <span>Call 08.......</span></a>
-                <a href=""><i class="fa fa-envelop" aria-hidden="true"></i>
-              <span>itcmipaunsoed@gmail.com</span></a>
-              </div>-->
-            </div>
+<!-- Footer start -->
+<footer class="footer_section" style="background-color: #00265c !important;">
+  <div class="container">
+    <div class="row">
+      <!-- Kolom kosong / bisa diisi nanti -->
+      <div class="col-md-4 footer-col">
+        <div class="footer_content"></div>
+      </div>
+
+      <!-- Kolom tengah: logo, deskripsi, dan sosial media -->
+      <div class="col-md-4 footer-col">
+        <div class="footer_detail text-center">
+          <a href="#" class="footer-logo text-white fw-bold" style="text-decoration: none;">ITC MIPA UNSOED</a>
+          <p class="text-white mt-2">Web resmi ITC MIPA Unsoed</p>
+          <div class="footer_social mt-3">          
+            <a href="https://www.instagram.com/itcmipaunsoed/" style="font-size: 22px;"><i class="bi bi-instagram instagram"></i></a>
+            <a href="https://www.tiktok.com/@itcmipaunsoed" style="font-size: 22px;"><i class="bi bi-tiktok tiktok"></i></a>          
+            <a href="https://x.com/itc_mipaunsoed" style="font-size: 22px;"><i class="bi bi-twitter-x twitter"></i></a>
+            <a href="https://www.threads.com/@itcmipaunsoed" style="font-size: 22px;"><i class="bi bi-threads threads"></i></a>
+            <a href="https://www.linkedin.com/company/ukm-itc-mipa-unsoed" style="font-size: 22px;"><i class="bi bi-linkedin linkedin"></i></a>
+            <a href="https://www.youtube.com/@itcmipaunsoed5314" style="font-size: 22px;"><i class="bi bi-youtube youtube"></i></a>
           </div>
-          <div class="col-md-4 footer-col">
-            <div class="footer_detail">
-              <a href="" class="footer-logo">
-                ITC MIPA UNSOED
-              </a>
-              <p>Web resmi ITC MIPA Unsoed
-              </p>
-              <div class="footer_social">
-                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 footer-col">
-            <div class="map_container">
-              <div class="map">
-                <div id="googleMap"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-info">
-          <p>&copy; <span id="displayYear"></span>All Rights Reserved By
-          <a href="#">Tekno</a></p>
         </div>
       </div>
-    </footer>
-    <!--Footer end-->
+    </div>
+
+    <!-- Info hak cipta -->
+    <div class="footer-info text-center mt-4">
+      <p class="text-white mb-0">
+        &copy; <span id="displayYear"></span> All Rights Reserved By <a href="kabinet.html#divisi_teknologi" class="text-white fw-semibold" style="text-decoration: none; font-weight: bold;">Divisi Teknologi</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<!-- Footer end -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
  </html>
