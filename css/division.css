@@ -106,6 +106,13 @@ body{
 }
 
 /* ===== MAIN ===== */
+.text-decoration-none {
+  text-decoration: none;
+  color: #fff;
+}
+.text-decoration-none:hover {
+  color: #00265c
+}
 .div-main-container {
     margin-top: 0px; 
     height: fit-content; 
@@ -116,7 +123,9 @@ body{
 .judul-box {
     background-color: #ffffff; /* Warna latar belakang untuk judul */
     padding: 20px;
-
+}
+.judul-box2 {
+    background-color: transparent;
 }
 .judul-text {
     text-align: center;

@@ -85,6 +85,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+/* bg index */
 .background_header {
   background-image: url("/asset/ITC_1.jpg");
   background-size: cover;       
@@ -95,6 +96,7 @@ body {
   position: relative;
   z-index: 1;
 }
+/* bg kabinet */
 .background_header2 {
   background-image: url("/asset/bg_header_kabinet.jpg");
   background-size: cover;       
@@ -105,6 +107,7 @@ body {
   position: relative;
   z-index: 1;
 }
+/* bg penjelasan logo */
 .background_header3 {
   background-image: url("/asset/bg_mean_logo.jpg");
   background-size: cover;       
@@ -115,6 +118,8 @@ body {
   position: relative;
   z-index: 1;
 }
+/* bg history .backgroun_header4 di css sendiri*/
+
 #aboutus {
   scroll-margin-top: 100px; /* atau sesuai tinggi navbar kamu */
 }
@@ -1200,7 +1205,7 @@ section.quote {
 }
 
 section.atasan {
-  background: url("/asset/IMG_7145.JPG") no-repeat;
+  background: url("/asset/ITC_4.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

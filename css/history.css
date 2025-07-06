@@ -1,0 +1,88 @@
+.his-header {
+    height: 80vh;
+}
+.his-main-container {
+    background-color: rgb(37, 41, 41);
+    padding: 45px;
+    border-top: 5px solid white;
+    z-index: 2;
+}
+.background_header4 {
+  background-image: url("/asset/ITC_4.JPG");
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 80vh;                
+  position: relative;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.his-judul {
+    padding: 0px 50px 0px 50px;
+}
+.his-judul-text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.his-isi {
+    padding: 0px 50px 0px 50px;
+}
+.perataan-text {
+    text-indent: 50px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.his-ketum-itc {
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.his-img-c {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+.his-img {
+    width: 50%;
+    padding: 10px;
+}
+.img-box {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    border: 3px solid rgb(202, 202, 202);
+    justify-self: end;
+}
+.img-box:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    transition: transform 0.3s ease; /* Transisi halus */
+}
+
+@media screen and (max-width: 768px) {
+    .his-main-container {
+        padding: 50px 20px 50px 20px;
+    }
+    .his-judul-text {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .his-judul {
+    padding: 0px;
+    }
+    .his-isi {
+    padding: 0;
+    }
+    .perataan-text {
+        font-size: 13px;
+    }
+    .his-ketum-itc-text {
+        font-size: 13px;
+    }
+    .his-img-c {
+        flex-direction: column;
+    }
+    .his-img {
+        width: 100%;
+    }
+}
