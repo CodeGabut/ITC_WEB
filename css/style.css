@@ -457,11 +457,12 @@ body {
 
 .footer-section {
     padding: 50px 100px 50px 100px;
+    background-color: #00265c;    
 }
 .footer-container {
     width: 100%;
     height: fit-content;
-    background-color: #00265c;
+
     display: flex;
     flex-direction: row;
 }
@@ -482,6 +483,7 @@ body {
 .footer-isi {
     font-weight: bold;
     margin: 10px 0 0 0;
+    color: #fff;
 }
 .sekat {
     background-color: white;
@@ -500,6 +502,7 @@ body {
 }
 .footer-copyright {
     padding: 20px 0 0 30px;
+    color: #fff;
 }
 
 /* ===== warna masing masing icon ===== */
