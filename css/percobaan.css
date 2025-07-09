@@ -1,0 +1,122 @@
+.footer-section {
+    padding: 50px 100px 50px 100px;
+}
+.footer-container {
+    width: 100%;
+    height: fit-content;
+    background-color: #00265c;
+    display: flex;
+    flex-direction: row;
+}
+.footer-img-container {
+    display: flex;
+    flex-direction: row;
+}
+.footer-bagian-kiri {
+    display: flex;
+    flex-direction: column;
+}
+.footer-img-box {
+    width: fit-content;
+}
+.footer-img{
+    height: 50px;
+}
+.footer-isi {
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+.sekat {
+    background-color: white;
+    width: 3px;
+    height: 175px;
+    margin: 0 25px 0 25px;
+}
+.footer-icon-container {
+    display: flex;
+    flex-direction: column;
+}
+.footer-icon {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-copyright {
+    padding: 20px 0 0 30px;
+}
+
+/* ===== warna masing masing icon ===== */
+.email:hover {
+  color: 	#6c757d;
+}
+
+.facebook:hover {
+  color: #1877F2;
+}
+
+.twitter:hover {
+  color: #000000;
+}
+
+.instagram:hover {
+  color: #E4405F;
+}
+
+.tiktok:hover {
+  color: #FF0000 ;
+}
+
+.linkedin:hover {
+  color: #0077B5;
+}
+
+.threads:hover {
+  color: #000000;
+}
+
+.youtube:hover {
+  color: #FF0000;
+}
+
+@media screen and (max-width: 900px){
+    .footer-section {
+        padding: 25px 10px 10px 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-img-container {
+        justify-content: center;
+    }
+    .footer-img-box {
+        width: fit-content;
+    }
+    .footer-img{
+        height: 50px;
+    }
+    .footer-isi {
+        text-align: center;
+        font-size: 13px;
+    }
+    .sekat {
+        background-color: white;
+        width: 100%;
+        height: 3px;
+        margin: 15px 0 15px 0;
+    }
+    .footer-icon-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer-icon {
+        display: flex;
+        font-size: 22px;
+        margin: 0 4px 0 4px;
+    }
+    .icon-text {
+        display: none;
+    }    
+    .footer-copyright {
+        font-size: 13px;
+    }
+}
