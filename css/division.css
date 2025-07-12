@@ -152,7 +152,7 @@ body{
     padding: 15px;
 }
 .detail-judul-box {
-    height: 70px;
+    height: 60px;
 }
 .div-img {
     width: 100%;
@@ -160,6 +160,7 @@ body{
     border-radius: 15px;
     border: 3px solid rgb(0, 0, 0);
     justify-self: end;
+    margin-bottom: 10px;
 }
 .div-img:hover {
     transform: scale(1.05); /* Efek zoom saat hover */
