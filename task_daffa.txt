@@ -3,7 +3,7 @@
   - Menambahkan button untuk mengacu ke article dan hover
   - Membuat struktur data untuk mengisi artikel2 serta logika2nya
   - Membuat deskripsi disingkatkan menjadi ...
-   -  Mmebuat fitur auto slide pada article
+   -Membuat fitur auto slide pada article
 
 
   Footer  :
@@ -17,3 +17,9 @@
   - konten
   - Writer
 
+  - memperbaiki caurosoul
+
+  - navbar, memperbaiki ketika layar mobile
+ -Membuat fungsi untuk cut data teks yang terlalu panjang
+
+ - Mengurus database ambil dari gdrive serta upload ke gdrive

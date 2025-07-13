@@ -1,0 +1,240 @@
+/* ===== HEADER ===== */
+
+.kab-header-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000; /* Add a fallback background */
+  
+}
+
+.kab-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-kabinet {
+  max-width: 750px;
+  width: 100%;
+  padding: 20px;
+}
+
+.img-logo-kabinet {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.kab-tombol_more_info {
+  background-color: transparent;
+  width: 10vw;
+  height: 3vw;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 2px 0px 2px;
+  font-size: 1vw;
+  border-radius: 4px;
+  border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .kab-tombol_more_info {
+    width: 30vw;
+    height: 7vw;
+    font-size: 3vw;
+  }
+    
+}
+
+
+
+/* ===== MAIN ===== */
+.kab-main-container {
+  background-color: #001d45;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+}
+.kab-main {
+    color:#eaeaea;
+    text-align: center;
+    padding: 20px;
+}
+
+.kab-main-header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kab-main-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.meaning-of-logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.meaning-of-logo {
+    width: 500px;
+    aspect-ratio: 4/5;
+}
+.img-meaning-of-logo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .kab-main-header {
+        height: fit-content;
+        padding: 20px;
+    }
+    .kab-main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .meaning-of-logo-box {
+        flex-direction: column;
+    }
+    .meaning-of-logo {
+        width: 300px;
+    }
+}
+
+.judul-utama {
+    margin: 30px 0 50px 0;
+}
+.judul-utama1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.judul-utama2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.kab-main h3 {
+margin-bottom: 30px;
+}
+
+#kabinet-nexabyte {
+    scroll-margin-top: 100px;
+}
+
+/* ===== Card ===== */
+
+.structure-card {
+    text-align: center;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: transparent; /* Warna latar belakang kotak */
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.structure-card:hover {
+    background-color: rgb(0, 102, 255); /* Warna latar belakang saat hover */
+    border: 2px solid rgb(0, 102, 255);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.structure-img {
+  width: 16vw;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+.card-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-img:hover {
+    transform: scale(1.05);   
+}
+.position-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.position-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.position-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .position-1 {
+        margin-bottom: 0px;
+    }
+    .position-2 {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .structure-card {
+        margin-bottom: 10px;
+    }
+    .structure-img {
+        width: 45vw; /* Mengubah lebar gambar untuk perangkat kecil */
+        aspect-ratio: 4 / 5; /* Mempertahankan rasio aspek */
+    }
+}
+
+.nama {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin-top: 5px;
+    font-size: 23px;
+    text-decoration: none;
+}
+.nama:hover {
+    color:#f1f1f1
+}
+.jabatan {
+    font-style: thin;
+    color: #f1f1f1;
+    margin-top: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+.jabatan:hover {
+    color:#f1f1f1
+}
+
+#ketua-wakil-ketua,
+#sekretaris-bendahara,
+#divisi_informasi,
+#divisi_teknologi,
+#divisi_komunikasi,
+#divisi_pengembangan {
+  scroll-margin-top: 100px;    
+}
