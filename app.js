@@ -1,3 +1,4 @@
+const { hasSubscribers } = require('diagnostics_channel');
 const express = require('express') ;
 const app = express() ; 
 const port = 3000 ; 
@@ -11,9 +12,12 @@ app.use(express.static("public"));
 mongoose.connect("mongodb+srv://daffahaibanmuzakki:majalengkaraharja@cluster0.eimhiyd.mongodb.net/Database_ITC").then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log("Connection error:", err));
 
-
+  
 const mongoSchema = new mongoose.Schema({
+
   title : String , 
+  content : String ,
+  description : String , 
   date : {
     type: Date,
     default: Date.now 
@@ -25,31 +29,99 @@ const mongoSchema = new mongoose.Schema({
     type: Boolean,
     default: true
   },
-  slug: {
-  type: String,
-  unique: true 
-}
+  slug: String
 }); 
+
+
+function getPageRange(currentPage, totalItems, itemsPerPage) {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  let startPage, endPage;
+
+  if (currentPage <= 2) {
+    startPage = 1;
+    endPage = Math.min(3, totalPages);
+  } else if (currentPage >= totalPages - 1) {
+    startPage = Math.max(totalPages - 2, 1);
+    endPage = totalPages;
+  } else {
+    startPage = currentPage;
+    endPage = currentPage + 2;
+  }
+
+  const pages = [];
+  for (let i = startPage; i <= endPage; i++) {
+    pages.push(i);
+  }
+
+  return pages;
+}
+
+function pagination(page,limit,model) {
+  page = parseInt(page)
+  const startIndex = (page-1)*limit ; 
+  const endIndex = page*limit ; 
+
+  let prev = null;
+  let next = null;
+  if (startIndex > 0) {
+    prev = {
+      page : page-1,
+      limit : limit
+    }
+  } 
+  if (endIndex < model.length) {
+     next = {
+      page : page+1,
+      limit : limit
+    }
+  } 
+  const result = model.slice(startIndex,endIndex) ;
+  return {prev,next,result,number: startIndex} ; 
+}
+
+
 
 const Article = new mongoose.model('Article',mongoSchema) ; 
 
 const newArticle = new Article({
-  title : "Ini adalah Judul Percobaan" , 
-  image: "misalkan dulu", 
+  title : "apa harus beda ya Percobaan Sahaja" , 
+  description : "Misalnya ini deskripsi",
+  content : "Percobaan ini contentnnya",
+  image: "laasdsadhh", 
   author : "dedi mulyadi" , 
-  tags: ["gacor"],
+  tags: ["gacor123"],
+  slug : "12029172000099328781122222992510"
 }) ; 
 
 
 app.get('/blog', async (req, res) => {
-  let [data1,data2] = await misal_db.find()
-  res.render('blog',{name : data1.nama})  ;
+  let data_article = await Article.find() ; 
+
+  res.render('blog', {data_article})  ;
 }) ;
 app.get('/division', async (req, res) => {
-  newArticle.save().then(() => console.log('Artikel berhasil disimpan'))
-  .catch(err => console.error('Gagal menyimpan artikel:', err));
   res.render('division')  ;
 });
+
+
+app.get('/dashboard_admin', async (req, res) => {
+  let data_article = await Article.find() ; 
+  let data_sliced = pagination(req.query.page,8,data_article) ; 
+  let data_pagination = getPageRange(req.query.page, data_article.length, 8) ; 
+
+  console.log(data_pagination);
+  
+  res.render('dashboard_admin', {data_sliced, page : req.query.page})  ;
+});
+
+
+app.get('/details_article', async (req, res) => {
+  newArticle.save().then(() => console.log('Artikel berhasil disimpan'))
+  .catch(err => console.error('Gagal menyimpan artikel:', err));
+  res.render('details_article')  ;
+});
+
+
 app.get('/fakultas', async (req, res) => {
   
   res.render('fakultas')  ;

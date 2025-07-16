@@ -1,0 +1,55 @@
+body {
+    background-image: url("/images/30969bbae6bb8931b943369fec8ab429.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #fff !important;
+}
+
+.data_details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.coloumn_details {
+    display: flex;
+    flex-direction: row;
+    border: 0.5px solid rgb(24, 24, 24);
+    flex-wrap: wrap;
+}
+
+/* KIRI (label) */
+.table1 {
+    background-color: #223155;
+    padding: 16px 24px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    flex: 1 1 200px; 
+    display: flex;
+    align-items: center;
+}
+
+
+.table2 {
+    background-color: #f8f9fa;
+    color: black;
+    padding: 16px 24px;
+    font-size: 1.2rem;
+    flex: 2 1 300px; 
+    word-break: break-word;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 576px) {
+    .coloumn_details {
+        flex-direction: column;
+    }
+
+    .table1, .table2 {
+        flex: 1 1 100%;
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+}
