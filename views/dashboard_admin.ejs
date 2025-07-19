@@ -113,12 +113,48 @@
   <div> Max storage : 20 Mb</div>
 </div>
 
-<div class="footer_font">1</div>
-<div class="footer_font">2</div>
-<div class="footer_font">3</div>
-<div class="footer_font">...</div>
-<div class="footer_font">></div>
-</div>
+
+<% if (data_sliced.prev) { %>
+  <a style="text-decoration: none; color: inherit;" href="http://localhost:3000/dashboard_admin?page=<%-(parseInt(page)-1)%>"  >
+  <div class="footer_font">&lt;</div>
+  </a>
+<% } %>
+
+
+
+<% if (page > 2 ) { %>
+   <a href="http://localhost:3000/dashboard_admin?page=1" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (Math.ceil(data_length/2) == page) { %>
+     <%- "number_currentPage" %>
+    <% } %>">1 %></div>
+  </a>
+    <div class="footer_font">...</div>
+ 
+<% } %>
+
+<% for( let index = 0; index < 3; index++ ) { %>
+  <a href="http://localhost:3000/dashboard_admin?page=<%-pagination[index]%>" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (pagination[index] == page) { %>
+     <%- "number_currentPage" %>
+    <% } %>"><%- pagination[index] %></div>
+  </a>
+<% } %>
+
+<% if (page < Math.ceil(data_length/2)-2 ) { %>
+  <div class="footer_font">...</div>
+  <a href="http://localhost:3000/dashboard_admin?page=<%-Math.ceil(data_length/2)%>" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (Math.ceil(data_length/2) == page) { %>
+     <%- "number_currentPage" %>
+    <% } %>"><%- Math.ceil(data_length/2) %></div>
+  </a>
+<% } %>
+
+<% if (data_sliced.next) { %>
+  <a style="text-decoration: none; color: inherit;" href="http://localhost:3000/dashboard_admin?page=<%-(parseInt(page)+1)%>"  >
+    <div class="footer_font">></div>
+  </div>
+  </a>
+<% } %>
 
 
 </section>

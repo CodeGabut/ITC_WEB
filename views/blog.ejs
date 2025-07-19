@@ -6,6 +6,7 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="style.css">
            <link href="css/style.css" rel="stylesheet"/>
+           <link href="css/blog.css" rel="stylesheet"/>
            <link href="css/responsive.css" rel="stylesheet"/>
            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -57,88 +58,92 @@
      <!--Navbar end-->
 
 
+<% if (page == 1) { %>
+  <section class="blog_hero"  style="background-color: #212529;display: flex;padding: 0%;aspect-ratio: 14/5;width: 100%;" >
+   
+   <div class="judul_hero" style="background-color: #00265c;width: 500px;height: 100%; display: flex;justify-content: center;align-items: center ;">
+     <div style="background-color: rgba(255, 0, 0, 0); width: 350px; height: 500px;display: flex; flex-direction: column;justify-content: center;align-content: center;">
+       <div style="color: #ccc;font-weight: bold;font-size:   clamp(20px, 5vw, 20px);width: 400px;">Judul Ini Hanyalah Percobaan</div>
+       <div style="color: #ccc;font-weight: 300;font-size:  clamp(8px, 4vw, 12px);">ITC MIPA Unsoed Merupakan sebuah unit kegiatan mahasiswa yang berada di lingkup Fakultas MIPA Unsoed yang bergerak di bidang informasi, teknologi, dan komunikasi serta di bidang Ilmu Pengetahuan dan Teknologi (IPTEK) dimana perkembangan zaman yang begitu pesat mendorong</div>
+     </div>
+   </div>
 
-     <section class="blog_hero"  style="background-color: #212529;display: flex;padding: 0%;aspect-ratio: 14/5;width: 100%;" >
+   <div class="gambar_hero" style="background-color: blue;flex-grow: 1;position: relative;">
+     <div class="layout_hero" style="background-color: #00000096; width: 100%;height: 100%;position: absolute;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+       <div class="text_gambar_hero" style="width: 100%;height: 200px;background-color: #00000000;display: none;flex-direction: column;justify-content: center;align-items: center;padding-right: 100px;padding-left: 100px;">
+         <div style="color: #ccc;font-weight: bold;font-size:  clamp(20px, 5vw, 30px);text-align: center;">Judul Ini Hanyalah Percobaan</div>
+         <div style="color: #ccc;font-weight: 300;font-size:  clamp(12px, 2.5vw, 20px);;text-align: center;">ITC MIPA Unsoed Merupakan sebuah unit kegiatan mahasiswa yang berada di lingkup Fakultas MIPA Unsoed yang bergerak di bidang informasi, teknologi, dan komunikasi serta di bidang</div>
+       </div>
       
-      <div class="judul_hero" style="background-color: #00265c;width: 500px;height: 100%; display: flex;justify-content: center;align-items: center ;">
-        <div style="background-color: rgba(255, 0, 0, 0); width: 350px; height: 500px;display: flex; flex-direction: column;justify-content: center;align-content: center;">
-          <div style="color: #ccc;font-weight: bold;font-size:   clamp(20px, 5vw, 20px);width: 400px;">Judul Ini Hanyalah Percobaan</div>
-          <div style="color: #ccc;font-weight: 300;font-size:  clamp(8px, 4vw, 12px);">ITC MIPA Unsoed Merupakan sebuah unit kegiatan mahasiswa yang berada di lingkup Fakultas MIPA Unsoed yang bergerak di bidang informasi, teknologi, dan komunikasi serta di bidang Ilmu Pengetahuan dan Teknologi (IPTEK) dimana perkembangan zaman yang begitu pesat mendorong</div>
-        </div>
-      </div>
-
-      <div class="gambar_hero" style="background-color: blue;flex-grow: 1;position: relative;">
-        <div class="layout_hero" style="background-color: #00000096; width: 100%;height: 100%;position: absolute;display: flex;justify-content: center;align-items: center;flex-direction: column;">
-          <div class="text_gambar_hero" style="width: 100%;height: 200px;background-color: #00000000;display: none;flex-direction: column;justify-content: center;align-items: center;padding-right: 100px;padding-left: 100px;">
-            <div style="color: #ccc;font-weight: bold;font-size:  clamp(20px, 5vw, 30px);text-align: center;">Judul Ini Hanyalah Percobaan</div>
-            <div style="color: #ccc;font-weight: 300;font-size:  clamp(12px, 2.5vw, 20px);;text-align: center;">ITC MIPA Unsoed Merupakan sebuah unit kegiatan mahasiswa yang berada di lingkup Fakultas MIPA Unsoed yang bergerak di bidang informasi, teknologi, dan komunikasi serta di bidang</div>
-          </div>
-         
-        </div>
-        
-        <img src="./asset/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" alt="" style="width: 100%; height: 100%;object-fit: cover;">
-      </div>
-     </section>
+     </div>
+     
+     <img src="./asset/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" alt="" style="width: 100%; height: 100%;object-fit: cover;">
+   </div>
+  </section>
+ 
+<% } %>
 
 
 
      
      <section class="container d-flex flex-column mt-5 " style="background-color: #21252900;display: flex;padding: 0%;aspect-ratio: 14/5;width: 100%;" >
       
-      <div class="mb-3 mx-2" style="font-size: 32px;font-weight: bold;color: #00265c;">Informasi Terbaru</div>
-
-
-      <div id="carouselExampleCaptions" class="carousel slide mx-2">
-
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"  style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px);margin-left: 10px;"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px);  margin-left: 10px;"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px); margin-left: 10px;"></button>
+       
+       
+       <% if (page == 1) { %>
+        <div class="mb-3 mx-2" style="font-size: 32px;font-weight: bold;color: #00265c;">Informasi Terbaru</div>
+        <div id="carouselExampleCaptions" class="carousel slide mx-2">
+  
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"  style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px);margin-left: 10px;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px);  margin-left: 10px;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px); margin-left: 10px;"></button>
+          </div>
+          <div class="carousel-inner">
+  
+  
+            <div class="carousel-item active">
+              <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
+                <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
+              </div>
+              <div class="carousel-caption" style="text-align: left;" >
+                <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
+                <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
+                <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
+                <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
+              </div>
+              <div class="carousel-caption" style="text-align: left;" >
+                <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
+                <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
+                <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
+                <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
+              </div>
+              <div class="carousel-caption" style="text-align: left;" >
+                <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
+                <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
+                <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+  
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-
-
-          <div class="carousel-item active">
-            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
-              <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
-            </div>
-            <div class="carousel-caption" style="text-align: left;" >
-              <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
-              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
-              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
-              <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
-            </div>
-            <div class="carousel-caption" style="text-align: left;" >
-              <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
-              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
-              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
-              <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
-            </div>
-            <div class="carousel-caption" style="text-align: left;" >
-              <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
-              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
-              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      <% } %>
   
       
 
@@ -147,29 +152,23 @@
       <div class="row row-cols-1 row-cols-md-2 g-4 " style="margin-left: 1px;margin-right: 1px;">
 
 
-        <% data_article.forEach((element,index) => { %>
-           <div class="col article_hover" style="cursor: pointer; ">
-          <div class="card margin_mobile_article" style="border: #00265c 1px solid;box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;">
-            <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
-              <img src="./asset/IMG_20240629_093800_075.jpg" class="card-img-top" alt="...">
+        <% data_sliced.result.forEach((element,index) => { %>
+          <div class="col article_hover" style="cursor: pointer; ">
+            <div class="card margin_mobile_article" style="border: #00265c 1px solid;box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3) !important;">
+              <div style="background-color: #0060e700; width: 100%;aspect-ratio: 16/9;overflow: hidden;">
+                <img src="./asset/IMG_20240629_093800_075.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><%- element.title %></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
+                <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
+              </div>
+              <div class="backround_hover <%-"article"+(index+1)%>" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -2; transition: 0.4s ease;border-radius: 5px;">
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"><%- element.title %></h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
-              <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
-            </div>
-            <div class="backround_hover <%-"article"+(index+1)%>" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -2; transition: 0.4s ease;border-radius: 5px;">
-            </div>
-          </div>
-        </div>
+          </div>  
         <% }) %>
-
-       
-
-        
-          
-        
         </div>
 
 
@@ -182,12 +181,51 @@
         </div>
         
     <div class="page_section mt-5 mb-5" style="background-color: #cccccc00;width: 100%;height: 20px; display: flex; flex-direction: row; justify-content: center;">
-      <div style="width: 20px;height: fit-content; color: #00265c; font-size: 1.2rem;margin-left: 28px; border-bottom: #00265c solid 1px;display: flex;justify-content: center;">1</div>
-      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">2</div>
-      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">3</div>
-      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">4</div>
-      <div style="width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;">...></div>
+
+
+
+       <% if (data_sliced.prev) { %>
+        <a class="link_page" href="http://localhost:3000/blog?page=<%-parseInt(page)-1%>">
+          <div class="page">&lt;</div>
+        </a>
+      <% } %>
+
+      <% if (page >2) { %>
+        <a class="link_page" href="http://localhost:3000/blog?page=1">
+          <div class="page ">1</div>
+        </a>
+        <div class="page">...</div>
+      <% } %>
+
+
+      <% for( let index = 0; index < 3; index++ ) { %>
+
+        <a href="http://localhost:3000/blog?page=<%-data_pagination[index]%>" class="link_page">
+          <div class="page <% if (data_pagination[index] == page) { %>
+           <%- "current_page" %>
+          <% } %>"><%- data_pagination[index] %></div>
+        </a>
+      <% } %>
+
+      <% if (page < totalPages-2) { %>
+        <div class="page ">...</div>
+        <a class="link_page" href="http://localhost:3000/blog?page=<%-totalPages%>">
+          <div class="page "><%- totalPages %></div>
+        </a>
+      <% } %>
+
+      <% if (data_sliced.next) { %>
+
+        <a class="link_page"  href="http://localhost:3000/blog?page=<%-parseInt(page)+1%>">
+         <div class="page">></div>
+        </a>
+       
+      <% } %>
+
+
     </div>
+
+
      </section>
 
 

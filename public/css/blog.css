@@ -1,0 +1,12 @@
+.page{
+ width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;
+}
+
+.current_page{
+    text-decoration: underline;
+    text-decoration-color: #00265c;
+}
+
+.link_page{
+    text-decoration: none;
+}

@@ -96,8 +96,10 @@ const newArticle = new Article({
 
 app.get('/blog', async (req, res) => {
   let data_article = await Article.find() ; 
-
-  res.render('blog', {data_article})  ;
+  let data_sliced = pagination(req.query.page,4,data_article) ;
+  let data_pagination = getPageRange(req.query.page, data_article.length, 4) ; 
+  console.log(data_sliced);
+  res.render('blog', {data_sliced,data_pagination,page : req.query.page, totalPages : Math.ceil(data_article.length / 4)})  ;
 }) ;
 app.get('/division', async (req, res) => {
   res.render('division')  ;
@@ -106,12 +108,11 @@ app.get('/division', async (req, res) => {
 
 app.get('/dashboard_admin', async (req, res) => {
   let data_article = await Article.find() ; 
-  let data_sliced = pagination(req.query.page,8,data_article) ; 
-  let data_pagination = getPageRange(req.query.page, data_article.length, 8) ; 
+  let data_sliced = pagination(req.query.page,2,data_article) ; 
+  let data_pagination = getPageRange(req.query.page, data_article.length, 2) ; 
 
-  console.log(data_pagination);
-  
-  res.render('dashboard_admin', {data_sliced, page : req.query.page})  ;
+  console.log(data_sliced);
+  res.render('dashboard_admin', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length})  ;
 });
 
 

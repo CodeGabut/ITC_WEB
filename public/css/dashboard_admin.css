@@ -39,3 +39,7 @@ background-color: #223155 !important; /* navy gelap */
      color: antiquewhite;
     font-size: clamp(0.2rem, 2.5vw, 0.6rem);
 }
+
+.number_currentPage{
+    text-decoration: underline;
+}
