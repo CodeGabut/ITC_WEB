@@ -1,0 +1,15 @@
+
+
+
+
+body {
+    background-image: url("/images/30969bbae6bb8931b943369fec8ab429.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color:  #ffff !important;
+}
+
+.container_login{
+    width: 100vw;height: 100vh; display: flex;justify-content: center; align-items: center;flex-direction: column;
+}

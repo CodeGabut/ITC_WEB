@@ -122,7 +122,7 @@
 
 
 
-<% if (page > 2 ) { %>
+<% if (page > 3 ) { %>
    <a href="http://localhost:3000/dashboard_admin?page=1" style="text-decoration: none;color: inherit;">
     <div class="footer_font <% if (Math.ceil(data_length/2) == page) { %>
      <%- "number_currentPage" %>
@@ -140,12 +140,12 @@
   </a>
 <% } %>
 
-<% if (page < Math.ceil(data_length/2)-2 ) { %>
+<% if (page < Math.ceil(data_length/8)-2 ) { %>
   <div class="footer_font">...</div>
-  <a href="http://localhost:3000/dashboard_admin?page=<%-Math.ceil(data_length/2)%>" style="text-decoration: none;color: inherit;">
-    <div class="footer_font <% if (Math.ceil(data_length/2) == page) { %>
+  <a href="http://localhost:3000/dashboard_admin?page=<%-Math.ceil(data_length/8)%>" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (Math.ceil(data_length/8) == page) { %>
      <%- "number_currentPage" %>
-    <% } %>"><%- Math.ceil(data_length/2) %></div>
+    <% } %>"><%- Math.ceil(data_length/8) %></div>
   </a>
 <% } %>
 

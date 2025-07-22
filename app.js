@@ -8,8 +8,9 @@ const path = require('path');
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb+srv://daffahaibanmuzakki:majalengkaraharja@cluster0.eimhiyd.mongodb.net/Database_ITC").then(() => console.log("Connected to MongoDB"))
+mongoose.connect("mongodb+srv://itcmipaunsoed25:salamteknosaintis@database.ppcteph.mongodb.net/").then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log("Connection error:", err));
 
   
@@ -31,6 +32,21 @@ const mongoSchema = new mongoose.Schema({
   },
   slug: String
 }); 
+
+const slugify = (text) => {
+  console.log("Ini bener?");
+  console.log(text);
+  
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')         // Ganti spasi dengan -
+    .replace(/[^\w\-]+/g, '')     // Hapus karakter non-word
+    .replace(/\-\-+/g, '-');      // Hapus duplikat tanda -
+};
+
+
 
 
 function getPageRange(currentPage, totalItems, itemsPerPage) {
@@ -79,20 +95,39 @@ function pagination(page,limit,model) {
   return {prev,next,result,number: startIndex} ; 
 }
 
-
+mongoSchema.pre('save', function(next) {
+ 
+  this.slug = slugify(this.title, { lower: true, strict: true });
+  console.log(this.slug);
+  
+  next();
+});
 
 const Article = new mongoose.model('Article',mongoSchema) ; 
 
+
+
+
 const newArticle = new Article({
-  title : "apa harus beda ya Percobaan Sahaja" , 
+  title : "apa harus beda ya Percobaan ya yaa211dsad lala" , 
   description : "Misalnya ini deskripsi",
   content : "Percobaan ini contentnnya",
   image: "laasdsadhh", 
   author : "dedi mulyadi" , 
   tags: ["gacor123"],
-  slug : "12029172000099328781122222992510"
+  
 }) ; 
 
+
+
+
+
+app.get('/tambah', async (req, res) => {
+  newArticle.save() ;
+  let data_article = await Article.find() ; 
+  console.log(data_article);
+  res.send("berhasil") ; 
+}) ;
 
 app.get('/blog', async (req, res) => {
   let data_article = await Article.find() ; 
@@ -108,8 +143,8 @@ app.get('/division', async (req, res) => {
 
 app.get('/dashboard_admin', async (req, res) => {
   let data_article = await Article.find() ; 
-  let data_sliced = pagination(req.query.page,2,data_article) ; 
-  let data_pagination = getPageRange(req.query.page, data_article.length, 2) ; 
+  let data_sliced = pagination(req.query.page,8,data_article) ; 
+  let data_pagination = getPageRange(req.query.page, data_article.length, 8) ; 
 
   console.log(data_sliced);
   res.render('dashboard_admin', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length})  ;
@@ -123,10 +158,29 @@ app.get('/details_article', async (req, res) => {
 });
 
 
+app.get('/login', async (req, res) => {
+  res.render('login')  ;
+});
+app.post('/login', async (req, res) => {
+  
+  res.send(req.body.password)  ;
+});
+
+
+
+
+
+app.get('/article', async (req, res) => {
+  
+  res.render('article')  ;
+});
+
 app.get('/fakultas', async (req, res) => {
   
   res.render('fakultas')  ;
 });
+
+
 app.get('/gallery', async (req, res) => {
   
   res.render('gallery')  ;
