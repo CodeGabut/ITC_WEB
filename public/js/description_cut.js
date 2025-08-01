@@ -5,3 +5,7 @@ console.log(teks1.length);
 
 
 console.log(teks1.slice(0,teks1.length)+"...");
+
+function cutDescription(text) {
+    return text.slice(0,28)+"..."
+}

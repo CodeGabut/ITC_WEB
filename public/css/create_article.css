@@ -1,0 +1,39 @@
+
+
+@media (max-width: 768px) {
+ 
+  .form_resvonsipe{
+flex-direction: column;
+}
+}
+
+.form_container{
+    background-color: rgba(102, 51, 153, 0) !important;
+    border-radius: 0% !important;
+    border: none !important;
+    
+    border-bottom: 2px #4e4e4e solid !important;
+    color: white !important;
+}
+
+.draft{
+  border: #245396 solid 2px !important; 
+  color: #245396 !important;
+  transition: linear 0.9;
+}
+
+.draft:hover {
+  color: rgb(255, 255, 255) !important;
+  border: white solid 2px !important;
+}
+
+.publish{
+  background-color: #003277 !important;
+  color: aliceblue !important;
+  transition: linear 0.9 !important;
+}
+
+.publish:hover{
+  background-color: #ffffff !important;
+  color: rgb(0, 0, 0) !important;
+}
