@@ -87,7 +87,7 @@ body {
 }
 /* bg index */
 .background_header {
-  
+  background-image: url('/asset/ITC_1.jpg');
   background-size: cover;       
   background-position: center;  
   background-repeat: no-repeat; 
