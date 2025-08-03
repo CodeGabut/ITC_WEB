@@ -75,6 +75,9 @@
           <button class="tombol" onclick="document.getElementById('aboutus').scrollIntoView({ behavior: 'smooth' })">
             MORE INFO
           </button>
+          <button class="tombol-spesial-blue" id="tombolJoin" style="display: none;">
+            <a href="#" style="text-decoration: none;">JOIN</a>            
+          </button>          
         </div>
       </section>
     </header>
@@ -173,7 +176,10 @@
                 </p>
                 <button class="tombol-dark" onclick="location.href='history.html'">
                   Selengkapnya
-                </button>
+                </button>    
+                <button class="tombol-spesial-blue" onclick="location.href='blog.html'">
+                  Lihat Blog          
+                </button>                                
               </div>
             </div>            
             <div class="col-md-6 col-lg-5 ml-auto" data-aos="fade-up">
@@ -199,28 +205,54 @@
             </div>            
             <div class="quote-text-box quote-box">
               <p style="align-items: center;">
-                "Kids who have never seen Peace and kids who have never seen War have different values!
-                Those who stand at the top determine what’s wrong and what’s right!
-                This very place is neutral ground! Justice will prevail, you say? But of course it will!!!
-                Whoever wins this war… Becomes Justice!”
+                "___________"
               </p>
-              <a style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Donquixote Doflamingo</a>
+              <a style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">---</a>
             </div>
           </div>
         </div>
       </section>
-      <!-- Quotes end -->
+      <!-- Quotes end -->     
+
+      <!-- History start -->
+      <section class="spcl_section layout_padding text-dark bg-light" style="text-align: left;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="detail-box">
+                <div class="heading_container text-division">
+                  <h2>KABINET</h2>
+                </div>
+                <p>
+                  Kabinet UKM ITC saat ini yaitu kabinet NEXABYTE. 
+                </p>
+                <button class="tombol-dark" onclick="location.href='kabinet.html'">
+                  Selengkapnya
+                </button>                                   
+              </div>
+            </div>            
+            <div class="col-lg-5" data-aos="fade-up">
+              <div class="quote-img-box quote-box">
+                <img class="quote-img" src="asset/Logo Nexabyte (No bg).png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- History end -->
 
 <!-- Blog start -->
+<!--
 <section class="abuabu" id="blog">
   <div class="layar-dalam text-dark">
     <h3>Latest Blog</h3>
-    <p class="ringkasan">Ini adalah beberapa program ITC yang telah terlaksana</p>
-
+    <p class="ringkasan">____________________________________________</p>
+  -->
+  <!--
     <div class="blog">
-
+  -->
       <!-- Blog item 1 -->
-      <div class="area position-relative" style="overflow: hidden;">
+  <!--    <div class="area position-relative" style="overflow: hidden;">
         <a href="#" class="stretched-link"></a>
         <div class="gambar" style="background-image: url('asset/IMG_9368.JPG');"></div>
         <div class="text">
@@ -230,9 +262,9 @@
           </article>
         </div>
       </div>
-
+    -->
       <!-- Blog item 2 -->
-      <div class="area position-relative" style="overflow: hidden;">
+<!--      <div class="area position-relative" style="overflow: hidden;">
         <a href="#" class="stretched-link"></a>
         <div class="gambar" style="background-image: url('asset/Screenshot (1050).png');"></div>
         <div class="text">
@@ -246,6 +278,7 @@
     </div>
   </div>
 </section>
+-->
 <!-- Blog end -->
 
 
@@ -338,8 +371,22 @@
       <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
       <script>
         AOS.init();
-      </script>              
+      </script>
+      
+      <script>/*
+        // Waktu mulai dan akhir dalam format UTC (tahun, bulan (0–11 dihitung dari 0), tanggal, jam, menit)
+        const mulai = new Date(2025, 7, 7, 13, 0, 0);     
+        const akhir = new Date(2025, 7, 24, 23, 59, 0);    
+
+        const sekarang = new Date();
+
+        // Cek apakah waktu sekarang berada di antara waktu mulai dan akhir
+        if (sekarang >= mulai && sekarang <= akhir) {
+          document.getElementById("tombolJoin").style.display = "inline-block";
+        } */
+      </script>
+              
     </main>
   </div>
 </body>
-</html
+</html>
