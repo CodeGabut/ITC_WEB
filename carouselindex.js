@@ -24,7 +24,7 @@ new Swiper('.card-wrapper', {
 
   breakpoints: {
 
-    1024: {
+    0: {
         slidesPerView: 3
     },        
   }
