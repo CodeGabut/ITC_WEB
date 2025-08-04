@@ -1,122 +1,105 @@
-.footer-section {
-    padding: 50px 100px 50px 100px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
-.footer-container {
-    width: 100%;
-    height: fit-content;
-    background-color: #00265c;
+
+body {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#ECEFFE, #CED6FB);
 }
-.footer-img-container {
-    display: flex;
-    flex-direction: row;
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
 }
-.footer-bagian-kiri {
-    display: flex;
-    flex-direction: column;
+
+.card-list .card-item {
+    list-style: none;
 }
-.footer-img-box {
-    width: fit-content;
-}
-.footer-img{
-    height: 50px;
-}
-.footer-isi {
-    font-weight: bold;
-    margin: 10px 0 0 0;
-}
-.sekat {
-    background-color: white;
-    width: 3px;
-    height: 175px;
-    margin: 0 25px 0 25px;
-}
-.footer-icon-container {
-    display: flex;
-    flex-direction: column;
-}
-.footer-icon {
-    font-size: 18px;
-    color: #fff;
+
+.card-list .card-item .card-link {
+    height: 400px;
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
     text-decoration: none;
-}
-.footer-copyright {
-    padding: 20px 0 0 30px;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+} 
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
 }
 
-/* ===== warna masing masing icon ===== */
-.email:hover {
-  color: 	#6c757d;
+.card-list .card-item .card-link:hover {
+    border-color: #5372f0;
 }
 
-.facebook:hover {
-  color: #1877F2;
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.twitter:hover {
-  color: #000000;
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+    padding-top: 18px;
 }
 
-.instagram:hover {
-  color: #E4405F;
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372f0;
+    border-radius: 50%;
+    margin: 30px  0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372f0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
 }
 
-.tiktok:hover {
-  color: #FF0000 ;
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #5372f0;
 }
 
-.linkedin:hover {
-  color: #0077B5;
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372f0;
 }
 
-.threads:hover {
-  color: #000000;
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
 }
 
-.youtube:hover {
-  color: #FF0000;
+.card-wrapper .swiper-slide-button {
+    color: #5372f0;
+    margin-top: -35px;
 }
 
-@media screen and (max-width: 900px){
-    .footer-section {
-        padding: 25px 10px 10px 10px;
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
     }
-    .footer-container {
-        flex-direction: column;
-    }
-    .footer-img-container {
-        justify-content: center;
-    }
-    .footer-img-box {
-        width: fit-content;
-    }
-    .footer-img{
-        height: 50px;
-    }
-    .footer-isi {
-        text-align: center;
-        font-size: 13px;
-    }
-    .sekat {
-        background-color: white;
-        width: 100%;
-        height: 3px;
-        margin: 15px 0 15px 0;
-    }
-    .footer-icon-container {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .footer-icon {
-        display: flex;
-        font-size: 22px;
-        margin: 0 4px 0 4px;
-    }
-    .icon-text {
+    .card-wrapper .swiper-slide-button {
         display: none;
-    }    
-    .footer-copyright {
-        font-size: 13px;
     }
 }
