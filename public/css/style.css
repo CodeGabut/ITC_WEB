@@ -1309,3 +1309,118 @@ section.atasan {
 .navbar {
   transition: all 0.5s !important;
 }
+
+
+#more-info {
+    scroll-margin-top: 100px;
+}
+
+.carousel-body {
+    margin: 0;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.carousel-container {
+    background: transparent;
+}
+
+.card-wrapper {
+    max-width: 1200px;
+    margin: 0 60px 5px;
+    padding: 20px 10px;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.card-list {
+  padding-left: 0px !important;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+    height: 400px;
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+} 
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #00265c;
+    transform: scale(1.05);
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+    padding-top: 18px;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #00265c;
+    border-radius: 50%;
+    margin: 30px  0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #00265c;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #00265c;
+}
+
+.swiper-pagination {
+  padding-bottom: 10px !important;
+}
+
+.card-wrapper .swipper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #00265c;
+}
+
+.card-wrapper .swipper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #00265c;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
