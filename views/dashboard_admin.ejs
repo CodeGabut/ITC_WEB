@@ -90,7 +90,14 @@
         <tr>
       <th scope="row" class="isi"><%- index + data_sliced.number +1 %></th>
       <td class="isi"><%- element.title %></td>
-      <td class="isi"><%- element.date.toLocaleDateString("id-ID")%></td>
+      <td class="isi"><%- element.date.toLocaleDateString("id-ID", {
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false 
+})%></td>
       <td class="isi"><%- element.isPublished ? 'Publish' : 'Hiden' %></td>
        <td class="isi"><div class="dropdown">
   <a  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -100,7 +107,11 @@
     <li><a class="dropdown-item" target="_blank" href="article/<%-element.slug%>"><i class="bi bi-link " style="margin-right: 5px !important;"></i>Visit</a></li>
     <li><a class="dropdown-item" href="#"><i class="bi bi-file-code " style="margin-right: 5px !important;"></i>Details</a></li>
     <li><a class="dropdown-item" href="/edit/<%-element.slug%>"><i class="bi bi-pencil " style="margin-right: 5px !important;"></i>Edit</a></li>
-    <li><a class="dropdown-item" href="/hiden/<%-element.slug%>"><i class="bi bi-eye-slash " style="margin-right: 5px !important;"></i>Hide</a></li>
+    <li>
+  <a class="dropdown-item" href="/hiden/<%= element.slug %>">
+    <%- !element.isPublished ? '<i class="bi bi-eye" style="margin-right: 5px !important;"></i> Publish': '<i class="bi bi-eye-slash" style="margin-right: 5px !important;"></i> Hide' %>
+  </a></li>
+
     <li><a class="dropdown-item"  onclick="delete_('<%- element.slug %>')" ><i class="bi bi-trash " style="margin-right: 5px !important;"></i>Delete</a></li>
   </ul>
 </div>

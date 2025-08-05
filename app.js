@@ -9,6 +9,7 @@ const cloudinary = require('cloudinary').v2 ;
 const {CloudinaryStorage} = require('multer-storage-cloudinary') ;
 const multer = require('multer');
 const session = require("express-session");
+const cherio = require('cheerio');
 const { title } = require('process');
 
 
@@ -37,13 +38,19 @@ const storage = new CloudinaryStorage({
   }
 });
 
-const upload = multer({storage})
+const upload = multer({
+  storage,
+  limits: {
+    fieldSize: 10 * 1024 * 1024 
+  }
+
+})
 
 
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true ,limit :'10mb'}));
 
 
 
@@ -209,9 +216,6 @@ app.get('/dashboard_admin',checkAuth, async (req, res) => {
   }
 
   
-
-  
-  
 });
 
 
@@ -282,11 +286,23 @@ app.get('/edit/:slug',checkAuth, async (req, res) => {
 app.post('/edit/:slug',checkAuth, upload.single('image'), async (req, res) => {
 
 
+ 
+
+const $ = cherio.load(req.body.content ); 
+
+$('img').each(function () {
+    $(this).addClass('img-quill');
+  });
+
+const newContent = $.html()
+
+console.log(newContent);
+
 
   let data = {
   title : req.body.title , 
   description : req.body.description,
-  content : req.body.content,
+  content : newContent,
   image: typeof req.file == 'undefined' ? req.body.image  : req.file.path  ,
   author : req.body.author , 
   tags: req.body.categories,
@@ -316,16 +332,23 @@ app.get('/hiden/:slug',checkAuth, upload.single('image'), async (req, res) =>{
 
 app.post('/create_article',checkAuth, upload.single('image'), async (req, res) => {
 
-  console.log(req.body);
-  
-  console.log(req.body.categories);
+  const $ = cherio.load(req.body.content ); 
+
+$('img').each(function () {
+    $(this).addClass('img-quill');
+  });
+
+const newContent = $.html()
+
+console.log(newContent);
+
 
   
 
   const newArticle = new Article({
   title : req.body.title , 
   description : req.body.description,
-  content : req.body.content,
+  content : newContent,
   image: req.file.path, 
   author : req.body.author , 
   tags: req.body.categories.split(','),

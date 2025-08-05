@@ -164,8 +164,13 @@
                 <div class="card-body">
                   <h5 class="card-title"><%- element.title %></h5>
                   <p class="card-text"><%- cutDescription(element.description)%></p>
-                  <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;">26 Desember 2025</span></p>
+                  <p class="card-text"> <i class="bi bi-clock"></i><span style="margin-left: 10px;"><%- element.date.toLocaleDateString("id-ID", {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+}); %></span></p>
                   <button type="button" class="btn btn-outline-primary" style="border: #00265c6c 1px solid; color: #ccc; background-color: #00265c;">Read More</button>
+                  <p class="tags" style="margin: 0;margin-top: 10px; color:#00265c">#<%- element.tags[0] %></p>
                 </div>
                 <div class="backround_hover <%-"article"+(index+1)%>" style="background-color: #00265c;width: 100%;height: 100%;position: absolute;z-index: -2; transition: 0.4s ease;border-radius: 5px;">
                 </div>

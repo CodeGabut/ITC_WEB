@@ -37,3 +37,21 @@ flex-direction: column;
   background-color: #ffffff !important;
   color: rgb(0, 0, 0) !important;
 }
+
+
+.toolbar{
+  color: antiquewhite !important;
+  background-color: white;
+}
+
+.ql-editor img {
+  display: block;
+  margin: 10px auto; /* center image */
+  width: 300px;
+  aspect-ratio: 16/9;
+}
+
+.editor{
+  background-color: white;
+  color: black;
+}
