@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
-  <link href="css/kabinet.css" rel="stylesheet" />
+  <link href="/css/footer.css" rel="stylesheet"/>
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/responsive.css" rel="stylesheet" />
+  <link href="/css/kabinet.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -21,47 +21,44 @@
 
 <body>
   <!-- Navbar start -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_scrolled" style="background-color: #3b81e200;">
-    <div class="container-fluid px-5">
-      <div style="background-color: rgba(95, 158, 160, 0); height: 40px; display: flex;">
-        <img src="./asset/Logo_ITC.png" alt="">
-      </div>
-      <a class="navbar-brand" href="index.html" style="font-size: 1rem;">ITC MIPA UNSOED</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-        <div>
-          <ul class="navbar-nav w-500">
-            <li class="nav-item me-5">
-              <a class="nav-link" aria-current="page" href="index.html">
-                <i class="bi bi-house-door-fill"></i>
-                <span style="margin-left: 10px;">Home</span>
-              </a>
-            </li>
-            <li class="nav-item me-5">
-              <a class="nav-link" href="history.html">History</a>
-            </li>
-            <li class="nav-item dropdown me-5">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                 data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>                
-                <li><a class="dropdown-item" href="kabinet.html">KABINET</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link me-5" href="blog.html">Blog</a>
-            </li>
+ <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
+      <div class="container-fluid px-3">
+        <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
+          <img src="./images/Logo_ITC.png" alt="">
+        </div>
+        <a class="navbar-brand" href="/main" style="font-size: 1rem;">ITC MIPA UNSOED</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
+          <div>
+            <ul class="navbar-nav  w-500">
+              <li class="nav-item me-5" >
+                <a class="nav-link" aria-current="page" href="/main"><i class="bi bi-house-door-fill"></i><span style="margin-left: 10px;">Home</span></a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="/history" >History</a>
+              </li>
+              <li class="nav-item dropdown me-5">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profil
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/kabinet">KABINET</a></li>
+                  <li><a class="dropdown-item" href="/divisi">DIVISI</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-5" href="/blog">Blog</a>
+              </li>
+            </ul>
+            
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   <!-- Navbar end -->
 
   <!-- HEADER -->
@@ -69,7 +66,7 @@
     <div class="overlay"></div>
     <div class="kab-header">
       <div class="logo-kabinet">
-        <img src="./asset/kabinet/header_kabinet.png" alt="Kabinet Header" class="img-logo-kabinet">
+        <img src="./images/kabinet/header_kabinet.png" alt="Kabinet Header" class="img-logo-kabinet">
       </div>
       <div>
         <button class="kab-tombol_more_info" onclick="document.getElementById('kabinet-nexabyte').scrollIntoView({ behavior: 'smooth' })">
@@ -84,15 +81,15 @@
         <div class="kab-main-content">
             <div class="meaning-of-logo-box">
                 <div class="meaning-of-logo">
-                    <img class="img-meaning-of-logo" src="asset/mean_logo1.png">
+                    <img class="img-meaning-of-logo" src="/images/mean_logo1.png">
                 </div>
                 <div class="meaning-of-logo">
-                    <img class="img-meaning-of-logo" src="asset/mean_logo2.png">
+                    <img class="img-meaning-of-logo" src="/images/mean_logo2.png">
                 </div>
             </div>
             <div class="meaning-of-logo-box">
                 <div class="meaning-of-logo">
-                    <img class="img-meaning-of-logo" src="asset/mean_logo3.png">
+                    <img class="img-meaning-of-logo" src="images/mean_logo3.png">
                 </div>
             </div>
         </div>            
@@ -109,8 +106,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('ketua').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#ketua" >
-                                <img src="asset/divisi/ITCcard_Ketum.jpg" alt="Ketua Umum" class="card-img">                        
+                            <a href="/division#ketua" >
+                                <img src="images/divisi/ITCcard_Ketum.jpg" alt="Ketua Umum" class="card-img">                        
                             </a>
                         </button>
                         <a class="nama">
@@ -122,8 +119,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('wakil_ketua').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#wakil_ketua">
-                                <img src="asset/divisi/ITCcard_WaKetum.jpg" alt="Wakil Ketua" class="card-img"> 
+                            <a href="/division#wakil_ketua">
+                                <img src="images/divisi/ITCcard_WaKetum.jpg" alt="Wakil Ketua" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -141,8 +138,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#sekretaris" >
-                                <img src="asset/divisi/ITCcard_divsekre_kadiv.jpg" alt="Sekretaris" class="card-img">                        
+                            <a href="/division#sekretaris" >
+                                <img src="images/divisi/ITCcard_divsekre_kadiv.jpg" alt="Sekretaris" class="card-img">                        
                             </a>
                         </button>
                         <a class="nama">
@@ -154,8 +151,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#sekretaris">
-                                <img src="asset/divisi/ITCcard_divsekre_staff1.jpg" alt="sekretaris" class="card-img"> 
+                            <a href="/division#sekretaris">
+                                <img src="images/divisi/ITCcard_divsekre_staff1.jpg" alt="sekretaris" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -167,8 +164,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#sekretaris">
-                                <img src="asset/divisi/ITCcard_divsekre_staff2.jpg" alt="sekretaris" class="card-img"> 
+                            <a href="/division#sekretaris">
+                                <img src="images/divisi/ITCcard_divsekre_staff2.jpg" alt="sekretaris" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -183,8 +180,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#bendahara">
-                                <img src="asset/divisi/ITCcard_divbendhr_kadiv.jpg" alt="bendahara" class="card-img"> 
+                            <a href="/division#bendahara">
+                                <img src="images/divisi/ITCcard_divbendhr_kadiv.jpg" alt="bendahara" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -196,8 +193,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#bendahara">
-                                <img src="asset/divisi/ITCcard_divbendhr_staff1.jpg" alt="bendahara" class="card-img"> 
+                            <a href="/division#bendahara">
+                                <img src="images/divisi/ITCcard_divbendhr_staff1.jpg" alt="bendahara" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -209,8 +206,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#bendahara">
-                                <img src="asset/divisi/ITCcard_divbendhr_staff2.jpg" alt="bendahara" class="card-img"> 
+                            <a href="/division#bendahara">
+                                <img src="images/divisi/ITCcard_divbendhr_staff2.jpg" alt="bendahara" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -222,8 +219,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#bendahara">
-                                <img src="asset/divisi/ITCcard_divbendhr_staff3.jpg" alt="bendahara" class="card-img"> 
+                            <a href="/division#bendahara">
+                                <img src="images/divisi/ITCcard_divbendhr_staff3.jpg" alt="bendahara" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -241,8 +238,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi" >
-                                <img src="asset/divisi/ITCcard_divinfor_kadiv.jpg" alt="divisi_informasi" class="card-img">                        
+                            <a href="/division#divisi_informasi" >
+                                <img src="images/divisi/ITCcard_divinfor_kadiv.jpg" alt="divisi_informasi" class="card-img">                        
                             </a>
                         </button>
                         <a class="nama">
@@ -254,8 +251,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff1.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff1.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -267,8 +264,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff2.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff2.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -280,8 +277,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff3.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff3.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -295,8 +292,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff4.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff4.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -308,8 +305,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff5.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff5.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -321,8 +318,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff6.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff6.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -334,8 +331,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_informasi">
-                                <img src="asset/divisi/ITCcard_divinfor_staff7.jpg" alt="divisi_informasi" class="card-img"> 
+                            <a href="/division#divisi_informasi">
+                                <img src="images/divisi/ITCcard_divinfor_staff7.jpg" alt="divisi_informasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -353,8 +350,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi" >
-                                <img src="asset/divisi/ITCcard_divtekno_kadiv.jpg" alt="divisi_teknologi" class="card-img">                        
+                            <a href="/division#divisi_teknologi" >
+                                <img src="images/divisi/ITCcard_divtekno_kadiv.jpg" alt="divisi_teknologi" class="card-img">                        
                             </a>
                         </button>
                         <a class="nama">
@@ -366,8 +363,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff1.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff1.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -379,8 +376,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff2.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff2.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -392,8 +389,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff3.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff3.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -407,8 +404,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff4.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff4.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -420,8 +417,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff5.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff5.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -433,8 +430,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff6.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff6.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -446,8 +443,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_teknologi">
-                                <img src="asset/divisi/ITCcard_divtekno_staff7.jpg" alt="divisi_teknologi" class="card-img"> 
+                            <a href="/division#divisi_teknologi">
+                                <img src="images/divisi/ITCcard_divtekno_staff7.jpg" alt="divisi_teknologi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -465,8 +462,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi" >
-                                <img src="asset/divisi/ITCcard_divkomun_kadiv.jpg" alt="divisi_komunikasi" class="card-img">                        
+                            <a href="/division#divisi_komunikasi" >
+                                <img src="images/divisi/ITCcard_divkomun_kadiv.jpg" alt="divisi_komunikasi" class="card-img">                        
                             </a>
                         </button>
                         <a class="nama">
@@ -478,8 +475,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff1.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff1.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -491,8 +488,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff2.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff2.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -504,8 +501,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff3.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff3.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -519,8 +516,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff4.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff4.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -532,8 +529,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff5.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff5.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -545,8 +542,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff6.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff6.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -558,8 +555,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_komunikasi">
-                                <img src="asset/divisi/ITCcard_divkomun_staff7.jpg" alt="divisi_komunikasi" class="card-img"> 
+                            <a href="/division#divisi_komunikasi">
+                                <img src="images/divisi/ITCcard_divkomun_staff7.jpg" alt="divisi_komunikasi" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -577,8 +574,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan" >
-                                <img src="asset/divisi/ITCcard_divpengmbngn_kadiv.jpg" alt="divisi_pengembangan" class="card-img">                        
+                            <a href="/division#divisi_pengembangan" >
+                                <img src="images/divisi/ITCcard_divpengmbngn_kadiv.jpg" alt="divisi_pengembangan" class="card-img">                        
                             </a>
                         </button>
                         <a class="nama">
@@ -590,8 +587,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff1.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff1.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -603,8 +600,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff2.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff2.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -616,8 +613,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff3.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff3.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -631,8 +628,8 @@
                 <div class="position-2">
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff4.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff4.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -644,8 +641,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff5.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff5.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -657,8 +654,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff6.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff6.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -670,8 +667,8 @@
                     </div> 
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff7.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff7.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -683,8 +680,8 @@
                     </div>
                     <div class="position-3" data-aos="fade-up">
                         <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-                            <a href="division.html#divisi_pengembangan">
-                                <img src="asset/divisi/ITCcard_divpengmbngn_staff8.jpg" alt="divisi_pengembangan" class="card-img"> 
+                            <a href="/division#divisi_pengembangan">
+                                <img src="images/divisi/ITCcard_divpengmbngn_staff8.jpg" alt="divisi_pengembangan" class="card-img"> 
                             </a>
                         </button>
                         <a class="nama">
@@ -706,13 +703,13 @@
     <div class="footer-bagian-kiri">
       <div class="footer-img-container">
         <div class="footer-img-box">
-          <img src="asset/Logo_Unsoed.png" class="footer-img"/>
+          <img src="images/Logo_Unsoed.png" class="footer-img"/>
         </div>
         <div class="footer-img-box">
-          <img src="asset/Logo_ITC.png" class="footer-img"/>
+          <img src="images/Logo_ITC.png" class="footer-img"/>
         </div>
         <div class="footer-img-box">
-          <img src="asset/Logo Nexabyte (No bg).png" class="footer-img"/>
+          <img src="images/Logo Nexabyte (No bg).png" class="footer-img"/>
         </div>            
       </div>
       <div class="footer-isi">

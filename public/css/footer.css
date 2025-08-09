@@ -1,7 +1,9 @@
 .footer-section {
+   
     padding: 50px 100px 50px 100px;
     background-color: #00265c !important;
     color: white;
+    margin: 0 !important;
 }
 .footer-container {
     width: 100%;

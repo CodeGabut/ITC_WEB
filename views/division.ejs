@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="css/style.css" rel="stylesheet" />
+  <link href="/css/footer.css" rel="stylesheet"/>
   <link href="css/responsive.css" rel="stylesheet" />
   <link href="css/division.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -21,47 +22,44 @@
 
 <body>
   <!-- Navbar start -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar_scrolled" style="background-color: #3b81e200;">
-    <div class="container-fluid px-5">
-      <div style="background-color: rgba(95, 158, 160, 0); height: 40px; display: flex;">
-        <img src="./asset/Logo_ITC.png" alt="">
-      </div>
-      <a class="navbar-brand" href="index.html" style="font-size: 1rem;">ITC MIPA UNSOED</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-        <div>
-          <ul class="navbar-nav w-500">
-            <li class="nav-item me-5">
-              <a class="nav-link" aria-current="page" href="index.html">
-                <i class="bi bi-house-door-fill"></i>
-                <span style="margin-left: 10px;">Home</span>
-              </a>
-            </li>
-            <li class="nav-item me-5">
-              <a class="nav-link" href="history.html">History</a>
-            </li>
-            <li class="nav-item dropdown me-5">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                 data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="division.html">DIVISI</a></li>                
-                <li><a class="dropdown-item" href="kabinet.html">KABINET</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link me-5" href="blog.html">Blog</a>
-            </li>
+ <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
+      <div class="container-fluid px-3">
+        <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
+          <img src="./images/Logo_ITC.png" alt="">
+        </div>
+        <a class="navbar-brand" href="/main" style="font-size: 1rem;">ITC MIPA UNSOED</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
+          <div>
+            <ul class="navbar-nav  w-500">
+              <li class="nav-item me-5" >
+                <a class="nav-link" aria-current="page" href="/main"><i class="bi bi-house-door-fill"></i><span style="margin-left: 10px;">Home</span></a>
+              </li>
+              <li class="nav-item me-5">
+                <a class="nav-link" href="/history" >History</a>
+              </li>
+              <li class="nav-item dropdown me-5">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profil
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/kabinet">KABINET</a></li>
+                  <li><a class="dropdown-item" href="/divisi">DIVISI</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-5" href="/blog">Blog</a>
+              </li>
+            </ul>
+            
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   <!-- Navbar end -->
   <!-- Struktur mulai -->
 </head>
@@ -72,24 +70,24 @@
       <div class="position-2">
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('ketua').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_Ketum.jpg" alt="Ketua Umum" class="card-img">
+              <img src="/images/divisi/ITCcard_Ketum.jpg" alt="Ketua Umum" class="card-img">
             </button>
         </div>
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('wakil_ketua').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_WaKetum.jpg" alt="Wakil Ketua" class="card-img">
+              <img src="/images/divisi/ITCcard_WaKetum.jpg" alt="Wakil Ketua" class="card-img">
             </button>
         </div>
       </div>
       <div class="position-2">
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('sekretaris').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_divsekre.jpg" alt="Sekretaris" class="card-img">
+              <img src="/images/divisi/ITCcard_divsekre.jpg" alt="Sekretaris" class="card-img">
             </button>
         </div>
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('bendahara').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_divbendhr.jpg" alt="Bendahara" class="card-img">
+              <img src="/images/divisi/ITCcard_divbendhr.jpg" alt="Bendahara" class="card-img">
             </button>
         </div>
       </div>
@@ -98,25 +96,25 @@
       <div class="position-2">
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('divisi_informasi').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_divinfor.jpg" alt="Informasi" class="card-img">
+              <img src="/images/divisi/ITCcard_divinfor.jpg" alt="Informasi" class="card-img">
             </button>
         </div>         
 
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('divisi_teknologi').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_divtekno.jpg" alt="Teknologi" class="card-img">
+              <img src="/images/divisi/ITCcard_divtekno.jpg" alt="Teknologi" class="card-img">
             </button>
         </div>
       </div>
       <div class="position-2">
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('divisi_komunikasi').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_divkomun.jpg" alt="Komunikasi" class="card-img">
+              <img src="/images/divisi/ITCcard_divkomun.jpg" alt="Komunikasi" class="card-img">
             </button>
         </div>
         <div>
             <button class="structure-card structure-img" onclick="document.getElementById('divisi_pengembangan').scrollIntoView({ behavior: 'smooth' })">
-              <img src="asset/divisi/ITCcard_divpengmbngn.jpg" alt="Pengembangan" class="card-img">
+              <img src="/images/divisi/ITCcard_divpengmbngn.jpg" alt="Pengembangan" class="card-img">
             </button>
         </div>       
       </div>
@@ -134,7 +132,7 @@
       </a>      
     </div>
     
-    <p class="perataan-tengah-text">Bertanggung jawab terhadap jalannya UKM ITC MIPA Unsoed baik internal maupun eksternal</p>
+    <p class="perataan-tengah-text">Memimpin UKM ITC MIPA Unsoed, bertanggung jawab terhadap jalannya UKM ITC MIPA Unsoed baik internal maupun eksternal, melakukan fungsi pengawasan, koordinasi, dan evaluasi internal pengurus UKM ITC MIPA Unsoed, serta bertanggung jawab dalam keputusan kebijakan organisasi dengan kesepakatan pengurus.</p>
     <div class="text-light text-align" style="margin-top: 10px; background-color:cornflowerblue; height: 50px; text-align: center;"></div>
 
     <section class="judul-box text-dark" style="text-align:justify;">
@@ -146,10 +144,10 @@
             <h5>Konsolidasi Internal</h5>              
           </div>
           <div data-aos="fade-up">
-            <p class="perataan-text">Ketua umum secara langsung maupun dibantu oleh wakil ketua dan kepala divisi melaksanakan konsolidasi internal antar pengurus selama satu periode kepengurusan di UKM ITC MIPS Unsoed</p>
-          </div>
+            <img src="/images/proker/Proker_konsolidasi_internal.jpg" class="div-img">
+          </div>          
           <div data-aos="fade-up">
-            <img src="asset/proker/Proker_konsolidasi_internal.jpg" class="div-img">
+            <p class="perataan-text">Ketua umum secara langsung maupun dibantu oleh wakil ketua dan kepala divisi melaksanakan konsolidasi internal antar pengurus selama satu periode kepengurusan di UKM ITC MIPS Unsoed</p>
           </div>
         </div>
 
@@ -158,10 +156,10 @@
             <h5>Konsolidasi Eksternal</h5>
           </div>
           <div data-aos="fade-up">
-            <p class="perataan-text">Melakukan interaksi di luar lingkungan UKM ITC MIPA Unsoed, guna untuk menjalin komunikasi dengan lingkungan luar</p>
-          </div>
+            <img src="/images/proker/Proker_konsolidasi_eksternal.jpg" class="div-img">
+          </div>          
           <div data-aos="fade-up">
-            <img src="asset/proker/Proker_konsolidasi_eksternal.jpg" class="div-img">
+            <p class="perataan-text">Melakukan interaksi di luar lingkungan UKM ITC MIPA Unsoed, guna untuk menjalin komunikasi dengan lingkungan luar</p>
           </div>
         </div>
           
@@ -170,10 +168,10 @@
             <h5>Rapat Pimpinan</h5>
           </div>
           <div data-aos="fade-up">
-            <p class="perataan-text">Rapat yang dihadiri oleh pengurus harian meliputi ketua umum, wakil ketua, bendahara, dan sekretaris serta dihadiri oleh setiap kepala divisi di ITC.</p>
-          </div>
+            <img src="/images/proker/Proker_rapat_pimpinan.jpg" class="div-img">
+          </div>          
           <div data-aos="fade-up">
-            <img src="asset/proker/Proker_rapat_pimpinan.jpg" class="div-img">
+            <p class="perataan-text">Rapat yang dihadiri oleh pengurus harian meliputi ketua umum, wakil ketua, bendahara, dan sekretaris serta dihadiri oleh setiap kepala divisi di ITC.</p>
           </div>
         </div>
           
@@ -182,10 +180,10 @@
             <h5>Pengarahan dan Pengawasan Program Kerja</h5>
           </div>
           <div data-aos="fade-up">
-            <p class="perataan-text">Memberikan pengarahan dan pengawasan baik secara langsung maupun tidak langsung mengenai program kerja yang sedang atau akan dilaksanakan</p>
-          </div>
+            <img src="/images/proker/Proker_pengarahan_dan_pengawasan_program_kerja.jpg" class="div-img">
+          </div>          
           <div data-aos="fade-up">
-            <img src="asset/proker/Proker_pengarahan_dan_pengawasan_program_kerja.jpg" class="div-img">
+            <p class="perataan-text">Memberikan pengarahan dan pengawasan baik secara langsung maupun tidak langsung mengenai program kerja yang sedang atau akan dilaksanakan</p>
           </div>
         </div>
       </div>
@@ -200,7 +198,7 @@
       </a>      
     </div>
 
-  <p class="perataan-tengah-text">Bertanggung jawab atas keadaan internal dan kesejahteraan pengurus</p>
+  <p class="perataan-tengah-text">Menggantikan fungsi Ketua Umum apabila berhalangan hadir, bertanggung jawab atas keadaan internal dan kesejahteraan pengurus UKM ITC MIPA Unsoed, serta membantu Ketua Umum melakukan pengawasan, koordinasi, dan evaluasi pengurus UKM ITC MIPA Unsoed.</p>
   
   <div class="text-light text-align" style="margin-top: 10px; background-color: chocolate; height: 50px; text-align: center;"></div>
 
@@ -213,10 +211,10 @@
           <h5>Musyawarah Kerja</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Kegiatan yang dilakukan untuk membahas program kerja UKM ITC selama satu periode</p>
-        </div>
+          <img src="/images/proker/Proker_musyawarah_kerja.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/proker/Proker_musyawarah_kerja.jpg" class="div-img">
+          <p class="perataan-text">Kegiatan yang dilakukan untuk membahas program kerja UKM ITC selama satu periode</p>
         </div>
       </div>
 
@@ -225,10 +223,10 @@
           <h5>Rapat Pleno</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Rapat yang diselenggarakan untuk seluruh pengurus UKM ITC periode 2023 dan bertujuan untuk melaporkan tentang program kerja di setiap divisi kepada ketua umum.</p>
-        </div>
+          <img src="/images/proker/Proker_rapat_pleno.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/proker/Proker_rapat_pleno.jpg" class="div-img">
+          <p class="perataan-text">Rapat yang diselenggarakan untuk seluruh pengurus UKM ITC periode 2023 dan bertujuan untuk melaporkan tentang program kerja di setiap divisi kepada ketua umum.</p>
         </div>
       </div>
 
@@ -237,10 +235,10 @@
           <h5>Monitoring dan Evaluasi</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Kegiatan yang bertujuan untuk mengevaluasi dan monitoring setiap divisi yang ada di UKM ITC.</p>
-        </div>
+          <img src="/images/proker/Proker_monitoring_dan_evaluasi.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/proker/Proker_monitoring_dan_evaluasi.jpg" class="div-img">
+          <p class="perataan-text">Kegiatan yang bertujuan untuk mengevaluasi dan monitoring setiap divisi yang ada di UKM ITC.</p>
         </div>
       </div>
 
@@ -249,16 +247,15 @@
           <h5>Sambang Pengurus</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Kegiatan ini berupa kunjungan wakil ketua umum ke setiap divisi untuk mengetahui keadaan internal divisi dengan pendekatan kelompok yang santai.</p>
-        </div>
+          <img src="/images/proker/Proker_sambang_pengurus.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/proker/Proker_sambang_pengurus.jpg" class="div-img">
+          <p class="perataan-text">Kegiatan ini berupa kunjungan wakil ketua umum ke setiap divisi untuk mengetahui keadaan internal divisi dengan pendekatan kelompok yang santai.</p>
         </div>
       </div>
     </div>
   </section>
 </div>
-
 
 <!-- Sekretaris Section -->
 <div class="div-main-container color-sekretaris text-light text-align">
@@ -281,10 +278,10 @@
           <h5>Pengarsipan Dokumen</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Pengarsipan dokumen dilakukan dengan memasukkan seluruh dokumen mulai dari surat-surat, proposal, LPJ, dan notulensi ke dalam Google Drive.</p>
-        </div>
+          <img src="/images/proker/Proker_pengarsipan_dokumen.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Pengarsipan dokumen dilakukan dengan memasukkan seluruh dokumen mulai dari surat-surat, proposal, LPJ, dan notulensi ke dalam Google Drive.</p>
         </div>        
       </div>
 
@@ -293,11 +290,11 @@
           <h5>Database Pengurus dan Anggota</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Mendata pengurus dan anggota UKM ITC MIPA Unsoed dengan data pribadi awal periode.</p>
-        </div>
+          <img src="/images/proker/Proker_database_pengurus_dan_anggota.jpg" class="div-img">
+        </div>          
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Mendata pengurus dan anggota UKM ITC MIPA Unsoed dengan data pribadi awal periode.</p>
+        </div>      
       </div>
 
       <div class="div-sec">
@@ -305,11 +302,11 @@
           <h5>Inventaris</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Inventaris dilakukan untuk mengelola dan mendata seluruh barang-barang inventaris UKM ITC MIPA Unsoed dengan pemberian label dan penomoran pada setiap barang.</p>
-        </div>
+          <img src="/images/proker/Proker_inventaris.jpg" class="div-img">
+        </div>          
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Inventaris dilakukan untuk mengelola dan mendata seluruh barang-barang inventaris UKM ITC MIPA Unsoed dengan pemberian label dan penomoran pada setiap barang.</p>
+        </div>      
       </div>
     </div>
 
@@ -319,11 +316,11 @@
           <h5>Piket Sekretariat</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Piket yang dilaksanakan oleh seluruh pengurus UKM ITC MIPA Unsoed dengan membagi pengurus menjadi 6 kelompok dan dijadwalkan per minggu.</p>
-        </div>
+          <img src="/images/proker/Proker_piket_sekretariat.jpg" class="div-img">
+        </div>          
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Piket yang dilaksanakan oleh seluruh pengurus UKM ITC MIPA Unsoed dengan membagi pengurus menjadi 6 kelompok dan dijadwalkan per minggu.</p>
+        </div>      
       </div>
 
 
@@ -332,11 +329,11 @@
           <h5>Forum Sekretaris Divisi</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Forum sekretaris divisi dilaksanakan untuk menyampaikan alur keadministrasian dan tata cara penulisan surat-surat, proposal, dan LPJ.</p>
-        </div>
+          <img src="/images/proker/Proker_forum_sekretaris_divisi.jpg" class="div-img">
+        </div>         
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Forum sekretaris divisi dilaksanakan untuk menyampaikan alur keadministrasian dan tata cara penulisan surat-surat, proposal, dan LPJ.</p>
+        </div>       
       </div>
 
       <div class="div-sec">
@@ -344,11 +341,11 @@
           <h5>Time Table</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Berisi tanggal-tanggal penting yang akan dilaksanakan oleh pengurus UKM ITC MIPA Unsoed.</p>
-        </div>
+          <img src="/images/proker/Proker_time_table.jpg" class="div-img">
+        </div>          
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Berisi tanggal-tanggal penting yang akan dilaksanakan oleh pengurus UKM ITC MIPA Unsoed.</p>
+        </div>      
       </div>
     </div>
   </section>
@@ -375,11 +372,11 @@
           <h5>Pengadaan Kas</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Menyediakan dana tambahan untuk kegiatan dan kesejahteraan pengurus.</p>
-        </div>
+          <img src="/images/proker/Proker_pengadaan_kas.jpg" class="div-img">
+        </div>          
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Menyediakan dana tambahan untuk kegiatan dan kesejahteraan pengurus.</p>
+        </div>      
       </div>
 
       <div class="div-sec">
@@ -387,11 +384,11 @@
           <h5>Pengalokasian Dana</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Mengatur pemasukan dana dari berbagai sumber, termasuk MIPA dan kas pengurus.</p>
-        </div>
+          <img src="/images/proker/Proker_pengalokasian_dana.jpg" class="div-img">
+        </div>         
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Mengatur pemasukan dana dari berbagai sumber, termasuk MIPA dan kas pengurus.</p>
+        </div>       
       </div>
 
       <div class="div-sec">
@@ -399,11 +396,11 @@
           <h5>Laporan Keuangan</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Melaporkan transaksi keuangan, baik pemasukan maupun pengeluaran, kepada pengurus UKM ITC MIPA Unsoed.</p>
-        </div>
+          <img src="/images/proker/Proker_laporan_keuangan.jpg" class="div-img">
+        </div>         
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Melaporkan transaksi keuangan, baik pemasukan maupun pengeluaran, kepada pengurus UKM ITC MIPA Unsoed.</p>
+        </div>       
       </div>
 
       <div class="div-sec">
@@ -411,11 +408,11 @@
           <h5>Forum Bendahara Divisi</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Forum yang dihadiri oleh bendahara tiap divisi UKM ITC yang dilaksanakan untuk menyampaikan hal-hal yang berkaitan dengan keuangan baik alur, konsultasi denganbendahara tiap divisi, format proposal gabungan, pembagian dana, serta pembukuan masing-masing divisi.</p>
-        </div>
+          <img src="/images/proker/Proker_forum_bendahara_divisi.jpg" class="div-img">
+        </div>          
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
-        </div>        
+          <p class="perataan-text">Forum yang dihadiri oleh bendahara tiap divisi UKM ITC yang dilaksanakan untuk menyampaikan hal-hal yang berkaitan dengan keuangan baik alur, konsultasi denganbendahara tiap divisi, format proposal gabungan, pembagian dana, serta pembukuan masing-masing divisi.</p>
+        </div>      
       </div>      
     </div>
   </section>
@@ -442,10 +439,10 @@
           <h5>Media Sosial</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja berupa informasi mengenai seputar kegiatan UKM ITC, juga memberikan informasi seputar teknologi. </p>
-        </div>
+          <img src="/images/proker/Proker_media_sosial.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-10-27 at 06.19.59.jpeg" class="div-img">
+          <p class="perataan-text">Program kerja berupa informasi mengenai seputar kegiatan UKM ITC, juga memberikan informasi seputar teknologi. </p>
         </div>
       </div>
 
@@ -454,10 +451,10 @@
           <h5>What’s In</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja yang berisi informasi, fakta menarik, ataupun beberapa tips seputar dunia teknologi informasi dan komunikasi. Materi untuk What's In sudah dijadwalkan untuk dibuat oleh setiap pengurus UKM ITC.</p>
-        </div>
+          <img src="/images/proker/Proker_what's_in.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Program kerja yang berisi informasi, fakta menarik, ataupun beberapa tips seputar dunia teknologi informasi dan komunikasi. Materi untuk What's In sudah dijadwalkan untuk dibuat oleh setiap pengurus UKM ITC.</p>
         </div>
       </div>
 
@@ -466,10 +463,10 @@
           <h5>Mading</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja berupa majalah dinding yang berisi informasi mengenai teknologi terbaru dan juga kegiatan-kegiatan UKM ITC MIPA Unsoed.</p>
-        </div>
+          <img src="/images/proker/Proker_mading.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-12-01 at 17.42.41.jpeg" class="div-img">
+          <p class="perataan-text">Program kerja berupa majalah dinding yang berisi informasi mengenai teknologi terbaru dan juga kegiatan-kegiatan UKM ITC MIPA Unsoed.</p>
         </div>
       </div>
     </div>
@@ -479,10 +476,10 @@
           <h5>Bulletin</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja berupa pembuatan majalah kecil mengenai informasi seputar teknologi dan informasi tentang UKM ITC MIPA Unsoed.</p>
-        </div>
+          <img src="/images/proker/Proker_bulletin.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/Screenshot (28).png" class="div-img">
+          <p class="perataan-text">Program kerja berupa pembuatan majalah kecil mengenai informasi seputar teknologi dan informasi tentang UKM ITC MIPA Unsoed.</p>
         </div>
       </div>
       
@@ -491,10 +488,10 @@
           <h5>Video Project</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja berupa pembuatan video pendek berisi profil UKM ITC untuk lebih mengenalkan apa itu UKM ITC kepada mahasiswa baru FMIPA.</p>
-        </div>
+          <img src="/images/proker/Proker_vidio_project.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/Screenshot (28).png" class="div-img">
+          <p class="perataan-text">Program kerja berupa pembuatan video pendek berisi profil UKM ITC untuk lebih mengenalkan apa itu UKM ITC kepada mahasiswa baru FMIPA.</p>
         </div>
       </div>      
     </div>
@@ -522,10 +519,10 @@
           <h5>Pelatihan Pengurus dan Anggota (PPA)</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Pelatihan yang diadakan dengan tujuan guna memberikan pelatihan intensif kepada pengurus dan anggota ITC terkait technological skill guna memperdalam kecakapan teknologi.</p>
-        </div>
+          <img src="/images/proker/Proker_PPA.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-10-27 at 06.19.59.jpeg" class="div-img">
+          <p class="perataan-text">Pelatihan yang diadakan dengan tujuan guna memberikan pelatihan intensif kepada pengurus dan anggota ITC terkait technological skill guna memperdalam kecakapan teknologi.</p>
         </div>
       </div>
 
@@ -533,11 +530,11 @@
         <div class="detail-judul-box" data-aos="fade-up">
           <h5>ITC CLASS</h5>
         </div>
+         <div data-aos="fade-up">
+          <img src="/images/proker/Proker_itc_class.jpg" class="div-img">
+        </div>       
         <div data-aos="fade-up">
           <p class="perataan-text">Pelatihan yang disajikan dalam bentuk webinar atau workshop untuk memberikan wawasan TIK dan implementasi dari Tri Dharma Perguruan Tinggi.</p>
-        </div>
-        <div data-aos="fade-up">
-          <img src="asset/Screenshot (1050).png" class="div-img">
         </div>
       </div>
 
@@ -546,10 +543,10 @@
           <h5>Tech Talk and Learning (TTL)</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja yang diadakan dalam bentuk workshop untuk mengembangkan diri, baik pengurus maupun anggota dalam bidang teknologi.</p>
-        </div>
+          <img src="/images/proker/Proker_TTL.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-12-01 at 17.42.41.jpeg" class="div-img">
+          <p class="perataan-text">Program kerja yang diadakan dalam bentuk workshop untuk mengembangkan diri, baik pengurus maupun anggota dalam bidang teknologi.</p>
         </div>
       </div>
 
@@ -558,10 +555,10 @@
           <h5>Web Project</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja pembuatan website khususnya untuk divisi teknologi yang memuat hal terkait ITC.</p>
-        </div>
+          <img src="/images/proker/Proker_web_project.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/Screenshot (28).png" class="div-img">
+          <p class="perataan-text">Program kerja pembuatan website khususnya untuk divisi teknologi yang memuat hal terkait ITC.</p>
         </div>
       </div>
     </div>
@@ -589,10 +586,10 @@
           <h5>Study Banding</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Suatu kegiatan mengunjungi atau menemui objek lain dengan tujuan menambah wawasan dan pengetahuan.</p>
-        </div>
+          <img src="/images/proker/Proker_study_banding.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-10-27 at 07.26.37.jpeg" class="div-img">
+          <p class="perataan-text">Suatu kegiatan mengunjungi atau menemui objek lain dengan tujuan menambah wawasan dan pengetahuan.</p>
         </div>
       </div>
 
@@ -601,10 +598,10 @@
           <h5>Technology Training</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Berupa pelatihan dengan pembicara dari luar yang bertujuan untuk memberikan wawasan dan pengalaman bagi mahasiswa dalam bidang teknologi informasi agar nantinya siap terjun dalam dunia kerja.</p>
-        </div>
+          <img src="/images/proker/Proker_technology_training.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-10-27 at 07.29.57.jpeg" class="div-img">
+          <p class="perataan-text">Berupa pelatihan dengan pembicara dari luar yang bertujuan untuk memberikan wawasan dan pengalaman bagi mahasiswa dalam bidang teknologi informasi agar nantinya siap terjun dalam dunia kerja.</p>
         </div>
       </div>
 
@@ -613,12 +610,24 @@
           <h5>Pendelegasian</h5>
         </div>
         <div data-aos="fade-up">
+          <img src="/images/proker/Proker_pendelegasian.jpg" class="div-img">
+        </div>        
+        <div data-aos="fade-up">
           <p class="perataan-text">Berperan aktif mengikuti dan mensukseskan kegiatan di luar UKM ITC serta menjalin silaturahmi antar lembaga.</p>
         </div>
-        <div data-aos="fade-up">
-          <img src="asset/WhatsApp Image 2024-10-27 at 07.36.47.jpeg" class="div-img">
-        </div>
       </div>
+
+      <div class="div-sec">
+        <div class="detail-judul-box" data-aos="fade-up">
+          <h5>Kunjungan Industri</h5>
+        </div>
+        <div data-aos="fade-up">
+          <img src="/images/proker/Proker_kunjungan_industri.jpg" class="div-img">
+        </div>        
+        <div data-aos="fade-up">
+          <p class="perataan-text">Program kerja inisiasi berupa mengunjungi instansi yang masih berkaitan dengan dunia teknologi.</p>
+        </div>
+      </div>      
     </div>
   </section>
 </div>
@@ -644,10 +653,10 @@
           <h5>Upgrading</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Suatu kegiatan pelatihan peningkatan mutu pengetahuan dan pengalaman organisasi.</p>
-        </div>
+          <img src="/images/proker/Proker_upgrading.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Suatu kegiatan pelatihan peningkatan mutu pengetahuan dan pengalaman organisasi.</p>
         </div>
       </div>
 
@@ -657,10 +666,10 @@
           <h5>KUBA</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Suatu kegiatan untuk menjalin silaturahmi sesama anggota baru UKM ITC dan merupakan tindak lanjut dari acara GO (Grand Opening).</p>
-        </div>
+          <img src="/images/proker/Proker_KUBA.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Suatu kegiatan untuk menjalin silaturahmi sesama anggota baru UKM ITC dan merupakan tindak lanjut dari acara GO (Grand Opening).</p>
         </div>
       </div>
 
@@ -669,10 +678,10 @@
           <h5>Diesnatalis</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Suatu kegiatan yang bertujuan untuk memperingati lahirnya ITC.</p>
-        </div>
+          <img src="/images/proker/Proker_diesnatalis.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Suatu kegiatan yang bertujuan untuk memperingati lahirnya ITC.</p>
         </div>
       </div>
     </div>
@@ -683,10 +692,10 @@
           <h5>MEGO</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Program kerja ini berupa magang di UKM ITC saat laboratorium dan diakhiri dengan Grand Opening. Kegiatan yang berfungsi sebagai sarana bagi mahasiswa yang berkeinginan untuk berorganisasi dan mengembangkan minat serta bakatnya di bidang teknologi, informasi, dan komunikasi.</p>
-        </div>
+          <img src="/images/proker/Proker_MEGO.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Program kerja ini berupa magang di UKM ITC saat laboratorium dan diakhiri dengan Grand Opening. Kegiatan yang berfungsi sebagai sarana bagi mahasiswa yang berkeinginan untuk berorganisasi dan mengembangkan minat serta bakatnya di bidang teknologi, informasi, dan komunikasi.</p>
         </div>
       </div>
 
@@ -695,10 +704,10 @@
           <h5>Musyawarah Anggota</h5>
         </div>
         <div data-aos="fade-up">
-          <p class="perataan-text">Kegiatan rutin yang dilaksanakan setiap akhir periode. Kegiatan Musyawarah Anggota membahas tentang Anggaran Dasar (AD), Anggaran Rumah Tangga (ART), Garis-garis Besar Haluan Organisasi (GBHO), Struktur dan Tata Kerja Organisasi (STKO). Selain itu, pemilihan ketua umum dan pemilihan Dewan Pertimbangan Organisasi (DPO), serta laporan pertanggungjawaban.</p>
-        </div>
+          <img src="/images/proker/Proker_musyawarah_anggota.jpg" class="div-img">
+        </div>        
         <div data-aos="fade-up">
-          <img src="asset/" class="div-img">
+          <p class="perataan-text">Kegiatan rutin yang dilaksanakan setiap akhir periode. Kegiatan Musyawarah Anggota membahas tentang Anggaran Dasar (AD), Anggaran Rumah Tangga (ART), Garis-garis Besar Haluan Organisasi (GBHO), Struktur dan Tata Kerja Organisasi (STKO). Selain itu, pemilihan ketua umum dan pemilihan Dewan Pertimbangan Organisasi (DPO), serta laporan pertanggungjawaban.</p>
         </div>
       </div>
     </div>
@@ -713,13 +722,13 @@
     <div class="footer-bagian-kiri">
       <div class="footer-img-container">
         <div class="footer-img-box">
-          <img src="asset/Logo_Unsoed.png" class="footer-img"/>
+          <img src="/images/Logo_Unsoed.png" class="footer-img"/>
         </div>
         <div class="footer-img-box">
-          <img src="asset/Logo_ITC.png" class="footer-img"/>
+          <img src="/images/Logo_ITC.png" class="footer-img"/>
         </div>
         <div class="footer-img-box">
-          <img src="asset/Logo Nexabyte (No bg).png" class="footer-img"/>
+          <img src="/images/Logo Nexabyte (No bg).png" class="footer-img"/>
         </div>            
       </div>
       <div class="footer-isi">

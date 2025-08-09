@@ -173,6 +173,17 @@
 
 <div class="editor-container" id="editor-container"></div>
 
+
+
+<% if (edit) { %>
+ <div class="form-check d-flex p-0 mt-2">
+            <div onclick="checked_updateTime()">
+              <input class="form-check-input-time" type="checkbox" value="update" id="checkDefault" >
+            </div>
+            <label class="form-check-label mx-1" for="checkDefault"><i class="bi bi-alarm"></i> Update the times Article </label>
+                        </div>
+<% } %>
+               
             
             
              <input type="hidden" name="content" id="quill-content" required>
@@ -181,13 +192,16 @@
 
             
             <input value="" id="categories_input_hide" name="hide" type="text"   style="display: none;" >
+            <input value="" id="updateTimes" name="update" type="text"   style="display: none;" >
+
+
             <% if (edit) { %>
               <input value="<%-image%>" name="image" type="text"  style="display: none;" >
             <% } %>
-            
+
+         
           </form>
        
-    
   
     </section>
 
@@ -272,18 +286,21 @@ document.getElementById('undo-btn').addEventListener('click', () => {
 <script >
 
   function checked() {
-    console.log("tess");
-    
     
     let categories_hide = document.getElementById('categories_input_hide') ; 
     let check_hide = document.querySelectorAll('.form-check-input-hide:checked') ; 
     const values_hide = Array.from(check_hide).map(checkbox => checkbox.value);
     categories_hide.value = values_hide
-    
-    
-    
   }
   
+
+  function checked_updateTime() {
+   
+    let categories_time = document.getElementById('updateTimes') ; 
+    let check_time = document.querySelectorAll('.form-check-input-time:checked') ; 
+    const values_time = Array.from(check_time).map(checkbox => checkbox.value);
+    categories_time.value = values_time
+  }
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

@@ -4,7 +4,7 @@ body{
 
 /* ===== HEADER ===== */
 .div-head-container {
-    background-image: url('/asset/divisi/bg_header_divisi.jpg');
+    background-image: url('/images/divisi/bg_header_divisi.jpg');
     background-size: cover;               /* agar gambar menyesuaikan ukuran container */
     background-position: center center;   /* agar gambar tetap di tengah */
     background-attachment: scroll; 

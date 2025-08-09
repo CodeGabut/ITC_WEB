@@ -1,3 +1,27 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* Konten utama akan mengisi sisa ruang */
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .page{
  width: 10px;height: 10px; color: #00265c; font-size: 1.2rem;margin-left: 30px;
 }

@@ -1,16 +1,28 @@
 
 
-1. Membuat halaman article
-2. Membuat halaman form ngisi data article
-3. Membuat halaman log in serta keamanan
+1. Membuat halaman article (done )
+2. Membuat halaman form ngisi data article (done )
+3. Membuat halaman log in serta keamanan (done )
 
 
 Blog  : 
-  - Menambahkan fitur halaman (pagenation)
-  - Menambahkan button untuk mengacu ke article dan hover
-  - Membuat struktur data untuk mengisi artikel2 serta logika2nya
-  - Membuat deskripsi disingkatkan menjadi ...
-   -Membuat fitur auto slide pada article
+  - Menambahkan fitur halaman (pagenation) (done )
+  - Menambahkan button untuk mengacu ke article dan hover (done )
+  - Membuat struktur data untuk mengisi artikel2 serta logika2nya (done )
+  - Membuat deskripsi disingkatkan menjadi ... (done )
+  - Memperbaiki Semua ejs agar sesuai dengan html (done )
+  - Menambahkan Footer ke setiap route (done )
+  - Memasukan data artikel ke carousel dengan kabar terbaru
+  - Memperbaiki navbar  (done )
+  - Memperbaiki efek hover
+  - Menambahkan Data blog ke index
+  
+  -Menghubungkan Setiap Route 
+  
+
+Deployment  and After deployment : 
+ -  List routing ( Railway, render , vercel) ; 
+ - Uji Coba Artikel 
 
 
 
@@ -22,7 +34,7 @@ Blog  :
   - konten
   - Writer
 
-  - memperbaiki caurosoul
+  
 
   - navbar, memperbaiki ketika layar mobile
  -Membuat fungsi untuk cut data teks yang terlalu panjang

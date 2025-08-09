@@ -285,17 +285,22 @@ app.get('/edit/:slug',checkAuth, async (req, res) => {
 
 app.post('/edit/:slug',checkAuth, upload.single('image'), async (req, res) => {
 
+console.log("Ini data :");
 
- 
+console.log(req.body);
+
+let check_update = req.body.update == '' ; 
+
+console.log(check_update);
+
+
 
 const $ = cherio.load(req.body.content ); 
-
 $('img').each(function () {
     $(this).addClass('img-quill');
   });
 
 const newContent = $.html()
-
 console.log(newContent);
 
 
@@ -310,7 +315,13 @@ console.log(newContent);
   }
 
 
-  await Article.updateOne({slug: req.params.slug},data)
+  await Article.updateOne({slug: req.params.slug},data) ; 
+
+  if (!check_update) {
+  await Article.updateOne({ slug: req.params.slug }, { date: Date.now()});
+}
+
+
   
   
  res.send("Berhasil") ;
@@ -375,7 +386,15 @@ app.get('/gallery', async (req, res) => {
   
   res.render('gallery')  ;
 });
-app.get('/index', async (req, res) => {
+
+
+app.get('/history', async (req, res) => {
+  
+  res.render('history')  ;
+});
+
+
+app.get('/main', async (req, res) => {
   
   res.render('index')  ;
 });
@@ -383,6 +402,13 @@ app.get('/kabinet', async (req, res) => {
   
   res.render('kabinet')  ;
 });
+
+app.get('/divisi', async (req, res) => {
+  
+  res.render('division')  ;
+});
+
+
 app.get('/pengurus', async (req, res) => {
   
   res.render('pengurus')  ;
