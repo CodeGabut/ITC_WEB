@@ -416,7 +416,7 @@ app.get('/history', async (req, res) => {
 });
 
 
-app.get('/main', async (req, res) => {
+app.get('/', async (req, res) => {
   let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }).limit(5) ; 
 console.log(data_article);
 

@@ -19,13 +19,13 @@
    <body style="overflow-x: hidden;">
      <!--Navbar start-->
      
-     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
+         <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
       <div class="container-fluid px-3">
         
         <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
-          <img src="./images/Logo_ITC.png" alt="">
+          <img src="/images/Logo_ITC.png" alt="">
         </div>
-        <a class="navbar-brand" href="/main" style="font-size: 1rem;">ITC MIPA UNSOED</a>
+        <a class="navbar-brand" href="/" style="font-size: 1rem;">ITC MIPA UNSOED</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -216,13 +216,13 @@
   
   
     <% if (data_sliced.prev) { %>
-     <a class="link_page" href="http://localhost:3000/blog?page=<%-parseInt(page)-1%>">
+     <a class="link_page" href="/blog?page=<%-parseInt(page)-1%>">
        <div class="page">&lt;</div>
      </a>
    <% } %>
   
    <% if (page >2) { %>
-     <a class="link_page" href="http://localhost:3000/blog?page=1">
+     <a class="link_page" href="/blog?page=1">
        <div class="page ">1</div>
      </a>
      <div class="page">...</div>
@@ -231,7 +231,7 @@
   
    <% for( let index = 0; index < 3; index++ ) { %>
   
-     <a href="http://localhost:3000/blog?page=<%-data_pagination[index]%>" class="link_page">
+     <a href="/blog?page=<%-data_pagination[index]%>" class="link_page">
        <div class="page <% if (data_pagination[index] == page) { %>
         <%- "current_page" %>
        <% } %>"><%- data_pagination[index] %></div>
@@ -240,14 +240,14 @@
   
    <% if (page < totalPages-2) { %>
      <div class="page ">...</div>
-     <a class="link_page" href="http://localhost:3000/blog?page=<%-totalPages%>">
+     <a class="link_page" href="/blog?page=<%-totalPages%>">
        <div class="page "><%- totalPages %></div>
      </a>
    <% } %>
   
    <% if (data_sliced.next) { %>
   
-     <a class="link_page"  href="http://localhost:3000/blog?page=<%-parseInt(page)+1%>">
+     <a class="link_page"  href="/blog?page=<%-parseInt(page)+1%>">
       <div class="page">></div>
      </a>
     
