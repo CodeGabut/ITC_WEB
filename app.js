@@ -11,6 +11,9 @@ const multer = require('multer');
 const session = require("express-session");
 const cherio = require('cheerio');
 const { title } = require('process');
+const cookieParser = require('cookie-parser') ; 
+const rateLimit = require('express-rate-limit')
+
 
 
 
@@ -21,6 +24,8 @@ app.use(session({
   resave : false , 
   saveUninitialized : false 
 }))
+
+app.use(cookieParser());
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -86,6 +91,17 @@ function checkAuth(req,res,next) {
     res.redirect("/login")
   }
 }
+
+const loginLimiter = rateLimit({
+  windowMs: 10 * 1000,
+  max: 5, 
+  handler: (req, res) => {
+    res.cookie("message", "⚠ Too many login attempts. Please wait 10 seconds.", { maxAge: 3000 });
+    res.redirect("/login");
+  },
+  standardHeaders: true,
+  legacyHeaders: false
+});
 
 function cutDescription(text) {
   console.log(text);
@@ -178,7 +194,7 @@ app.get('/tambah', async (req, res) => {
 app.get('/blog', async (req, res) => {
 
 
-  let data_article = await Article.find({isPublished : true}) ; 
+  let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }) ; 
   console.log(data_article);
     let data_sliced = pagination(req.query.page,4,data_article) ;
     let data_pagination = getPageRange(req.query.page, data_article.length, 4) ;
@@ -190,8 +206,9 @@ app.get('/blog', async (req, res) => {
     res.send("No page found");
   }
   else{
+     console.log("Ini data result");
      
-    console.log(data_sliced);
+    console.log(data_sliced.result);
     res.render('blog', {data_sliced,data_pagination,page : req.query.page, totalPages : Math.ceil(data_article.length / 4), cutDescription})  ;
   }
 
@@ -227,18 +244,23 @@ app.get('/details_article',checkAuth, async (req, res) => {
 
 
 app.get('/login', async (req, res) => {
-
-  res.render('login')  ;
+  const message = req.cookies.message;
+  console.log("Ini pesan salah password");
+  console.log(typeof message != 'undefined');
+  
+  
+  res.render('login',{message})  ;
 });
 
-app.post('/login' ,async (req, res) => {
+app.post('/login' , loginLimiter, async (req, res) => {
   console.log(req.body);
   
   if (req.body.password == process.env.PASSWORD_DASHBOARD) {
     req.session.loggedIn = true ; 
     res.redirect('/dashboard_admin')
   }else{
-    res.send("Salah password")
+    res.cookie("message", "❌ Wrong username or password.", { maxAge: 3000 });
+    res.redirect('/login');
   }
 
 });
@@ -369,7 +391,7 @@ console.log(newContent);
 
   await newArticle.save()
 
-  res.send('berhasil')  ;
+  res.redirect('/dashboard_admin')  ;
 });
 
 
@@ -395,8 +417,10 @@ app.get('/history', async (req, res) => {
 
 
 app.get('/main', async (req, res) => {
-  
-  res.render('index')  ;
+  let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }).limit(5) ; 
+console.log(data_article);
+
+  res.render('index', {data_article})  ;
 });
 app.get('/kabinet', async (req, res) => {
   

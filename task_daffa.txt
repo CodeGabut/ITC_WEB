@@ -12,13 +12,20 @@ Blog  :
   - Membuat deskripsi disingkatkan menjadi ... (done )
   - Memperbaiki Semua ejs agar sesuai dengan html (done )
   - Menambahkan Footer ke setiap route (done )
-  - Memasukan data artikel ke carousel dengan kabar terbaru
+  - Memasukan data artikel ke carousel dengan kabar terbaru (done )
   - Memperbaiki navbar  (done )
   - Memperbaiki efek hover
-  - Menambahkan Data blog ke index
+  - Menambahkan Data blog ke index (done )
   
-  -Menghubungkan Setiap Route 
+  -Menghubungkan Setiap Route  (done )
+
+  Keamanan  :
+  - Berikan waktu jika salah kode (done )
+  - Pelajari session (done )
   
+ Konten : 
+  - Bersihkan data2  (done )
+  -  masukan konten2 
 
 Deployment  and After deployment : 
  -  List routing ( Railway, render , vercel) ; 

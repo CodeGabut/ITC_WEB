@@ -74,8 +74,14 @@
   </div>
   
   <button type="submit" class="btn btn-primary" style="width:200px;">Submit</button>
+
 </form>
-    </div>
+
+<% if (typeof message != 'undefined') { %>
+  <div class="alert alert-danger mt-2" role="alert">
+    <%- message %>
+  </div>
+<% } %>
 
 
 

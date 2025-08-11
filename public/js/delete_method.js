@@ -9,6 +9,8 @@ async function delete_(url) {
 
         if (respons.ok) {
             console.log("Data terhapus");
+            window.location.href = window.location.href;
+
         }else{
             console.log("Data gagal dihapus");
             

@@ -21,6 +21,7 @@
      
      <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
       <div class="container-fluid px-3">
+        
         <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
           <img src="./images/Logo_ITC.png" alt="">
         </div>
@@ -99,37 +100,63 @@
          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="margin:0;width: clamp(2px,1.5vw,10px);height: clamp(2px,1.5vw,10px); margin-left: 10px;"></button>
        </div>
        <div class="carousel-inner">
+
+     
   
-  
-         <div class="carousel-item active">
-           <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
-             <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
-           </div>
-           <div class="carousel-caption" style="text-align: left;" >
-             <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
-             <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
-             <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
-           </div>
+         <div class="carousel-item active" href="">
+          <a href="/article/<%-data_sliced.result[0].slug%>">
+            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
+              <img src="<%- data_sliced.result[0].image %>" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
+            </div>
+            <div class="carousel-caption" style="text-align: left;" >
+              <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);"><%- data_sliced.result[0].title %></h5>
+              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;"><%- cutDescription(data_sliced.result[0].description) %></p>
+              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span><%- data_sliced.result[0].date.toLocaleDateString("id-ID", {
+   day: 'numeric',
+   month: 'long',
+   year: 'numeric'
+   }); %></p>
+            </div>
+          </a>
          </div>
+
          <div class="carousel-item ">
-           <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
-             <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
-           </div>
-           <div class="carousel-caption" style="text-align: left;" >
-             <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
-             <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
-             <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
-           </div>
+
+          <a href="/article/<%-data_sliced.result[1].slug%>">
+            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
+              <img src="<%- data_sliced.result[1].image %>" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
+            </div>
+            <div class="carousel-caption" style="text-align: left;" >
+              <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);"><%- data_sliced.result[1].title %></h5>
+              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;"><%- cutDescription( data_sliced.result[1].description) %></p>
+              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span><%- data_sliced.result[1].date.toLocaleDateString("id-ID", {
+   day: 'numeric',
+   month: 'long',
+   year: 'numeric'
+   }); %></p>
+            </div>
+
+          </a>
          </div>
+
+         
+
          <div class="carousel-item ">
-           <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
-             <img src="./asset/IMG_9324.JPG" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
-           </div>
-           <div class="carousel-caption" style="text-align: left;" >
-             <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);">Acara ITC dilaksanakan di FMIPA Unsoed 1</h5>
-             <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;">Ini merupakan deskripsi percobaan untuk carousel di blog .Untuk ini hayalah mencari cara untuk menyelesaikan hal ini dengan tuntas biar saya tidur pulas</p>
-             <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span>26 Maret 2021</p>
-           </div>
+          <a href="/article/<%-data_sliced.result[2].slug%>">
+            <div style="width: 100%;aspect-ratio: 16/9;background: linear-gradient(to bottom, #032b63, #000f24);;overflow: hidden;">
+              <img src="<%- data_sliced.result[2].image %>" alt="" style="width: 100%;aspect-ratio: 16/9; object-fit: cover; z-index: 2; opacity: 25%; ">
+            </div>
+            <div class="carousel-caption" style="text-align: left;" >
+              <h5 style="font-size: clamp(12px,3vw,36px) ;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-bottom: clamp(0px,0.5vw,8px);"><%- data_sliced.result[2].title %></h5>
+              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin: 0;"><%- cutDescription( data_sliced.result[2].description) %></p>
+              <p style="font-size: clamp(8px,2vw,16px); color: #fffeff;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);margin-top: 8px;"><span><i class="bi bi-clock mx-2"></i></span><%- data_sliced.result[2].date.toLocaleDateString("id-ID", {
+   day: 'numeric',
+   month: 'long',
+   year: 'numeric'
+   }); %></p>
+            </div>
+
+          </a>
          </div>
        </div>
        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -314,12 +341,17 @@
 
 
 
-
+<script>
+    window.SERVER_DATA = {
+        page: <%- JSON.stringify(page) %>
+    };
+</script>
 
 
   
-     <script src="js/backround_effect.js">
+     <script src="js/backround_effect_blog.js">
      </script>
+     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
  </html>

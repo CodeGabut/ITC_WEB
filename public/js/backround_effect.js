@@ -4,12 +4,13 @@
       const article3 = document.querySelector('.article3') ; 
       const article4 = document.querySelector('.article4') ; 
 
-    
-      window.addEventListener('scroll' , ()=>{
 
+
+  window.addEventListener('scroll' , ()=>{
+        
         //NAVBAR
         if (window.scrollY >= 256) {
-          console.log(window.scrollY);
+        
           navEl.classList.add('navbar_scrolled')
         } else if (window.scrollY < 256) {
           navEl.classList.remove('navbar_scrolled')
