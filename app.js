@@ -52,10 +52,10 @@ const upload = multer({
 })
 
 
-
 app.set('view engine', 'ejs');
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true ,limit :'10mb'}));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
 
 
 
@@ -442,4 +442,6 @@ app.get('/profil', async (req, res) => {
   res.render('profil')  ;
 });
 
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})

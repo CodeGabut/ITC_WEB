@@ -1,7 +1,4 @@
 {
-  "scripts": {
-  "start": "node app.js"
-},
 
   "dependencies": {
     "cheerio": "^1.1.0",
@@ -15,5 +12,16 @@
     "mongoose": "^8.16.2",
     "multer": "^2.0.2",
     "multer-storage-cloudinary": "^4.0.0"
-  }
+  } ,
+  "name": "percobaan_vercel_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
