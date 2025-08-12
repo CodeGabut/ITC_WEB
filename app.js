@@ -3,6 +3,7 @@ const express = require('express') ;
 const app = express() ; 
 const port = 3000 ; 
 const fs = require("fs") ;
+const dep = require('./app');
 const mongoose = require('mongoose');
 const path = require('path');
 const cloudinary = require('cloudinary').v2 ; 
@@ -442,6 +443,4 @@ app.get('/profil', async (req, res) => {
   res.render('profil')  ;
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+module.exports = serverless({ dep });
