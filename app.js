@@ -442,3 +442,4 @@ app.get('/profil', async (req, res) => {
   res.render('profil')  ;
 });
 
+module.exports = app;
