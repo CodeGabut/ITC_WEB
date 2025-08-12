@@ -442,6 +442,3 @@ app.get('/profil', async (req, res) => {
   res.render('profil')  ;
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
