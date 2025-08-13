@@ -443,4 +443,6 @@ app.get('/profil', async (req, res) => {
   res.render('profil')  ;
 });
 
-module.exports = serverless({ dep });
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
