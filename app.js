@@ -18,6 +18,7 @@ const rateLimit = require('express-rate-limit')
 
 
 
+
 require('dotenv').config()
 
 app.use(session({
@@ -28,29 +29,9 @@ app.use(session({
 
 app.use(cookieParser());
 
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_API_KEY,
-  api_secret: process.env.CLOUD_API_SECRET
-});
 
 
 
-const storage = new CloudinaryStorage({
-  cloudinary: cloudinary,
-  params: {
-    folder: 'gambar_article',
-    allowed_formats: ['jpg', 'png', 'jpeg', 'webp']
-  }
-});
-
-const upload = multer({
-  storage,
-  limits: {
-    fieldSize: 10 * 1024 * 1024 
-  }
-
-})
 
 
 app.set('view engine', 'ejs');
@@ -63,7 +44,63 @@ app.use(express.urlencoded({ extended: true }));
 mongoose.connect("mongodb+srv://itcmipaunsoed25:salamteknosaintis@database.ppcteph.mongodb.net/").then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log("Connection error:", err));
 
+
+
+
+
+
+async function upload_img() {
   
+  
+  const db = await mongoose.connection.db;
+  const collection = db.collection('password'); 
+  console.log("Ini password");
+  let [docs] = await collection.find({}).toArray()
+
+  cloudinary.config({
+  cloud_name: docs.CLOUD_NAME,
+  api_key: docs.CLOUD_API_KEY,
+  api_secret: docs.CLOUD_API_SECRET
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'gambar_article',
+    allowed_formats: ['jpg', 'png', 'jpeg', 'webp']
+  }
+});
+
+
+const upload = multer({
+  storage,
+  limits: {
+    fieldSize: 10 * 1024 * 1024 
+  }
+
+})
+
+console.log("berhasil ke upload");
+
+
+return upload
+
+}
+
+
+
+  
+  
+
+
+
+
+
+
+    
+
+
+
 const mongoSchema = new mongoose.Schema({
 
   title : String , 
@@ -83,6 +120,16 @@ const mongoSchema = new mongoose.Schema({
   slug: String
 }); 
 
+async function passwordAndKey() {
+  console.log("tes ini password");
+  
+  const db = await mongoose.connection.db;
+  const collection = db.collection('password'); 
+  console.log("Ini password");
+  let [docs] = await collection.find({}).toArray()
+  console.log(docs);
+  return docs
+}
 
 function checkAuth(req,res,next) {
   if (req.session && req.session.loggedIn) {
@@ -185,6 +232,7 @@ const Article = new mongoose.model('Article',mongoSchema) ;
 
 
 
+
 app.get('/tambah', async (req, res) => {
   newArticle.save() ;
   let data_article = await Article.find() ; 
@@ -193,10 +241,9 @@ app.get('/tambah', async (req, res) => {
 }) ;
 
 app.get('/blog', async (req, res) => {
-
+    
 
   let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }) ; 
-  console.log(data_article);
     let data_sliced = pagination(req.query.page,4,data_article) ;
     let data_pagination = getPageRange(req.query.page, data_article.length, 4) ;
   
@@ -207,9 +254,6 @@ app.get('/blog', async (req, res) => {
     res.send("No page found");
   }
   else{
-     console.log("Ini data result");
-     
-    console.log(data_sliced.result);
     res.render('blog', {data_sliced,data_pagination,page : req.query.page, totalPages : Math.ceil(data_article.length / 4), cutDescription})  ;
   }
 
@@ -245,6 +289,9 @@ app.get('/details_article',checkAuth, async (req, res) => {
 
 
 app.get('/login', async (req, res) => {
+
+  
+
   const message = req.cookies.message;
   console.log("Ini pesan salah password");
   console.log(typeof message != 'undefined');
@@ -254,9 +301,12 @@ app.get('/login', async (req, res) => {
 });
 
 app.post('/login' , loginLimiter, async (req, res) => {
-  console.log(req.body);
+
   
-  if (req.body.password == process.env.PASSWORD_DASHBOARD) {
+  let pass = await passwordAndKey() ; 
+
+  
+  if (req.body.password == pass.password) {
     req.session.loggedIn = true ; 
     res.redirect('/dashboard_admin')
   }else{
@@ -306,7 +356,10 @@ app.get('/edit/:slug',checkAuth, async (req, res) => {
   res.render('create_article',{edit : true,data_article, tags : data_article.tags[0] , slug : req.params.slug,image : data_article.image })  ;
 });
 
-app.post('/edit/:slug',checkAuth, upload.single('image'), async (req, res) => {
+app.post('/edit/:slug',checkAuth, async (req, res, next) => {
+  const upload = await upload_img();
+  upload.single('image')(req, res, next);
+}, async (req, res) => {
 
 console.log("Ini data :");
 
@@ -350,7 +403,10 @@ console.log(newContent);
  res.send("Berhasil") ;
 });
 
-app.get('/hiden/:slug',checkAuth, upload.single('image'), async (req, res) =>{
+app.get('/hiden/:slug',checkAuth, async (req, res, next) => {
+  const upload = await upload_img();
+  upload.single('image')(req, res, next);
+}, async (req, res) =>{
   let data = await Article.findOne({slug: req.params.slug});
 
   
@@ -364,7 +420,10 @@ app.get('/hiden/:slug',checkAuth, upload.single('image'), async (req, res) =>{
 })
 
 
-app.post('/create_article',checkAuth, upload.single('image'), async (req, res) => {
+app.post('/create_article',checkAuth, async (req, res, next) => {
+  const upload = await upload_img();
+  upload.single('image')(req, res, next);
+}, async (req, res) => {
 
   const $ = cherio.load(req.body.content ); 
 

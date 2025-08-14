@@ -14,7 +14,7 @@ Blog  :
   - Menambahkan Footer ke setiap route (done )
   - Memasukan data artikel ke carousel dengan kabar terbaru (done )
   - Memperbaiki navbar  (done )
-  - Memperbaiki efek hover
+  - Memperbaiki efek hover (done)
   - Menambahkan Data blog ke index (done )
   
   -Menghubungkan Setiap Route  (done )
@@ -22,14 +22,18 @@ Blog  :
   Keamanan  :
   - Berikan waktu jika salah kode (done )
   - Pelajari session (done )
+  - Simpan ke database (done)
+  -
   
- Konten : 
+ Konten :
+ - Memperbaiki tampilan blog 
   - Bersihkan data2  (done )
-  -  masukan konten2 
+  -  masukan konten2 (done)
 
 Deployment  and After deployment : 
- -  List routing ( Railway, render , vercel) ; 
- - Uji Coba Artikel 
+ -  List routing ( Railway, render , vercel) (done); 
+ - Uji Coba Artikel  (done)
+ - 
 
 
 
