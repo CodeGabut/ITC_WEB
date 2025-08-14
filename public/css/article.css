@@ -1,6 +1,6 @@
   .article-body{
     background-image: linear-gradient(#e5e5e5 0.5px, transparent 0.5px), linear-gradient(to right, #e5e5e5 0.5px, transparent 0.5px);
-    background-size: 100px 100px;
+    background-size: 150px 100px;
     background-color: #00265C;	
     padding-top: 100px !important;
   }
