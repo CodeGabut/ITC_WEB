@@ -264,27 +264,54 @@ app.get('/division', async (req, res) => {
 });
 
 
+app.get('/dashboard_admin/search',checkAuth, async (req, res) => {
+  console.log("Item Cari :");
+  console.log(req.query);
+  let data_article = await Article.find({
+    title: { $regex: req.query.find, $options: "i" }
+});
+
+console.log(data_article);
+
+
+    res.render('dashboard_admin_search', {data_article, total : data_article.length})  ;
+  
+});
+
+
 app.get('/dashboard_admin',checkAuth, async (req, res) => {
+  const db = await mongoose.connection.db;
+  const stats = await db.stats();
+  const totalBytes = stats.dataSize + stats.indexSize; 
+  const totalMB = (totalBytes / (1024 * 1024)).toFixed(2);
+
+  
+
+
   let data_article = await Article.find() ; 
   let data_sliced = pagination(req.query.page,8,data_article) ; 
   let data_pagination = getPageRange(req.query.page, data_article.length, 8) ; 
+  message = req.cookies.message
 
    if (!req.query.page) {
   res.redirect("/dashboard_admin?page=1") ;
   }else if(req.query.page > Math.ceil(data_article.length/8) || isNaN(req.query.page)){
     res.send("No page found") ; 
   }else{
-    res.render('dashboard_admin', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length,})  ;
+    res.render('dashboard_admin', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length,message,totalMB})  ;
   }
 
   
 });
 
 
-app.get('/details_article',checkAuth, async (req, res) => {
-  newArticle.save().then(() => console.log('Artikel berhasil disimpan'))
-  .catch(err => console.error('Gagal menyimpan artikel:', err));
-  res.render('details_article')  ;
+app.get('/details_article/:slug',checkAuth, async (req, res) => {
+
+  let data_article = await Article.findOne({slug : req.params.slug})
+
+
+  
+  res.render('details_article', {data_article})  ;
 });
 
 
@@ -321,22 +348,18 @@ app.post('/login' , loginLimiter, async (req, res) => {
 
 
 app.get('/article/:title', async (req, res) => {
-  console.log(req.params.title);
   let data_article = await Article.findOne({slug : req.params.title})
   console.log(data_article);
   res.render('article', {data_article})  ;
 });
 
-app.delete('/article/:title', async (req, res) => {
-  console.log("Ini datanya  :"); console.log(req.params.title);
+app.post('/delete_article/:title', async (req, res) => {
   
-  
-  let contoh = await Article.deleteOne({slug : req.params.title}) ;
-  console.log("Ini data yang diapus");
-  
-  console.log(contoh);
-  
-  res.send('terhapus')  ;
+  await Article.deleteOne({slug : req.params.title}) ;
+
+  res.cookie("message", "Article deleted", { maxAge: 3000 });
+
+  res.redirect(`/dashboard_admin?page=${req.body.page}`)  ;
 });
 
 
@@ -398,25 +421,26 @@ console.log(newContent);
 }
 
 
+  res.cookie("message", "Article Edited", { maxAge: 3000 });
   
-  
- res.send("Berhasil") ;
+ res.redirect("/dashboard_admin") ;
 });
 
-app.get('/hiden/:slug',checkAuth, async (req, res, next) => {
-  const upload = await upload_img();
-  upload.single('image')(req, res, next);
-}, async (req, res) =>{
+app.get('/hiden/:slug',checkAuth, async (req, res) =>{
   let data = await Article.findOne({slug: req.params.slug});
 
-  
-  console.log(data);
-  console.log(!data.isPublished);
-  
+ 
   await Article.updateOne({ slug: req.params.slug },{
     isPublished : !data.isPublished
   })
-  res.redirect('/dashboard_admin')
+
+  if(data.isPublished){
+    res.cookie("message", "Article Hiden",{ maxAge: 3000 });
+    res.redirect('/dashboard_admin')
+  }else{
+    res.cookie("message", "Article Publish",{ maxAge: 3000 });
+    res.redirect('/dashboard_admin')
+  }
 })
 
 
@@ -449,8 +473,9 @@ console.log(newContent);
 }) ; 
 
 
-  await newArticle.save()
+  await newArticle.save() ;
 
+  res.cookie("message", "Article Added", { maxAge: 3000 });
   res.redirect('/dashboard_admin')  ;
 });
 

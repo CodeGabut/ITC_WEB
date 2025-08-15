@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/details_article.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/details_article.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
 
@@ -59,42 +59,36 @@
 <section class="container data_details" >
   <h4 >DETAILS ARTICLE</h4>
   <div class="coloumn_details">
-    <div class="table1"> <i class="bi bi-arrow-left-circle-fill" style="margin-right: 10px;"></i>Back</div>
+    <div class="table1"> <a style="text-decoration: none; color: inherit;" href="/dashboard_admin"> <i class="bi bi-arrow-left-circle-fill" style="margin-right: 10px;"></i>Back</a> </div>
    
   </div>
   <div class="coloumn_details">
     <div class="table1">Title</div>
-    <div class="table2" >Ini Merupakan Judul ITC yang mana bisa jadi Keren</div>
+    <div class="table2" ><%-data_article.title %></div>
   </div>
   <div class="coloumn_details">
     <div class="table1">Date</div>
-    <div class="table2" >adsasd</div>
+    <div class="table2" ><%-data_article.date%></div>
   </div>
   <div class="coloumn_details">
     <div class="table1">Description</div>
-    <div class="table2" >Menteri Perdagangan periode 2015–2016, Tom Lembong menilai replik jaksa penuntut umum mendistorsi atau memutarbalikkan fakta, kronologi, dan realita.
-
-Dalam dupliknya, pria bernama lengkap Thomas Trikasih Lembong ini menyinggung keterangan berita acara pemeriksaan milik eks Menteri Badan Usaha Milik Negara (BUMN) Rini Soemarno, yang hanya dibacakan oleh penuntut umum pada sidang korupsi impor gula beberapa waktu lalu.</div>
-  </div>
-  <div class="coloumn_details">
-    <div class="table1">Content</div>
-    <div class="table2" >adsasd</div>
+    <div class="table2" ><%-data_article.description%></div>
   </div>
   <div class="coloumn_details">
     <div class="table1">Image</div>
-    <div class="table2" >adsasd</div>
+    <div class="table2" ><a href="<%-data_article.image%>"><%-data_article.image%></a></div>
   </div>
   <div class="coloumn_details">
     <div class="table1">Author</div>
-    <div class="table2" >adsasd</div>
+    <div class="table2" ><%-data_article.author%></div>
   </div>
   <div class="coloumn_details">
     <div class="table1">Url</div>
-    <div class="table2" >adsasd</div>
+    <div class="table2" ><a href="/article/<%-data_article.slug%>"><%-data_article.slug%></a></div>
   </div>
   <div class="coloumn_details">
     <div class="table1">Status</div>
-    <div class="table2" >adsasd</div>
+    <div class="table2" ><%-data_article.isPublished%></div>
   </div>
 
 </section>

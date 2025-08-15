@@ -69,7 +69,7 @@
     <table class="table m-0" >
     <thead>
     <tr>
-      <th scope="col " class="coloumn_isi">No</th>
+      
       <th scope="col" class="coloumn_isi">Title</th>
       <th scope="col" class="coloumn_isi">Date</th>
       <th scope="col"class="coloumn_isi">Status</th>
@@ -88,9 +88,9 @@
     </thead>
     <tbody >
 
-      <% data_sliced.result.forEach((element,index) => { %>
+      <% data_article.forEach((element,index) => { %>
         <tr>
-      <th scope="row" class="isi"><%- index + data_sliced.number +1 %></th>
+      
       <td class="isi"><%- element.title %></td>
       <td class="isi"><%- element.date.toLocaleDateString("id-ID", {
   day: 'numeric',
@@ -119,7 +119,7 @@
     <button type="submit" class="dropdown-item">
       <i class="bi bi-trash" style="margin-right: 5px !important;"></i>Delete
     </button>
-    <input type="hidden" name="page" value="<%-page%>">
+   
   </form>
 </li>
   </ul>
@@ -128,82 +128,20 @@
 </td>
     </tr>
       <% }) %>
-   
+    </div>
     
-  </div>
-</tbody>
+  </tbody>
 </table>
-
 <div class="footer_table">
-
-<div class="data_table">
-  <div>Total article : <%-data_length%></div>
-  <div>Storage : <%- totalMB %> Mb</div>
+  Found : <%- total  %>
 </div>
 
 
 
-<% if (data_sliced.prev) { %>
-  <a style="text-decoration: none; color: inherit;" href="http://localhost:3000/dashboard_admin?page=<%-(parseInt(page)-1)%>"  >
-  <div class="footer_font">&lt;</div>
-  </a>
-<% } %>
-
-
-
-<% if (page > 3 ) { %>
-   <a href="/dashboard_admin?page=1" style="text-decoration: none;color: inherit;">
-    <div class="footer_font <% if (Math.ceil(data_length/2) == page) { %>
-     <%- "number_currentPage" %>
-    <% } %>">1 %></div>
-  </a>
-    <div class="footer_font">...</div>
- 
-<% } %>
-
-<% for( let index = 0; index < 3; index++ ) { %>
-  <a href="/dashboard_admin?page=<%-pagination[index]%>" style="text-decoration: none;color: inherit;">
-    <div class="footer_font <% if (pagination[index] == page) { %>
-     <%- "number_currentPage" %>
-    <% } %>"><%- pagination[index] %></div>
-  </a>
-<% } %>
-
-<% if (page < Math.ceil(data_length/8)-2 ) { %>
-  <div class="footer_font">...</div>
-  <a href="/dashboard_admin?page=<%-Math.ceil(data_length/8)%>" style="text-decoration: none;color: inherit;">
-    <div class="footer_font <% if (Math.ceil(data_length/8) == page) { %>
-     <%- "number_currentPage" %>
-    <% } %>"><%- Math.ceil(data_length/8) %></div>
-  </a>
-<% } %>
-
-<% if (data_sliced.next) { %>
-  <a style="text-decoration: none; color: inherit;" href="http://localhost:3000/dashboard_admin?page=<%-(parseInt(page)+1)%>"  >
-    <div class="footer_font">></div>
-  </div>
-  </a>
-<% } %>
 
 
 
 
-</section>
-
-<% if (typeof message != 'undefined') { %>
-  <div id="delete_article" class="alert alert-warning delete" style="position: fixed; width: fit-content;height: fit-content;top: 70%; left: 50%; transform: translate(-50%, -50%); " role="alert">
-   <%- message %>
- </div>
-<% } %>
-
-
-<script>
-setTimeout(() => {
-  const msg = document.getElementById('delete_article');
-  
-  setTimeout(() => msg.remove(), 500); 
-}, 3000); 
-</script>
 
 <script src="js/delete_method.js" >
 </script>

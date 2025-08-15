@@ -46,7 +46,14 @@ flex-direction: column;
 
 .ql-editor img {
   display: block;
-  margin: 10px auto; /* center image */
+  margin: 10px auto; 
+  width: 300px;
+  aspect-ratio: 16/9;
+}
+
+.ql-video {
+  display: block;
+  margin: 10px auto; 
   width: 300px;
   aspect-ratio: 16/9;
 }
@@ -54,4 +61,10 @@ flex-direction: column;
 .editor{
   background-color: white;
   color: black;
+}
+.ql-undo::before {
+  content: '↺';
+}
+.ql-redo::before {
+  content: '↻';
 }

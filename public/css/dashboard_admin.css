@@ -43,3 +43,13 @@ background-color: #223155 !important; /* navy gelap */
 .number_currentPage{
     text-decoration: underline;
 }
+
+.delete_article{
+ position: fixed; 
+ width: fit-content;
+ height: fit-content;
+ top: 70%; left: 50%;
+ transform: translate(-50%, -50%);
+ 
+}
+

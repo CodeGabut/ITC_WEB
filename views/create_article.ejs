@@ -219,17 +219,31 @@
     modules: {
      toolbar: {
   container: [
+    
     [{ 'header': [1, 2, 3, false] }],
     ['bold', 'italic', 'underline', 'strike'],
+    [{ 'color': [] }, { 'background': [] }],
     [{ 'list': 'ordered' }, { 'list': 'bullet' }],
     [{ 'align': [] }],
     ['link', 'image'],
     ['clean'],
-    ['link', 'video']
+    ['video'],
+    ['undo', 'redo']
   ],
   handlers: {
-    image: imageHandler
-  }
+    image: imageHandler,
+    undo: function() {
+          this.quill.history.undo();
+        },
+        redo: function() {
+          this.quill.history.redo();
+        },
+  },
+  history: {
+      delay: 1000,      // delay 1 detik sebelum masuk history
+      maxStack: 100,    // jumlah langkah undo maksimum
+      userOnly: true    // hanya catat perubahan user
+    }
 }
 
     }
