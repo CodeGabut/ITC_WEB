@@ -26,7 +26,7 @@ Blog  :
   -
   
  Konten :
- - Memperbaiki tampilan blog 
+ - Memperbaiki tampilan blog (done)
   - Bersihkan data2  (done )
   -  masukan konten2 (done)
   - Masukan article detail datanya (done)

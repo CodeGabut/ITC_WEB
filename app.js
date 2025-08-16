@@ -14,41 +14,57 @@ const cherio = require('cheerio');
 const { title } = require('process');
 const cookieParser = require('cookie-parser') ; 
 const rateLimit = require('express-rate-limit')
-
-
-
-
-
 require('dotenv').config()
 
+
+//// MIDDLEWARE
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 app.use(session({
   secret : "teknocihuy", 
   resave : false , 
   saveUninitialized : false 
 }))
-
 app.use(cookieParser());
-
-
-
-
-
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 
-
+// MONGOOSE
 mongoose.connect("mongodb+srv://itcmipaunsoed25:salamteknosaintis@database.ppcteph.mongodb.net/").then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log("Connection error:", err));
+  
+  const mongoSchema = new mongoose.Schema({
+  
+    title : String , 
+    content : String ,
+    description : String , 
+    date : {
+      type: Date,
+      default: Date.now 
+    },
+    image: String, 
+    author : String , 
+    tags: [String],
+    isPublished: {
+      type: Boolean,
+      default: true
+    },
+    slug: String
+  }); 
+  mongoSchema.pre('save', function(next) {
+ 
+  this.slug = slugify(this.title, { lower: true, strict: true });
+  
+  next();
+});
+  const Article = new mongoose.model('Article',mongoSchema) ; 
+
+  
 
 
-
-
-
-
+//// FUNCTION AND MIDDLEWARE
 async function upload_img() {
   
   
@@ -87,39 +103,6 @@ return upload
 
 }
 
-
-
-  
-  
-
-
-
-
-
-
-    
-
-
-
-const mongoSchema = new mongoose.Schema({
-
-  title : String , 
-  content : String ,
-  description : String , 
-  date : {
-    type: Date,
-    default: Date.now 
-  },
-  image: String, 
-  author : String , 
-  tags: [String],
-  isPublished: {
-    type: Boolean,
-    default: true
-  },
-  slug: String
-}); 
-
 async function passwordAndKey() {
   console.log("tes ini password");
   
@@ -155,6 +138,7 @@ function cutDescription(text) {
   console.log(text);
     return text.slice(0,120)+"..."
 }
+
 const slugify = (text) => {
   console.log("Ini bener?");
   console.log(text);
@@ -213,36 +197,16 @@ function pagination(page,limit,model) {
   return {prev,next,result,number: startIndex} ; 
 }
 
-mongoSchema.pre('save', function(next) {
- 
-  this.slug = slugify(this.title, { lower: true, strict: true });
-  console.log(this.slug);
-  
-  next();
+
+
+///// FRONT END
+app.get('/', async (req, res) => {
+  let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }).limit(5) ; 
+  res.render('index', {data_article})  ;
 });
 
-const Article = new mongoose.model('Article',mongoSchema) ; 
-
-
-
-
-
-
-
-
-
-
-
-app.get('/tambah', async (req, res) => {
-  newArticle.save() ;
-  let data_article = await Article.find() ; 
-  console.log(data_article);
-  res.send("berhasil") ; 
-}) ;
-
 app.get('/blog', async (req, res) => {
-    
-
+  
   let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }) ; 
     let data_sliced = pagination(req.query.page,4,data_article) ;
     let data_pagination = getPageRange(req.query.page, data_article.length, 4) ;
@@ -250,33 +214,32 @@ app.get('/blog', async (req, res) => {
   
   if (!req.query.page) {
   res.redirect("/blog?page=1") ;
-  }else if(req.query.page > Math.ceil(data_article.length/4) || isNaN(req.query.page)){
-    res.send("No page found");
+}else if(req.query.page > Math.ceil(data_article.length/4) || isNaN(req.query.page)){
+  res.send("No page found");
   }
   else{
     res.render('blog', {data_sliced,data_pagination,page : req.query.page, totalPages : Math.ceil(data_article.length / 4), cutDescription})  ;
   }
-
+  
 }) ;
 
 app.get('/division', async (req, res) => {
   res.render('division')  ;
 });
 
-
-app.get('/dashboard_admin/search',checkAuth, async (req, res) => {
-  console.log("Item Cari :");
-  console.log(req.query);
-  let data_article = await Article.find({
-    title: { $regex: req.query.find, $options: "i" }
+app.get('/history', async (req, res) => {
+  res.render('history')  ;
 });
 
-console.log(data_article);
-
-
-    res.render('dashboard_admin_search', {data_article, total : data_article.length})  ;
-  
+app.get('/kabinet', async (req, res) => {
+  res.render('kabinet')  ;
 });
+
+app.get('/divisi', async (req, res) => {
+  res.render('division')  ;
+});
+
+///////////// BACKEND GET
 
 
 app.get('/dashboard_admin',checkAuth, async (req, res) => {
@@ -284,8 +247,6 @@ app.get('/dashboard_admin',checkAuth, async (req, res) => {
   const stats = await db.stats();
   const totalBytes = stats.dataSize + stats.indexSize; 
   const totalMB = (totalBytes / (1024 * 1024)).toFixed(2);
-
-  
 
 
   let data_article = await Article.find() ; 
@@ -300,10 +261,18 @@ app.get('/dashboard_admin',checkAuth, async (req, res) => {
   }else{
     res.render('dashboard_admin', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length,message,totalMB})  ;
   }
-
-  
 });
 
+app.get('/dashboard_admin/search',checkAuth, async (req, res) => {
+
+  let data_article = await Article.find({
+    title: { $regex: req.query.find, $options: "i" }
+});
+
+
+    res.render('dashboard_admin_search', {data_article, total : data_article.length})  ;
+  
+});
 
 app.get('/details_article/:slug',checkAuth, async (req, res) => {
 
@@ -313,7 +282,6 @@ app.get('/details_article/:slug',checkAuth, async (req, res) => {
   
   res.render('details_article', {data_article})  ;
 });
-
 
 app.get('/login', async (req, res) => {
 
@@ -327,6 +295,54 @@ app.get('/login', async (req, res) => {
   res.render('login',{message})  ;
 });
 
+app.get('/create_article',checkAuth, async (req, res) => {
+  
+  res.render('create_article', {edit : false, tags : undefined, slug : undefined, image : undefined})  ;
+});
+
+app.get('/article/:title', async (req, res) => {
+  let data_article = await Article.findOne({slug : req.params.title})
+  console.log(data_article);
+  res.render('article', {data_article})  ;
+});
+
+app.get('/hiden/:slug',checkAuth, async (req, res) =>{
+  let data = await Article.findOne({slug: req.params.slug});
+
+ 
+  await Article.updateOne({ slug: req.params.slug },{
+    isPublished : !data.isPublished
+  })
+
+  if(data.isPublished){
+    res.cookie("message", "Article Hiden",{ maxAge: 3000 });
+    res.redirect('/dashboard_admin')
+  }else{
+    res.cookie("message", "Article Publish",{ maxAge: 3000 });
+    res.redirect('/dashboard_admin')
+  }
+}) ; 
+
+app.get('/edit/:slug',checkAuth, async (req, res) => {
+ 
+ let [data_article] = await Article.find({slug:req.params.slug}) ; 
+  console.log(data_article);
+  console.log("Ini data tag");
+  console.log(data_article.tags[0]);
+  
+  res.render('create_article',{edit : true,data_article, tags : data_article.tags[0] , slug : req.params.slug,image : data_article.image })  ;
+});
+
+///////////// BACKEND POST
+
+app.post('/delete_article/:title', async (req, res) => {
+  
+  await Article.deleteOne({slug : req.params.title}) ;
+
+  res.cookie("message", "Article deleted", { maxAge: 3000 });
+
+  res.redirect(`/dashboard_admin?page=${req.body.page}`)  ;
+});
 app.post('/login' , loginLimiter, async (req, res) => {
 
   
@@ -342,43 +358,6 @@ app.post('/login' , loginLimiter, async (req, res) => {
   }
 
 });
-
-
-
-
-
-app.get('/article/:title', async (req, res) => {
-  let data_article = await Article.findOne({slug : req.params.title})
-  console.log(data_article);
-  res.render('article', {data_article})  ;
-});
-
-app.post('/delete_article/:title', async (req, res) => {
-  
-  await Article.deleteOne({slug : req.params.title}) ;
-
-  res.cookie("message", "Article deleted", { maxAge: 3000 });
-
-  res.redirect(`/dashboard_admin?page=${req.body.page}`)  ;
-});
-
-
-app.get('/create_article',checkAuth, async (req, res) => {
-  
-  res.render('create_article', {edit : false, tags : undefined, slug : undefined, image : undefined})  ;
-});
-
-
-app.get('/edit/:slug',checkAuth, async (req, res) => {
- 
- let [data_article] = await Article.find({slug:req.params.slug}) ; 
-  console.log(data_article);
-  console.log("Ini data tag");
-  console.log(data_article.tags[0]);
-  
-  res.render('create_article',{edit : true,data_article, tags : data_article.tags[0] , slug : req.params.slug,image : data_article.image })  ;
-});
-
 app.post('/edit/:slug',checkAuth, async (req, res, next) => {
   const upload = await upload_img();
   upload.single('image')(req, res, next);
@@ -425,25 +404,6 @@ console.log(newContent);
   
  res.redirect("/dashboard_admin") ;
 });
-
-app.get('/hiden/:slug',checkAuth, async (req, res) =>{
-  let data = await Article.findOne({slug: req.params.slug});
-
- 
-  await Article.updateOne({ slug: req.params.slug },{
-    isPublished : !data.isPublished
-  })
-
-  if(data.isPublished){
-    res.cookie("message", "Article Hiden",{ maxAge: 3000 });
-    res.redirect('/dashboard_admin')
-  }else{
-    res.cookie("message", "Article Publish",{ maxAge: 3000 });
-    res.redirect('/dashboard_admin')
-  }
-})
-
-
 app.post('/create_article',checkAuth, async (req, res, next) => {
   const upload = await upload_img();
   upload.single('image')(req, res, next);
@@ -480,53 +440,7 @@ console.log(newContent);
 });
 
 
-
-
-
-app.get('/fakultas', async (req, res) => {
-  
-  res.render('fakultas')  ;
-});
-
-
-app.get('/gallery', async (req, res) => {
-  
-  res.render('gallery')  ;
-});
-
-
-app.get('/history', async (req, res) => {
-  
-  res.render('history')  ;
-});
-
-
-app.get('/', async (req, res) => {
-  let data_article = await Article.find({isPublished : true}).sort({ _id: -1 }).limit(5) ; 
-console.log(data_article);
-
-  res.render('index', {data_article})  ;
-});
-app.get('/kabinet', async (req, res) => {
-  
-  res.render('kabinet')  ;
-});
-
-app.get('/divisi', async (req, res) => {
-  
-  res.render('division')  ;
-});
-
-
-app.get('/pengurus', async (req, res) => {
-  
-  res.render('pengurus')  ;
-});
-app.get('/profil', async (req, res) => {
-  
-  res.render('profil')  ;
-});
-
+//LISTEN PORT
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
