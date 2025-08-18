@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasbor Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="dasbor.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <style>
+    .material-symbols-rounded {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+    </style>
+</head>
+<body>
+    <div class="body-container">
+        <div class="navbar-container" id="sidebar">
+            <div class="nav-icon">
+                <a href="#"><span class="material-symbols-rounded font-black">home</span></a>
+                <a id="closeBtn"><span class="material-symbols-rounded font-black close-btn">close</span></a>
+            </div>
+            <div class="nav-button">
+                <div class="on-page-button nav-list"><a>Lorem Ipsum 1</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 2</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 3</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 4</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 5</a></div>
+            </div>
+        </div>
+        <div class="main-container" id="main">
+            <div class="nav-main">
+                <span class="material-symbols-rounded nav-main-item menu-btn" id="menuBtn">menu</span>
+                <h1 class="nav-title nav-main-item">DASBOR ADMIN - Lorem Ipsum 1</h1>
+            </div>
+            <div class="content-box">
+<section class="container " >
+  <h4>DASHBOARD ADMIN</h4>
+  <p>Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.</p>
+    <input type="text" placeholder="Cari artikel..."> <button>Cari</button>
+
+
+    <table class="table m-0" >
+    <thead>
+    <tr>
+      <th scope="col " class="coloumn_isi">No</th>
+      <th scope="col" class="coloumn_isi">Title</th>
+      <th scope="col" class="coloumn_isi">Date</th>
+      <th scope="col"class="coloumn_isi">Status</th>
+      
+        <th scope="col"class="coloumn_isi">
+
+          <a href="/create_article" style="color: inherit; text-decoration: none;">
+
+            <i class="bi bi-plus-circle-fill" style="font-size: 24px;"></i>
+
+          </a>
+        
+        </th>
+      
+    </tr>
+    </thead>
+    <tbody >
+
+      <% data_sliced.result.forEach((element,index) => { %>
+        <tr>
+      <th scope="row" class="isi"><%- index + data_sliced.number +1 %></th>
+      <td class="isi"><%- element.title %></td>
+      <td class="isi"><%- element.date.toLocaleDateString("id-ID", {
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false 
+})%></td>
+      <td class="isi"><%- element.isPublished ? 'Publish' : 'Hiden' %></td>
+       <td class="isi"><div class="dropdown">
+  <a  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-gear-fill" style="color: rgb(126, 125, 125);"></i>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" target="_blank" href="article/<%-element.slug%>"><i class="bi bi-link " style="margin-right: 5px !important;"></i>Visit</a></li>
+    <li><a class="dropdown-item" href="#"><i class="bi bi-file-code " style="margin-right: 5px !important;"></i>Details</a></li>
+    <li><a class="dropdown-item" href="/edit/<%-element.slug%>"><i class="bi bi-pencil " style="margin-right: 5px !important;"></i>Edit</a></li>
+    <li>
+  <a class="dropdown-item" href="/hiden/<%= element.slug %>">
+    <%- !element.isPublished ? '<i class="bi bi-eye" style="margin-right: 5px !important;"></i> Publish': '<i class="bi bi-eye-slash" style="margin-right: 5px !important;"></i> Hide' %>
+  </a></li>
+
+    <li><a class="dropdown-item"  onclick="delete_('<%- element.slug %>')" ><i class="bi bi-trash " style="margin-right: 5px !important;"></i>Delete</a></li>
+  </ul>
+</div>
+
+</td>
+    </tr>
+      <% }) %>
+   
+   
+    
+  </div>
+</tbody>
+</table>
+
+<div class="footer_table">
+
+<div class="data_table">
+  <div>Total article : 20</div>
+  <div>Storage : 20 Mb</div>
+  <div> Max storage : 20 Mb</div>
+</div>
+
+
+<% if (data_sliced.prev) { %>
+  <a style="text-decoration: none; color: inherit;" href="http://localhost:3000/dashboard_admin?page=<%-(parseInt(page)-1)%>"  >
+  <div class="footer_font">&lt;</div>
+  </a>
+<% } %>
+
+
+
+<% if (page > 3 ) { %>
+   <a href="/dashboard_admin?page=1" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (Math.ceil(data_length/2) == page) { %>
+     <%- "number_currentPage" %>
+    <% } %>">1 %></div>
+  </a>
+    <div class="footer_font">...</div>
+ 
+<% } %>
+
+<% for( let index = 0; index < 3; index++ ) { %>
+  <a href="/dashboard_admin?page=<%-pagination[index]%>" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (pagination[index] == page) { %>
+     <%- "number_currentPage" %>
+    <% } %>"><%- pagination[index] %></div>
+  </a>
+<% } %>
+
+<% if (page < Math.ceil(data_length/8)-2 ) { %>
+  <div class="footer_font">...</div>
+  <a href="/dashboard_admin?page=<%-Math.ceil(data_length/8)%>" style="text-decoration: none;color: inherit;">
+    <div class="footer_font <% if (Math.ceil(data_length/8) == page) { %>
+     <%- "number_currentPage" %>
+    <% } %>"><%- Math.ceil(data_length/8) %></div>
+  </a>
+<% } %>
+
+<% if (data_sliced.next) { %>
+  <a style="text-decoration: none; color: inherit;" href="http://localhost:3000/dashboard_admin?page=<%-(parseInt(page)+1)%>"  >
+    <div class="footer_font">></div>
+  </div>
+  </a>
+<% } %>
+
+
+</section>                
+            </div>
+        </div>
+
+    </div>
+    <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const sidebar = document.getElementById("sidebar");
+    const main = document.getElementById("main");
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.add("active");
+      menuBtn.classList.add("hide");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      menuBtn.classList.remove("hide");
+    });
+    </script>
+</body>
+</html>
