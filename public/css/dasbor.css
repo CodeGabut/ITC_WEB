@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    .body-container {
+      display: flex;
+    }
+
+    /* Side Navbar */
+    .body-container .navbar-container {
+      position: fixed;
+      top: 0;
+      left: -260px; /* tersembunyi awal */
+      width: 250px;
+      height: 100vh;
+      background: #00265c;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+      z-index: 999;
+      box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+    }
+
+    .body-container .navbar-container.active {
+      left: 0; /* geser masuk */
+    }
+
+    .navbar-container .nav-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .nav-icon a span {
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .nav-button {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .nav-list {
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      color: white;
+    }
+
+    .nav-list:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .on-page-button {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* Main Navbar (atas) */
+    .main-container {
+      flex: 1 !important;
+      margin-left: 0  !important;
+      transition: margin-left 0.4s ease  !important;
+      width: 100% !important;
+    }
+
+    .nav-main {
+      height: 40px;
+      display: flex !important;
+      align-items: center !important;
+      padding: 0 15px !important;
+      background: #00265c !important;
+      color: white !important;
+    }
+
+    .nav-main-item {
+      align-items: center;
+    }
+
+    .nav-title {
+      margin: 0 0 0 15px !important;
+      font-family: "Quantico" !important;
+      font-weight: 100 !important;
+      font-size: 24px !important;
+    }
+
+    /* Tombol Burger */
+    .nav-main .menu-btn {
+      font-size: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-btn.hide {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+
+    /* Tombol Close di Sidebar */
+    .close-btn {
+      display: none;
+    }
+
+    .navbar-container.active .close-btn {
+      display: inline-block;
+    }
+
+    .content-box {
+      width: 100%;
+      height: fit-content;
+      padding: 20px;
+    }
+
+     .material-symbols-rounded {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }

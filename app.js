@@ -116,7 +116,7 @@ async function passwordAndKey() {
 
 function checkAuth(req,res,next) {
   if (req.session && req.session.loggedIn) {
-    next()
+    next() ;
   }
   else{
     res.redirect("/login")
@@ -242,6 +242,11 @@ app.get('/divisi', async (req, res) => {
 ///////////// BACKEND GET
 
 
+app.get('/pendaftaran', async (req, res) => {
+  res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSck-PFgdeKw9xKl_-1-rU86uIqAm9pUTv3QNshoa65QwE-zOg/viewform?usp=header') ; 
+});
+
+
 app.get('/dashboard_admin',checkAuth, async (req, res) => {
   const db = await mongoose.connection.db;
   const stats = await db.stats();
@@ -261,6 +266,24 @@ app.get('/dashboard_admin',checkAuth, async (req, res) => {
   }else{
     res.render('dashboard_admin', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length,message,totalMB})  ;
   }
+});
+
+
+app.get('/dashboard_new', async (req, res) => {
+  const db = await mongoose.connection.db;
+  const stats = await db.stats();
+  const totalBytes = stats.dataSize + stats.indexSize; 
+  const totalMB = (totalBytes / (1024 * 1024)).toFixed(2);
+
+
+  let data_article = await Article.find() ; 
+  let data_sliced = pagination(req.query.page,8,data_article) ; 
+  let data_pagination = getPageRange(req.query.page, data_article.length, 8) ; 
+  message = req.cookies.message ; 
+
+   
+    res.render('dashboard_new', {data_sliced, page : req.query.page, pagination : data_pagination , data_length : data_article.length,message,totalMB})  ;
+  
 });
 
 app.get('/dashboard_admin/search',checkAuth, async (req, res) => {
@@ -343,7 +366,9 @@ app.post('/delete_article/:title', async (req, res) => {
 
   res.redirect(`/dashboard_admin?page=${req.body.page}`)  ;
 });
-app.post('/login' , loginLimiter, async (req, res) => {
+
+
+app.post('/login' , loginLimiter, async (req, res,next) => {
 
   
   let pass = await passwordAndKey() ; 
@@ -351,7 +376,7 @@ app.post('/login' , loginLimiter, async (req, res) => {
   
   if (req.body.password == pass.password) {
     req.session.loggedIn = true ; 
-    res.redirect('/dashboard_admin')
+    res.redirect('/dashboard_admin') ;
   }else{
     res.cookie("message", "❌ Wrong username or password.", { maxAge: 3000 });
     res.redirect('/login');

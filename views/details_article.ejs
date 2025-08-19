@@ -8,53 +8,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="/css/style.css" rel="stylesheet" />
     <link href="/css/details_article.css" rel="stylesheet" />
+     <link href="/css/dasbor.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   </head>
 
   
   <body>
-    <div class="m-5">
-           <nav class="navbar navbar-expand-lg navbar-dark  fixed-top  " style="background-color: rgba(173, 49, 49, 0);">
-      <div class="container-fluid px-3">
-        
-        <div style="background-color: rgba(95, 158, 160, 0);height: 40px;display: flex;">
-          <img src="/images/Logo_ITC.png" alt="">
+    <div class="body-container">
+        <div class="navbar-container" id="sidebar">
+            <div class="nav-icon">
+                <a href="#"><span class="material-symbols-rounded font-black">home</span></a>
+                <a id="closeBtn"><span class="material-symbols-rounded font-black close-btn">close</span></a>
+            </div>
+            <div class="nav-button">
+                <div class="on-page-button nav-list"><a>Data-data Artikel</a></div>
+                <div class="nav-list"><a>Link Shorterner</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 3</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 4</a></div>
+                <div class="nav-list"><a>Lorem Ipsum 5</a></div>
+            </div>
         </div>
-        <a class="navbar-brand" href="/" style="font-size: 1rem;">ITC MIPA UNSOED</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          </ul>
-          <div>
-            <ul class="navbar-nav  w-500">
-              <li class="nav-item me-5" >
-                <a class="nav-link" aria-current="page" href="/"><i class="bi bi-house-door-fill"></i><span style="margin-left: 10px;">Home</span></a>
-              </li>
-              <li class="nav-item me-5">
-                <a class="nav-link" href="/history" >History</a>
-              </li>
-              <li class="nav-item dropdown me-5">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Profil
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/kabinet">KABINET</a></li>
-                  <li><a class="dropdown-item" href="/divisi">DIVISI</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link me-5" href="/blog">Blog</a>
-              </li>
-            </ul>
-            
-          </div>
-        </div>
-      </div>
-    </nav>
+        <div class="main-container" id="main">
+            <div class="nav-main">
+                <span class="material-symbols-rounded nav-main-item menu-btn" id="menuBtn">menu</span>
+                <h1 class="nav-title nav-main-item">Data-Data Artikel</h1>
+            </div>
 
-    </div>
+        </div>
+           
+      </div>
 
   
 <section class="container data_details" >
@@ -94,7 +77,22 @@
 
 </section>
 
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const sidebar = document.getElementById("sidebar");
+    const main = document.getElementById("main");
 
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.add("active");
+      menuBtn.classList.add("hide");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      menuBtn.classList.remove("hide");
+    });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   </body>
 </html>
