@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="sl-style.css"/>
+</head>
+<body>
+    <div class="sl-container">
+        <h1>URL Shortener</h1>
+    <form class="shorten-form" id="shorten-form">
+      <label class="label-1">
+        URL Panjang
+        <input class="o-input" type="url" id="url" name="url" placeholder="https://example.com/my-long-url" required />
+      </label>
+      <label class="label-2">
+        URL Custom
+        <div class="n-url-box">
+          <div class="domain">
+              https://itcmipaunsoed.my.id/
+          </div>
+          <input class="n-input" type="text" id="slug" name="slug" placeholder="Contoh" required/>
+        </div>
+        <small>Huruf/angka/-/_ | 3–50 karakter</small>
+      </label>
+      <label class="label-1">
+        <input class="o-input" type="url" id="url" name="url" placeholder="Judul Link" required />
+      </label>      
+      <button class="submit" type="submit">Buat Link</button>
+    </form>        
+    </div>
+</body>
+</html>
