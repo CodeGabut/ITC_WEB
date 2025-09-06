@@ -79,12 +79,17 @@
           <img src="./images/Logo Nexabyte (No bg).png">
           <h3>ITC MIPA UNSOED</h3>
           <p>Information Technology and Communication MIPA Unsoed</p>
-          <button class="tombol" onclick="document.getElementById('more-info').scrollIntoView({ behavior: 'smooth' })">
-            MORE INFO
-          </button>
-          <button class="tombol-spesial-blue" id="tombolJoin" style="display: none;">
-            <a href="#" style="text-decoration: none;">JOIN</a>            
-          </button>          
+          <div class="intro-button">
+            <button class="tombol" onclick="document.getElementById('more-info').scrollIntoView({ behavior: 'smooth' })">
+              MORE INFO
+            </button>
+            <button class="tombol-spesial-blue" id="tombolJoin" style="display: none;">
+              <a href="#" style="text-decoration: none;">DAFTAR ANGGOTA</a>            
+            </button>
+            <button class="tombol-spesial-blue" id="tombolJoin2" style="display: none;">
+              <a href="https://bit.ly/OprecBatch2PanitTetra25" style="text-decoration: none;">DAFTAR PANITIA TETRA</a>            
+            </button>                         
+          </div>         
         </div>
       </section>
     </header>
@@ -443,17 +448,29 @@
         AOS.init();
       </script>
       
-      <script>/*
+      <script>/
         // Waktu mulai dan akhir dalam format UTC (tahun, bulan (0–11 dihitung dari 0), tanggal, jam, menit)
-        const mulai = new Date(2025, 7, 7, 13, 0, 0);     
-        const akhir = new Date(2025, 7, 24, 23, 59, 0);    
+        const mulai = new Date(2025, 8, 10, 0, 0, 0);     
+        const akhir = new Date(2025, 8, 10, 23, 59, 0);    
 
         const sekarang = new Date();
 
         // Cek apakah waktu sekarang berada di antara waktu mulai dan akhir
         if (sekarang >= mulai && sekarang <= akhir) {
           document.getElementById("tombolJoin").style.display = "inline-block";
-        } */
+        } 
+      </script>
+            <script>/
+        // Waktu mulai dan akhir dalam format UTC (tahun, bulan (0–11 dihitung dari 0), tanggal, jam, menit)
+        const mulai = new Date(2025, 8, 9, 0, 0, 0);     
+        const akhir = new Date(2025, 8, 14, 23, 59, 0);    
+
+        const sekarang = new Date();
+
+        // Cek apakah waktu sekarang berada di antara waktu mulai dan akhir
+        if (sekarang >= mulai && sekarang <= akhir) {
+          document.getElementById("tombolJoin2").style.display = "inline-block";
+        } 
       </script>
          
     </main>
