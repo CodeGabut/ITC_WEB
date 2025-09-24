@@ -12,7 +12,8 @@ Link : itcmipaunsoed.my.id
 
 <img width="1352" height="607" alt="image" src="https://github.com/user-attachments/assets/2e928857-d100-4ddf-b132-d8fcda00aab4" />
 
-<img width="488" height="534" alt="image" src="https://github.com/user-attachments/assets/97ea3e07-85a2-47f2-b9f9-a594d575ca79" />
+<img width="1351" height="607" alt="image" src="https://github.com/user-attachments/assets/d474f3d5-85f4-493d-81ae-72cd8e3b9ba5" />
+
 
 <img width="1353" height="600" alt="image" src="https://github.com/user-attachments/assets/a70dbd83-5906-47df-9e54-ec158cb939aa" />
 
