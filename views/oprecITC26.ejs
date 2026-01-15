@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.png">
+  <title>Open Recruitment Pengurus 26 - UKM ITC MIPA UNSOED</title>
+  <!-- Google Font: Kode Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Kode Mono', monospace;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      color: #1F1A17;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background-image: url("/images/fotstud26.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      filter: grayscale(100%);
+      z-index: -1;
+      opacity: 0.10;
+    }
+
+    .overlay {
+      background-color: transparent;
+      color: transparent;
+      -webkit-text-stroke: 3px rgba(75, 75, 75, 0.2);
+      position: fixed;
+      inset: 0;
+      opacity: 0.85;
+      z-index: -1;
+      text-align: center;
+      font-size: 1000%;
+    }
+
+    .container {
+      border-radius: 5px;
+      width: 100%;
+      max-width: 400px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: 42px;
+    }
+
+    .link {
+      display: block;
+      text-decoration: none;
+      color: #FFF;
+      background-color: #1F1A17;
+      padding: 14px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .link:hover {
+      background-color: #3c3c3c;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">UKM ITC MIPA UNSOED</div>
+  <div class="container">
+    <img src="/images/Logo_ITC.png" alt="Logo ITC MIPA UNSOED" width="170" style="margin-bottom: 16px;">
+    <h1>UKM ITC MIPA UNSOED</h1>
+
+    <a href="#" class="link">Link Pertama</a>
+    <a href="#" class="link">Link Kedua</a>
+    <a href="#" class="link">Link Ketiga</a>
+    <a href="#" class="link">Link Keempat</a>
+  </div>
+</body>
+</html>
