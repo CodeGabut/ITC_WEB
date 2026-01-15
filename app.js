@@ -238,6 +238,7 @@ app.get('/kabinet', async (req, res) => {
 app.get('/divisi', async (req, res) => {
   res.render('division')  ;
 });
+
 app.get('/oprecITC26', async (req, res) => {
   res.render('oprecITC26')  ;
 });
