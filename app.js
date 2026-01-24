@@ -243,6 +243,10 @@ app.get('/oprecITC26', async (req, res) => {
   res.render('oprecITC26')  ;
 });
 
+app.get('/oprecITC26/announcement', async (req, res) => {
+  res.render('oprecITC26/announcement')  ;
+});
+
 
 ///////////// BACKEND GET
 
